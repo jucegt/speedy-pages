@@ -1,0 +1,19 @@
+{
+  "name": "speedy-pages",
+  "version": "0.0.1",
+  "description": "11ty blog template with AMP",
+  "main": "index.js",
+  "repository": "git@github.com:jucegt/speedy-pages.git",
+  "author": "jucegt <julio2201@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "npx @11ty/eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.8"
+  }
+}
