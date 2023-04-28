@@ -7,10 +7,12 @@
   "author": "jucegt <julio2201@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "npx @11ty/eleventy"
+    "dev:11ty": "npx @11ty/eleventy --watch --serve",
+    "build:11ty": "npx @11ty/eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "dotenv": "^16.0.3",
     "eslint": "^8.39.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
