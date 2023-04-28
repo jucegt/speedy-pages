@@ -1,11 +1,15 @@
+const ignores = require('./src/includes/ignores');
+
 const eleventy = (config) => {
+  ignores(config);
+
   return {
     dir: {
-      input: 'src',
+      input: '.',
       output: '.11ty',
-      includes: 'includes',
-      layouts: 'layouts',
-      data: 'data',
+      includes: 'src/includes',
+      layouts: 'src/layouts',
+      data: 'src/data',
     },
   };
 };
