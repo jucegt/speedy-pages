@@ -9,8 +9,12 @@
   "scripts": {
     "format": "prettier --write \"**/*.{js,scss}\"",
     "lint": "eslint . --fix --max-warnings=0",
-    "dev:11ty": "npx @11ty/eleventy --watch --serve",
-    "build:11ty": "npx @11ty/eleventy"
+    "sass": "sass --no-source-map src/assets/scss:src/assets/css",
+    "11ty": "npx @11ty/eleventy",
+    "dev:11ty": "yarn 11ty --watch --serve",
+    "dev:sass": "yarn sass --watch",
+    "build:11ty": "yarn 11ty",
+    "build:sass": "yarn sass"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
