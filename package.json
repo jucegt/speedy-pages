@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "format": "prettier --write \"**/*.{js,scss}\"",
+    "lint": "eslint . --fix --max-warnings=0",
     "dev:11ty": "npx @11ty/eleventy --watch --serve",
     "build:11ty": "npx @11ty/eleventy"
   },
