@@ -1,7 +1,9 @@
 const ignores = require('./src/includes/ignores');
+const collections = require('./src/includes/collections');
 
 const eleventy = (config) => {
   ignores(config);
+  collections(config);
 
   return {
     dir: {
