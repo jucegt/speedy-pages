@@ -1,0 +1,4 @@
+{
+  "layout": "base",
+  "permalink": "/{{ category | slug }}/{{ title | slug }}/index.html"
+}
