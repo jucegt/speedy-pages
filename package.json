@@ -15,7 +15,9 @@
     "dev:11ty": "yarn 11ty --watch --serve",
     "dev:sass": "yarn sass --watch",
     "build:11ty": "yarn 11ty",
-    "build:sass": "yarn sass"
+    "build:sass": "yarn sass",
+    "dev": "yarn clean && yarn dev:sass && yarn dev:11ty",
+    "build": "yarn clean && yarn build:sass && yarn build:11ty"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
