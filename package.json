@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@ampproject/toolbox-optimizer": "^2.9.0",
     "dotenv": "^16.0.3",
     "eslint": "^8.39.0",
     "eslint-config-prettier": "^8.8.0",
