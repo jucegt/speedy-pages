@@ -1,5 +1,5 @@
-const ignores = require('./src/includes/ignores');
-const collections = require('./src/includes/collections');
+const ignores = require('./src/eleventy/ignores');
+const collections = require('./src/eleventy/collections');
 
 const eleventy = (config) => {
   ignores(config);

@@ -7,9 +7,11 @@ A blog template built with [**11ty**](https://www.11ty.dev/), optimized for blaz
 - [x] Add ESLint and Prettier config
 - [x] Add 11ty and required config
 - [x] Add base layout and AMP
-- [ ] Add SASS and its corresponding compilation task
+- [x] Add blog configuration file
+- [x] Add SASS and its corresponding compilation task
+- [x] Add all necessary collections (articles, authors, categories, etc.)
+- [ ] Add AMP Optimizer
 - [ ] Add [Decap](https://decapcms.org/) to manage content
 - [ ] Add image transformer with [sharp](https://sharp.pixelplumbing.com/)
-- [ ] Add all necessary collections (articles, authors, categories, etc.)
-- [ ] Add blog configuration file
+- [ ] Add blog design
 - [ ] Add shortcodes (components) for reuse
