@@ -19,6 +19,10 @@
     "dev": "npm-run-all clean build:sass --parallel dev:*",
     "build": "npm-run-all clean build:*"
   },
+  "pre-commit": [
+    "format",
+    "lint"
+  ],
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@ampproject/toolbox-optimizer": "^2.9.0",
