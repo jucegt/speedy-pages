@@ -11,6 +11,7 @@ module.exports = {
     'semi': ['error', 'always'],
   },
   parserOptions: {
+    ecmaVersion: 2015,
     sourceType: 'module',
   },
 };

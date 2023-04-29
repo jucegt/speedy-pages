@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "format": "prettier --write \"**/*.{js,scss}\"",
-    "lint": "eslint . --fix --max-warnings=0",
+    "lint": "eslint . --config eslint.config.js --fix --max-warnings=0",
     "11ty": "npx @11ty/eleventy",
     "sass": "sass --no-source-map src/assets/scss:src/assets/css",
     "clean": "rm -rf .11ty/",
@@ -23,10 +23,11 @@
     "@11ty/eleventy": "^2.0.1",
     "@ampproject/toolbox-optimizer": "^2.9.0",
     "dotenv": "^16.0.3",
-    "eslint": "^8.39.0",
+    "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "npm-run-all": "^4.1.5",
+    "pre-commit": "^1.2.2",
     "prettier": "^2.8.8",
     "sass": "^1.62.1"
   }
