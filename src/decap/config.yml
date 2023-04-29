@@ -1,0 +1,91 @@
+backend:
+  name: github
+  repo: jucegt/speedy-pages
+  branch: master
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
+
+publish_mode: editorial_workflow
+media_folder: content/static
+public_folder: /
+
+site_url: '{{site_url}}'
+display_url: '{{site_url}}'
+
+slug:
+  encoding: 'ascii'
+  clean_accents: true
+
+collections:
+  - name: 'categories'
+    label: 'Categories'
+    label_singular: 'Category'
+    folder: 'content/categories'
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Show in Menu',
+          name: 'showmenu',
+          widget: 'boolean',
+          required: false,
+        }
+      - {
+          label: 'Excerpt',
+          name: 'excerpt',
+          widget: 'text',
+          pattern:
+            [
+              '.{140,150}',
+              'The excerpt should be between 140 and 150 characters.',
+            ],
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'authors'
+    label: 'Authors'
+    label_singular: 'Author'
+    folder: 'content/authors'
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+  - name: 'posts'
+    label: 'Posts'
+    label_singular: 'Post'
+    folder: 'content/posts'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - {
+          label: 'Author',
+          name: 'author',
+          widget: 'relation',
+          collection: 'authors',
+          search_fields: ['title'],
+          value_field: 'title',
+        }
+      - {
+          label: 'Excerpt',
+          name: 'excerpt',
+          widget: 'text',
+          pattern:
+            [
+              '.{140,150}',
+              'The excerpt should be between 140 and 150 characters.',
+            ],
+        }
+      - {
+          label: 'Category',
+          name: 'category',
+          widget: 'relation',
+          collection: 'categories',
+          search_fields: ['title'],
+          value_field: 'title',
+        }
+      - { label: 'Featured Image', name: 'featuredimage', widget: image }
+      - { label: 'Body', name: 'body', widget: 'markdown' }

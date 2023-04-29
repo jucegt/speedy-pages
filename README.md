@@ -11,7 +11,7 @@ A blog template built with [**11ty**](https://www.11ty.dev/), optimized for blaz
 - [x] Add SASS and its corresponding compilation task
 - [x] Add all necessary collections (articles, authors, categories, etc.)
 - [x] Add AMP Optimizer
-- [ ] Add [Decap](https://decapcms.org/) to manage content
+- [x] Add [Decap](https://decapcms.org/) to manage content
 - [ ] Add image transform with [sharp](https://sharp.pixelplumbing.com/)
 - [ ] Add blog design
 - [ ] Add shortcodes (components) for reuse
