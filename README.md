@@ -14,6 +14,6 @@ This template also includes [**DecapCMS**](https://decapcms.org/) ([formerly **N
 - [x] Add all necessary collections (articles, authors, categories, etc.)
 - [x] Add AMP Optimizer
 - [x] Add [Decap](https://decapcms.org/) to manage content
-- [ ] Add image transform with [sharp](https://sharp.pixelplumbing.com/)
+- [x] Add image transform with [sharp](https://sharp.pixelplumbing.com/)
 - [ ] Add blog design
 - [ ] Add shortcodes (components) for reuse
