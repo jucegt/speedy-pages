@@ -1,8 +1,8 @@
-require('dotenv').config();
+const speedyConfig = require('../../speedy.config');
 
 const metadata = {
-  title: 'SpeedyPages',
-  url: process.env.ENV_URL || 'http://localhost:8080',
+  title: speedyConfig.metadata.title,
+  url: speedyConfig.metadata.url,
 };
 
 module.exports = metadata;

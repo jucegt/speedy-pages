@@ -1,8 +1,8 @@
-require('dotenv').config();
+const speedyConfig = require('../../speedy.config');
 
 const config = {
-  language: process.env.LANGUAGE || 'en',
-  dark: process.env.DARK_MODE === 'true' ? true : false,
+  language: speedyConfig.language || 'en',
+  dark: speedyConfig.ui.darkMode,
 };
 
 module.exports = config;

@@ -11,7 +11,6 @@ const eleventy = (config) => {
     dir: {
       input: '.',
       output: '.11ty',
-      includes: 'src/includes',
       layouts: 'src/layouts',
       data: 'src/data',
     },
