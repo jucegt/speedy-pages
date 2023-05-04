@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "bungcip.better-toml",
+    "mikestead.dotenv",
+    "editorconfig.editorconfig",
+    "usernamehw.errorlens",
+    "tobermory.es6-string-html",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "davidanson.vscode-markdownlint",
+    "christian-kohler.npm-intellisense",
+    "esbenp.prettier-vscode",
+    "sibiraj-s.vscode-scss-formatter",
+    "sibiraj-s.vscode-scss-formatter"
+  ]
+}
