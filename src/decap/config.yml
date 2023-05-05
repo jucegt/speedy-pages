@@ -44,7 +44,9 @@ collections:
               'The excerpt should be between 140 and 150 characters.',
             ],
         }
+      - { label: 'Featured Image', name: 'featuredimage', widget: image }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
   - name: 'authors'
     label: 'Authors'
     label_singular: 'Author'
@@ -52,6 +54,7 @@ collections:
     create: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
+
   - name: 'posts'
     label: 'Posts'
     label_singular: 'Post'
@@ -88,4 +91,13 @@ collections:
           value_field: 'title',
         }
       - { label: 'Featured Image', name: 'featuredimage', widget: image }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'pages'
+    label: 'Pages'
+    label_singular: 'Page'
+    folder: 'content/pages'
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
