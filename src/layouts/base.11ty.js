@@ -1,3 +1,6 @@
+// Components
+const header = require('../components/header');
+
 const base = {
   render: ({ config, content }) => {
     return /* html */ `
@@ -23,7 +26,10 @@ const base = {
         <link rel="canonical" href="." />
       </head>
       <body>
-        ${content}
+        ${header(config)}
+        <main>
+          ${content}
+        </main>
       </body>
     </html>
     `;
