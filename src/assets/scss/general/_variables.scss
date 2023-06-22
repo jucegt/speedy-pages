@@ -1,8 +1,34 @@
 @mixin light {
   --white: #fff;
   --black: #000;
-  --light-blue: #f0f2f5;
-  --bg: var(--light-blue);
+  --gray: #4d4d4d;
+  --white-rgb: 255, 255, 255;
+  --black-rgb: 0, 0, 0;
+  --light-skyblue: #f3f8fb;
+  --bg: var(--light-skyblue);
+  --header-bg: var(--white);
+  --text-color: var(--gray);
+  --shadow-color: 200deg 16% 77%;
+  --bottom-shadow: 0px 1px 1px hsl(var(--shadow-color) / 0),
+    0px 6px 9px hsl(var(--shadow-color) / 0.04),
+    0px 11px 17px hsl(var(--shadow-color) / 0.08),
+    0px 16px 24px hsl(var(--shadow-color) / 0.12),
+    0px 21px 31px hsl(var(--shadow-color) / 0.16),
+    0px 27px 41px hsl(var(--shadow-color) / 0.2),
+    0px 35px 53px hsl(var(--shadow-color) / 0.24),
+    0px 45px 68px hsl(var(--shadow-color) / 0.28),
+    0px 58px 87px hsl(var(--shadow-color) / 0.32),
+    0px 75px 112px hsl(var(--shadow-color) / 0.36);
+  --top-shadow: 0px -1px 1px hsl(var(--shadow-color) / 0),
+    0px -6px 9px hsl(var(--shadow-color) / 0.04),
+    0px -11px 17px hsl(var(--shadow-color) / 0.08),
+    0px -16px 24px hsl(var(--shadow-color) / 0.12),
+    0px -21px 31px hsl(var(--shadow-color) / 0.16),
+    0px -27px 41px hsl(var(--shadow-color) / 0.2),
+    0px -35px 53px hsl(var(--shadow-color) / 0.24),
+    0px -45px 68px hsl(var(--shadow-color) / 0.28),
+    0px -58px 87px hsl(var(--shadow-color) / 0.32),
+    0px -75px 112px hsl(var(--shadow-color) / 0.36);
 }
 
 @mixin dark {
