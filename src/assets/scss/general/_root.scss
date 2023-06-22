@@ -1,8 +1,27 @@
 @import "variables";
 
+@font-face {
+  font-family: "Lato";
+  src: url("/static/fonts/lato-regular.woff2") format("woff2"),
+    url("/static/fonts/lato-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/static/fonts/lato-bold.woff2") format("woff2"),
+    url("/static/fonts/lato-bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   min-width: 320px;
   font-size: toPx(16);
+  font-family: "Lato", Arial, Helvetica, sans-serif;
   @include light;
 }
 
