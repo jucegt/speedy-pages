@@ -5,7 +5,7 @@ const header = require('../components/header');
 const inlineCss = require('../utilities/css');
 
 const base = {
-  render: async ({ config, content }) => {
+  render: async ({ config, metadata, content }) => {
     return /* html */ `
     <!doctype html>
     <html ⚡ lang="${config.language}" class="${config.dark ? 'dark' : ''}">
@@ -29,7 +29,7 @@ const base = {
         <link rel="canonical" href="." />
       </head>
       <body>
-        ${header(config)}
+        ${header(metadata)}
         <main>
           ${content}
         </main>
