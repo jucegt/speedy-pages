@@ -1,0 +1,9 @@
+@mixin light {
+  --white: #fff;
+  --black: #000;
+  --light-blue: #f0f2f5;
+  --bg: var(--light-blue);
+}
+
+@mixin dark {
+}
