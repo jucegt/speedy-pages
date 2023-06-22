@@ -19,6 +19,8 @@ const base = {
         <title>Titulo</title>
         <!-- OG -->
         <!-- PRELOAD -->
+        <link rel="preload" href="/static/fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
         <!-- AMP -->
         <script async src="https://cdn.ampproject.org/v0.js"></script>
