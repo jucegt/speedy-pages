@@ -4,7 +4,7 @@ A blog template built with [**11ty**](https://www.11ty.dev/), optimized for blaz
 
 Additionally, this template features a custom image transformation system using [**sharp**](https://sharp.pixelplumbing.com/). With this system, any images uploaded through **DecapCMS** will automatically be transformed into **multiple sizes and formats** to optimize page load times and improve overall performance.
 
-Overall, with **SpeedyPages** and its custom image transformation system using sharp, you'll have everything you need to create a custom blog that loads quickly, delivers an excellent user experience, and is easy to manage and maintain.
+Overall, with **SpeedyPages** you'll have everything you need to create a custom blog that loads quickly, delivers an excellent user experience, and is easy to manage and maintain.
 
 ## TODO
 
