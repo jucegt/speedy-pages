@@ -14,14 +14,10 @@
   --text-color: var(--gray);
   --shadow-color: 200deg 16% 77%;
   --shadow-color--dark: 180deg 4% 11%;
-  --bottom-shadow: 0px 1px 1.1px hsl(var(--shadow-color) / 0.36),
-    0px 3.3px 3.7px -0.8px hsl(var(--shadow-color) / 0.36),
-    0.1px 8.2px 9.2px -1.7px hsl(var(--shadow-color) / 0.36),
-    0.1px 20px 22.5px -2.5px hsl(var(--shadow-color) / 0.36);
-  --top-shadow: 0px -1px 1px hsl(var(--shadow-color) / 0.36),
-    0px -3.3px 3.7px -0.8px hsl(var(--shadow-color) / 0.36),
-    0px -8.2px 9.2px -1.7px hsl(var(--shadow-color) / 0.36),
-    0px -20px 22.5px -2.5px hsl(var(--shadow-color) / 0.36);
+  --bottom-shadow: 0px 1px 1.1px hsl(var(--shadow-color) / 0.36), 0px 3.3px 3.7px -0.8px hsl(var(--shadow-color) / 0.36),
+    0.1px 8.2px 9.2px -1.7px hsl(var(--shadow-color) / 0.36), 0.1px 20px 22.5px -2.5px hsl(var(--shadow-color) / 0.36);
+  --top-shadow: 0px -1px 1px hsl(var(--shadow-color) / 0.36), 0px -3.3px 3.7px -0.8px hsl(var(--shadow-color) / 0.36),
+    0px -8.2px 9.2px -1.7px hsl(var(--shadow-color) / 0.36), 0px -20px 22.5px -2.5px hsl(var(--shadow-color) / 0.36);
   --top-shadow--dark: 0px -1px 1px hsl(var(--shadow-color--dark) / 0.36),
     0px -3.3px 3.7px -0.8px hsl(var(--shadow-color--dark) / 0.36),
     0px -8.2px 9.2px -1.7px hsl(var(--shadow-color--dark) / 0.36),

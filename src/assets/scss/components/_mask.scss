@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   background: rgba(var(--black-rgb), 0.5);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(to-rem(6));
   opacity: 0;
   visibility: hidden;
   transition: all ease 0.2s;

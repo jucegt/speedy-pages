@@ -11,7 +11,7 @@
   &__nav {
     background: inherit;
     bottom: 0;
-    box-shadow: 0 0 30px rgba(var(--black-rgb), 0.4);
+    box-shadow: 0 0 to-rem(30) rgba(var(--black-rgb), 0.4);
     height: inherit;
     left: 0;
     position: fixed;
