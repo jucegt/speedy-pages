@@ -1,1 +1,35 @@
 $base-font-size: 16;
+
+$xs: (
+  "min": 0,
+  "max": 575,
+);
+$sm: (
+  "min": 576,
+  "max": 767,
+);
+$md: (
+  "min": 768,
+  "max": 1023,
+);
+$lg: (
+  "min": 1024,
+  "max": 1199,
+);
+$xl: (
+  "min": 1200,
+  "max": 1399,
+);
+$xxl: (
+  "min": 1400,
+  "max": 2000,
+);
+
+$breakpoints: (
+  "xs": $xs,
+  "sm": $sm,
+  "md": $md,
+  "lg": $lg,
+  "xl": $xl,
+  "xxl": $xxl,
+);
