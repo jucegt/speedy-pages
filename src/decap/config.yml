@@ -63,6 +63,7 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Slug', name: 'slug', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - {
           label: 'Author',
@@ -73,15 +74,16 @@ collections:
           value_field: 'title',
         }
       - {
-          label: 'Excerpt',
-          name: 'excerpt',
+          label: 'Description',
+          name: 'description',
           widget: 'text',
           pattern:
             [
-              '.{140,150}',
-              'The excerpt should be between 140 and 150 characters.',
+              '.{140,160}',
+              'The description should be between 140 and 160 characters.',
             ],
         }
+      - { label: 'Excerpt', name: 'excerpt', widget: 'text' }
       - {
           label: 'Category',
           name: 'category',
