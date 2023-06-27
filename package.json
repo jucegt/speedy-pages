@@ -16,7 +16,7 @@
     "dev:sass": "yarn sass --watch",
     "build:11ty": "yarn 11ty",
     "build:sass": "yarn sass",
-    "build:images": "node ./src/node/sharp.js",
+    "build:images": "node ./src/utilities/node/sharp.js",
     "dev": "npm-run-all clean build:images build:sass --parallel dev:*",
     "build": "npm-run-all clean build:*"
   },
