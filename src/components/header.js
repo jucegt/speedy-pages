@@ -7,8 +7,9 @@ const moon = require('../svgs/moon');
 const hamburger = require('../svgs/hamburger');
 
 const header = ({ title, url }) => {
-  const defaultMenu = 'header__panel menu';
-  const defaultTools = 'header__panel tools';
+  const defaultMenu = 'header__panel header__panel--bottom menu';
+  const defaultTools = 'header__panel header__panel--top tools';
+  const defaultNav = 'header__nav';
 
   return /* html */ `
     <header class="header">
@@ -16,7 +17,7 @@ const header = ({ title, url }) => {
         ${logo()}
       </a>
 
-      <!-- <nav class="${defaultMenu}">
+      <nav class="${defaultMenu}" [class]="menu ? '${defaultMenu} header__panel--show' : '${defaultMenu}'">
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/">Page</a></li>
@@ -24,16 +25,16 @@ const header = ({ title, url }) => {
         </ul>
       </nav>
 
-      <div class="${defaultTools}">
+      <div class="${defaultTools}" [class]="search ? '${defaultTools} header__panel--show' : '${defaultTools}'">
         <div class="search">
           Input
         </div>
         <div class="mode">
           Moon/Sun
         </div>
-      </div> -->
+      </div>
 
-      <div class="header__nav">
+      <div class="${defaultNav}" [class]="search ? '${defaultNav} header__nav--dark' : '${defaultNav}'">
         <ul>
           <li>
             <a href="/">
@@ -42,22 +43,22 @@ const header = ({ title, url }) => {
             </a>
           </li>
           <li>
-            <a href="/">
+            <button [class]="search ? 'active' : ''" on="tap:AMP.setState({ search: !search, menu: false })">
               ${search()}
               <span>Buscar</span>
-            </a>
+            </button>
           </li>
           <li>
-            <a href="/">
+            <button>
               ${moon()}
               <span>Modo</span>
-            </a>
+            </button>
           </li>
           <li>
-            <a href="/">
+            <button [class]="menu ? 'active' : ''" on="tap:AMP.setState({ menu: !menu, search: false })">
               ${hamburger()}
               <span>Menu</span>
-            </a>
+            </button>
           </li>
         </ul>
       </div>
