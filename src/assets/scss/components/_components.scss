@@ -3,3 +3,8 @@
 
 // Mask
 @import "./mask";
+
+// Media query(MD)
+@include min-query("md") {
+  @include header-md;
+}
