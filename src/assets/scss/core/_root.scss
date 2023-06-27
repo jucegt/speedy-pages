@@ -1,0 +1,23 @@
+@import "variables";
+
+:root {
+  min-width: 320px;
+  font-size: toPx(16);
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  @include light;
+}
+
+*,
+*:before,
+*:after {
+  position: relative;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  background: var(--bg);
+}
