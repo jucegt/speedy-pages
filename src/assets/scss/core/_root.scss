@@ -2,7 +2,7 @@
 
 :root {
   min-width: 320px;
-  font-size: toPx(16);
+  font-size: to-px(16);
   font-family: "Lato", Arial, Helvetica, sans-serif;
   @include light;
 }

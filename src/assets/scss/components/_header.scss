@@ -3,10 +3,10 @@
   background: var(--header-bg);
   box-shadow: var(--bottom-shadow);
   display: flex;
-  height: toRem(60);
+  height: to-rem(60);
   justify-content: center;
-  padding: 0 toRem(32);
-  margin-bottom: toRem(32);
+  padding: 0 to-rem(32);
+  margin-bottom: to-rem(32);
 
   &__nav {
     background: inherit;
@@ -37,7 +37,7 @@
           color: var(--text-color);
           display: flex;
           flex-direction: column;
-          gap: toRem(4);
+          gap: to-rem(4);
           height: inherit;
           justify-content: center;
           margin: 0;
@@ -46,11 +46,11 @@
           width: 100%;
           svg {
             display: block;
-            height: toRem(24);
-            width: toRem(24);
+            height: to-rem(24);
+            width: to-rem(24);
           }
           span {
-            font-size: toRem(12);
+            font-size: to-rem(12);
           }
 
           &.active {
@@ -78,7 +78,7 @@
   &__panel {
     position: fixed;
     background: var(--header-bg);
-    padding: toRem(32);
+    padding: to-rem(32);
     left: 0;
     right: 0;
     transition: all ease 0.2s;
@@ -89,7 +89,7 @@
       transform: translateY(-100%);
     }
     &--bottom {
-      bottom: toRem(60);
+      bottom: to-rem(60);
       transform: translateY(100%);
     }
 
@@ -103,8 +103,8 @@
     svg {
       display: block;
       height: 100%;
-      max-height: toRem(30);
-      max-width: toRem(174);
+      max-height: to-rem(30);
+      max-width: to-rem(174);
       width: 100%;
     }
   }
@@ -118,7 +118,7 @@
   }
 
   .tools {
-    height: toRem(60);
+    height: to-rem(60);
     .mode {
       display: none;
     }
