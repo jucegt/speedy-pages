@@ -35,15 +35,16 @@ collections:
           required: false,
         }
       - {
-          label: 'Excerpt',
-          name: 'excerpt',
+          label: 'Description',
+          name: 'description',
           widget: 'text',
           pattern:
             [
-              '.{140,150}',
-              'The excerpt should be between 140 and 150 characters.',
+              '.{140,160}',
+              'The description should be between 140 and 160 characters.',
             ],
         }
+      - { label: 'Excerpt', name: 'excerpt', widget: 'text' }
       - { label: 'Featured Image', name: 'featuredimage', widget: image }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
