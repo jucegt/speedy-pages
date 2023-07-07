@@ -1,7 +1,5 @@
-const posts = (config) => {
-  config.addCollection('posts', (collection) => {
-    return collection.getFilteredByGlob('./content/posts/*.md');
-  });
+const posts = (collection) => {
+  return collection.getFilteredByGlob('./content/posts/*.md').reverse();
 };
 
 module.exports = posts;
