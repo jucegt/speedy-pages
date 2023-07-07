@@ -1,44 +1,4 @@
 @mixin light {
-  --white: #fff;
-  --black: #000;
-  --gray: #4d4d4d;
-  --white-rgb: 255, 255, 255;
-  --black-rgb: 0, 0, 0;
-  --light-skyblue: #f3f8fb;
-  --fuchsia: #ff0f7b;
-  --orange: #f89b29;
-  --primary: var(--orange);
-  --secondary: var(--fuchsia);
-  --bg: var(--light-skyblue);
-  --header-bg: var(--white);
-  --text-color: var(--gray);
-  --shadow-color: 200deg 16% 77%;
-  --shadow-color--dark: 180deg 4% 11%;
-  --bottom-shadow: 0px 1px 1.1px hsl(var(--shadow-color) / 0.36),
-    0px 3.3px 3.7px -0.8px hsl(var(--shadow-color) / 0.36),
-    0.1px 8.2px 9.2px -1.7px hsl(var(--shadow-color) / 0.36),
-    0.1px 20px 22.5px -2.5px hsl(var(--shadow-color) / 0.36);
-  --top-shadow: 0px -1px 1px hsl(var(--shadow-color) / 0.36),
-    0px -3.3px 3.7px -0.8px hsl(var(--shadow-color) / 0.36),
-    0px -8.2px 9.2px -1.7px hsl(var(--shadow-color) / 0.36),
-    0px -20px 22.5px -2.5px hsl(var(--shadow-color) / 0.36);
-  --top-shadow--dark: 0px -1px 1px hsl(var(--shadow-color--dark) / 0.36),
-    0px -3.3px 3.7px -0.8px hsl(var(--shadow-color--dark) / 0.36),
-    0px -8.2px 9.2px -1.7px hsl(var(--shadow-color--dark) / 0.36),
-    0px -20px 22.5px -2.5px hsl(var(--shadow-color--dark) / 0.36);
-  --gradient: linear-gradient(
-    135deg,
-    hsl(333deg 100% 53%) 0%,
-    hsl(340deg 100% 58%) 11%,
-    hsl(347deg 100% 61%) 22%,
-    hsl(355deg 100% 64%) 33%,
-    hsl(3deg 100% 65%) 44%,
-    hsl(11deg 100% 63%) 56%,
-    hsl(18deg 100% 62%) 67%,
-    hsl(23deg 100% 60%) 78%,
-    hsl(28deg 99% 59%) 89%,
-    hsl(33deg 94% 57%) 100%
-  );
 }
 
 @mixin dark {

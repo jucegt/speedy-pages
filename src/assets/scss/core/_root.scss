@@ -5,6 +5,9 @@
   font-size: to-px(16);
   font-family: "Lato", Arial, Helvetica, sans-serif;
   @include light;
+  &.dark {
+    @include dark;
+  }
 }
 
 *,
