@@ -24,3 +24,17 @@ body {
   -webkit-font-smoothing: antialiased;
   background: var(--bg);
 }
+
+button,
+input,
+textarea {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+
+p {
+  line-height: 1.375em;
+  color: var(--gray);
+  strong {
+    color: var(--darkblue);
+  }
+}
