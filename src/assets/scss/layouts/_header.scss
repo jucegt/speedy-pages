@@ -9,12 +9,71 @@
   &__panel {
     display: none;
   }
+  &__nav {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 10;
+  }
 
   .logo {
     svg {
       display: block;
       height: to-rem(30);
       width: to-rem(122);
+    }
+  }
+
+  .nav {
+    background: var(--nav-bg);
+    box-shadow: 0 0 to-rem(40) rgba(0, 0, 0, 0.2);
+    height: to-rem(76);
+    padding: 0 to-rem(20) to-rem(16);
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    &__item {
+      a,
+      button {
+        align-items: center;
+        background: transparent;
+        border: 0;
+        color: var(--darkblue);
+        display: flex;
+        flex-direction: column;
+        height: to-rem(60);
+        justify-content: center;
+        overflow: hidden;
+        padding-top: to-rem(2);
+        padding: 0;
+        text-decoration: none;
+        width: to-rem(70);
+        &:before {
+          background: var(--oragenta);
+          border-radius: 0 0 to-rem(6) to-rem(6);
+          content: "";
+          height: inherit;
+          position: absolute;
+          top: 0;
+          width: inherit;
+          transform: translateY(-100%);
+        }
+        svg {
+          display: block;
+          height: to-rem(24);
+          width: to-rem(24);
+        }
+        span {
+          display: block;
+          font-size: to-rem(12);
+          margin-top: to-rem(2);
+        }
+      }
     }
   }
 }
