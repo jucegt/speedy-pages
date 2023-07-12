@@ -1,13 +1,10 @@
-const optimizer = require('@ampproject/toolbox-optimizer').create();
+const minified = require('html-minifier').minify;
 
 const html = (content, outputPath) => {
-  if (
-    outputPath &&
-    outputPath.endsWith('.html') &&
-    !outputPath.includes('/admin/')
-  ) {
-    return optimizer.transformHtml(content).then((optimizedHtml) => {
-      return optimizedHtml;
+  if (outputPath.endsWith('.html')) {
+    return minified(content, {
+      removeComments: true,
+      collapseWhitespace: true,
     });
   }
   return content;
