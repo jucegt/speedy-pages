@@ -10,7 +10,7 @@ const base = {
   render: async ({ config, metadata, content }) => {
     return /* html */ `
     <!doctype html>
-    <html ⚡ lang="${config.language}" class="${config.dark ? 'dark' : ''}">
+    <html ⚡ lang="${config.language}">
       <head>
         <!-- META -->
         <meta charset="utf-8" />

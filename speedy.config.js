@@ -7,7 +7,6 @@ const speedyConfig = {
     url: process.env.ENV_URL || 'http://localhost:8080',
   },
   ui: {
-    darkMode: process.env.DARK_MODE === 'true' ? true : false,
     paginatedPagePrefix: '',
     postsPerPage: 12,
   },
