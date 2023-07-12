@@ -1,6 +1,7 @@
 const logo = require('../svgs/logo');
 const home = require('../svgs/home');
 const search = require('../svgs/search');
+const searchBox = require('../svgs/search-box');
 const moon = require('../svgs/moon');
 const sun = require('../svgs/sun');
 const hamburger = require('../svgs/hamburger');
@@ -26,7 +27,10 @@ const header = ({ url, title }) => {
 
       <section class="${classesTools}" [class]="search ? '${classesTools} header__panel--open' : '${classesTools}'">
         <form class="tools__search">
-          <input placeholder="Buscar">
+          <div class="input input--icon">
+            <input placeholder="Buscar" name="search" id="search">
+            ${search()}
+          </div>
         </form>
         <div class="tools__mode">
           ${moon()}
@@ -38,25 +42,34 @@ const header = ({ url, title }) => {
         <ul class="nav__list">
           <li class="nav__item">
             <a href="${url}">
-              ${home()}
+              <span class="nav__icon">
+                ${home()}
+              </span>
               <span>Inicio</span>
             </a>
           </li>
           <li class="nav__item">
             <button on="tap:AMP.setState({ search: !search, menu: false })" [class]="search ? 'active' : ''">
-              ${search()}
+              <span class="nav__icon">
+                ${searchBox()}
+              </span>
               <span>Buscar</span>
             </button>
           </li>
           <li class="nav__item">
-            <button>
-              ${moon()}
+            <button on="tap:AMP.toggleTheme()">
+              <span class="nav__icon">
+                ${moon()}
+                ${sun()}
+              </span>
               <span>Modo</span>
             </button>
           </li>
           <li class="nav__item">
             <button on="tap:AMP.setState({ menu: !menu, search: false })" [class]="menu ? 'active' : ''">
-              ${hamburger()}
+              <span class="nav__icon">
+                ${hamburger()}
+              </span>
               <span>Menu</span>
             </button>
           </li>
