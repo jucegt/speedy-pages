@@ -67,6 +67,7 @@
         padding: 0;
         text-decoration: none;
         width: to-rem(70);
+        transition: all ease-in 0.2s;
         &:before {
           background: var(--oragenta);
           border-radius: 0 0 to-rem(6) to-rem(6);
@@ -91,6 +92,7 @@
 
         &.active {
           color: var(--white);
+          transition-timing-function: ease-out;
           &:before {
             transform: translateY(0);
             transition-timing-function: ease-out;
