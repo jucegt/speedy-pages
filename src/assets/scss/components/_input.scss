@@ -1,0 +1,34 @@
+.input {
+  input {
+    background: var(--lightgray);
+    border-radius: to-rem(8);
+    border: 0;
+    color: var(--darkblue);
+    height: to-rem(40);
+    outline: to-rem(2) solid transparent;
+    padding: 0 to-rem(14);
+    width: 100%;
+    transition: all ease-in 0.2s;
+    &:focus {
+      outline-offset: to-rem(2);
+      outline-color: var(--orange);
+      transition-timing-function: ease-out;
+    }
+  }
+  &--icon {
+    svg {
+      display: block;
+      height: to-rem(24);
+      left: to-rem(14);
+      pointer-events: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: to-rem(24);
+      color: var(--gray);
+    }
+    input {
+      padding-left: to-rem(42);
+    }
+  }
+}
