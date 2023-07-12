@@ -1,0 +1,17 @@
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(var(--darkblue-rgb), 0.4);
+  backdrop-filter: blur(to-rem(6));
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in 0.2s;
+  &--show {
+    opacity: 1;
+    visibility: visible;
+    transition-timing-function: ease-out;
+  }
+}

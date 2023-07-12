@@ -6,9 +6,6 @@
   flex-direction: column;
   height: to-rem(60);
   justify-content: center;
-  position: sticky;
-  top: 0;
-  z-index: 10;
   &__panel {
     background: var(--nav-bg);
     bottom: to-rem(76);
@@ -18,6 +15,7 @@
     right: 0;
     transform: translateY(100%);
     transition: all ease-in 0.2s;
+    z-index: 10;
     &--open {
       transform: translateY(0);
       transition-timing-function: ease-out;
