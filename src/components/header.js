@@ -26,7 +26,7 @@ const header = ({ url, title }) => {
       </nav>
 
       <section class="${classesTools}" [class]="search ? '${classesTools} header__panel--open' : '${classesTools}'">
-        <form class="tools__search">
+        <form class="tools__search" method="post" action-xhr="/" target="_top">
           <div class="input input--icon">
             <input placeholder="Buscar" name="search" id="search">
             ${search()}
