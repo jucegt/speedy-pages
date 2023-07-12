@@ -43,7 +43,7 @@ const header = ({ url, title }) => {
             </a>
           </li>
           <li class="nav__item">
-            <button on="tap:AMP.setState({ search: !search, menu: false })">
+            <button on="tap:AMP.setState({ search: !search, menu: false })" [class]="search ? 'active' : ''">
               ${search()}
               <span>Buscar</span>
             </button>
@@ -55,7 +55,7 @@ const header = ({ url, title }) => {
             </button>
           </li>
           <li class="nav__item">
-            <button on="tap:AMP.setState({ menu: !menu, search: false })">
+            <button on="tap:AMP.setState({ menu: !menu, search: false })" [class]="menu ? 'active' : ''">
               ${hamburger()}
               <span>Menu</span>
             </button>

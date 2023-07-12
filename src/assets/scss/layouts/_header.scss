@@ -74,8 +74,9 @@
           height: inherit;
           position: absolute;
           top: 0;
-          width: inherit;
           transform: translateY(-100%);
+          transition: all ease-in 0.2s;
+          width: inherit;
         }
         svg {
           display: block;
@@ -86,6 +87,14 @@
           display: block;
           font-size: to-rem(12);
           margin-top: to-rem(2);
+        }
+
+        &.active {
+          color: var(--white);
+          &:before {
+            transform: translateY(0);
+            transition-timing-function: ease-out;
+          }
         }
       }
     }
