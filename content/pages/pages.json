@@ -1,4 +1,4 @@
 {
   "layout": "base",
-  "permalink": "/{{ title | slug }}/index.html"
+  "permalink": "/{{ title | slugify }}/index.html"
 }
