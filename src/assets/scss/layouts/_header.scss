@@ -6,8 +6,22 @@
   flex-direction: column;
   height: to-rem(60);
   justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   &__panel {
-    display: none;
+    background: var(--nav-bg);
+    bottom: to-rem(76);
+    left: 0;
+    padding: to-rem(20);
+    position: fixed;
+    right: 0;
+    transform: translateY(100%);
+    transition: all ease-in 0.2s;
+    &--open {
+      transform: translateY(0);
+      transition-timing-function: ease-out;
+    }
   }
   &__nav {
     bottom: 0;
@@ -74,6 +88,20 @@
           margin-top: to-rem(2);
         }
       }
+    }
+  }
+
+  .menu {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .tools {
+    &__mode {
+      display: none;
     }
   }
 }
