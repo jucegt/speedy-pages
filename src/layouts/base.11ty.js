@@ -1,5 +1,6 @@
 // Components
 const header = require('../components/header');
+const footer = require('../components/footer');
 const mask = require('../components/mask');
 const state = require('../components/state');
 
@@ -40,6 +41,7 @@ const base = {
         <main class="content">
           ${content}
         </main>
+        ${footer(metadata)}
         ${mask()}
         ${state()}
       </body>

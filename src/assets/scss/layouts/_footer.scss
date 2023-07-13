@@ -1,0 +1,119 @@
+.footer {
+  background: var(--footer-bg);
+  box-shadow: 0 0 to-rem(40) rgba(0, 0, 0, 0.2);
+  margin-bottom: to-rem(76);
+  padding: to-rem(20);
+  &__panel {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: var(--darkblue);
+      font-size: to-rem(18);
+      font-weight: bold;
+      margin: 0 0 to-rem(20) 0;
+    }
+  }
+  &__header {
+    align-items: center;
+    display: flex;
+    gap: to-rem(20);
+    justify-content: space-between;
+  }
+  &__content {
+    border-top: 1px solid var(--lightgray);
+    display: flex;
+    flex-direction: column;
+    gap: to-rem(20);
+    margin-top: to-rem(20);
+    padding-top: to-rem(20);
+  }
+  &__bottom {
+    margin-top: to-rem(20);
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: to-rem(16);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &--inline {
+      flex-direction: row;
+      flex-wrap: wrap;
+      a {
+        display: block;
+      }
+      span {
+        background: var(--oragenta);
+        border-radius: to-rem(4);
+        color: var(--lightblue);
+        display: inline-block;
+        font-size: to-rem(12);
+        font-weight: bold;
+        min-width: to-rem(19);
+        padding: to-rem(2) to-rem(4);
+        text-align: center;
+        top: to-rem(-1);
+      }
+    }
+    li {
+      a {
+        color: var(--gray);
+        text-decoration: none;
+      }
+    }
+  }
+  .logo {
+    svg {
+      display: block;
+      height: to-rem(30);
+      opacity: 0.4;
+      width: to-rem(122);
+      path {
+        fill: var(--darkblue);
+      }
+    }
+  }
+  .social {
+    ul {
+      display: flex;
+      gap: to-rem(16);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    &__button {
+      align-items: center;
+      border-radius: to-rem(6);
+      color: var(--lightblue);
+      display: flex;
+      height: to-rem(40);
+      justify-content: center;
+      text-decoration: none;
+      width: to-rem(40);
+      svg {
+        display: block;
+        height: to-rem(24);
+        width: to-rem(24);
+      }
+    }
+    .fb {
+      background: var(--facebook);
+    }
+    .ig {
+      background: var(--instagram);
+    }
+    .tw {
+      background: var(--twitter);
+    }
+  }
+  .copy {
+    color: var(--gray);
+    font-size: to-rem(12);
+    margin: 0;
+    padding: 0;
+  }
+}
