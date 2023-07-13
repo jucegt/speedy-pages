@@ -105,7 +105,10 @@
       width: to-rem(24);
       height: to-rem(24);
       svg {
-        transition: all ease 0.2s;
+        &.sun,
+        &.moon {
+          transition: all ease 0.2s;
+        }
       }
       .sun {
         left: 0;
