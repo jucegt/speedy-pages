@@ -1,6 +1,6 @@
 .footer {
   background: var(--footer-bg);
-  box-shadow: 0 0 to-rem(40) rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 to-rem(40) var(--shadow);
   margin-bottom: to-rem(76);
   padding: to-rem(20);
   &__panel {
@@ -10,7 +10,7 @@
     h4,
     h5,
     h6 {
-      color: var(--darkblue);
+      color: var(--title);
       font-size: to-rem(18);
       font-weight: bold;
       margin: 0 0 to-rem(20) 0;
@@ -23,7 +23,7 @@
     justify-content: space-between;
   }
   &__content {
-    border-top: 1px solid var(--lightgray);
+    border-top: 1px solid var(--border);
     display: flex;
     flex-direction: column;
     gap: to-rem(20);
@@ -49,7 +49,7 @@
       span {
         background: var(--oragenta);
         border-radius: to-rem(4);
-        color: var(--lightblue);
+        color: var(--white-200);
         display: inline-block;
         font-size: to-rem(12);
         font-weight: bold;
@@ -61,7 +61,7 @@
     }
     li {
       a {
-        color: var(--gray);
+        color: var(--text);
         text-decoration: none;
       }
     }
@@ -73,7 +73,7 @@
       opacity: 0.4;
       width: to-rem(122);
       path {
-        fill: var(--darkblue);
+        fill: var(--text);
       }
     }
   }
@@ -88,7 +88,7 @@
     &__button {
       align-items: center;
       border-radius: to-rem(6);
-      color: var(--lightblue);
+      color: var(--white-200);
       display: flex;
       height: to-rem(40);
       justify-content: center;
@@ -111,7 +111,7 @@
     }
   }
   .copy {
-    color: var(--gray);
+    color: var(--text);
     font-size: to-rem(12);
     margin: 0;
     padding: 0;

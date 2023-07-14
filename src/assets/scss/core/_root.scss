@@ -5,9 +5,10 @@
   font-size: to-px(16);
   font-family: "Lato", Arial, Helvetica, sans-serif;
   @include light;
-  &.dark {
-    @include dark;
-  }
+}
+
+.amp-dark-mode {
+  @include dark;
 }
 
 *,
@@ -34,8 +35,8 @@ textarea {
 
 p {
   line-height: 1.375em;
-  color: var(--gray);
+  color: var(--text);
   strong {
-    color: var(--darkblue);
+    color: var(--title);
   }
 }

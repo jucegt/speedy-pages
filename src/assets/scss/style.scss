@@ -9,3 +9,7 @@
 
 // Components
 @import "components/components";
+
+.amp-dark-mode {
+  @include header--dark;
+}

@@ -1,11 +1,14 @@
 @mixin light {
   --white: hsl(0, 0%, 100%);
-  --skyblue: hsl(202, 50%, 97%);
-  --lightblue: hsl(200, 32%, 93%);
-  --darkblue: hsl(206, 16%, 9%);
-  --darkblue-rgb: 19, 23, 26;
-  --lightgray: hsl(0, 0%, 95%);
+  --white-100: hsl(202, 50%, 97%);
+  --white-200: hsl(200, 32%, 93%);
+  --white-300: hsl(0, 0%, 95%);
+  --black-rgb: 0, 0, 0;
   --gray: hsl(200, 1%, 54%);
+  --gray-900: hsl(0, 0%, 9%);
+  --gray-800: hsl(0, 0%, 13%);
+  --blue-900: hsl(206, 16%, 9%);
+  --blue-900-rgb: 19, 23, 26;
   --orange: hsl(17, 87%, 57%);
   --magenta: hsl(333, 100%, 49%);
   --oragenta: linear-gradient(135deg, var(--orange) 0%, hsl(356, 97%, 62%) 50%, var(--magenta) 100%);
@@ -19,11 +22,24 @@
   );
   --twitter: hsl(204deg 88% 53%);
 
-  --bg: var(--skyblue);
+  --bg: var(--white-100);
+  --shadow: rgba(var(--black-rgb), 0.2);
   --header-bg: var(--white);
   --nav-bg: var(--white);
   --footer-bg: var(--white);
+  --border: var(--white-300);
+  --text: var(--gray);
+  --title: var(--blue-900);
+  --form-element-bg: var(--white-300);
 }
 
 @mixin dark {
+  --bg: var(--gray-800);
+  --shadow: rgba(var(--black-rgb), 0.4);
+  --header-bg: var(--gray-900);
+  --nav-bg: var(--gray-900);
+  --footer-bg: var(--gray-900);
+  --border: var(--gray-800);
+  --title: var(--white-100);
+  --form-element-bg: var(--gray-800);
 }
