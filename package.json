@@ -18,7 +18,7 @@
     "build:sass": "yarn sass",
     "build:images": "node ./src/utilities/node/sharp.js",
     "dev": "npm-run-all clean build:images build:sass --parallel dev:*",
-    "build": "npm-run-all clean build:*"
+    "build": "npm-run-all clean build:sass build:*"
   },
   "pre-commit": [
     "format",
