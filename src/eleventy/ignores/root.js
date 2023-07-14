@@ -1,4 +1,4 @@
-const root = (config) => {
+const root = function (config) {
   config.ignores.add('./*.md');
 };
 

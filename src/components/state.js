@@ -1,4 +1,4 @@
-const state = () => {
+const state = function () {
   return /* html */ `
     <amp-state id="global">
       <script type="application/json">

@@ -1,4 +1,4 @@
-const categoriesList = (collection) => {
+const categoriesList = function (collection) {
   const posts = require('./posts')(collection);
   const categoriesNames = new Set();
   const categoriesList = [];

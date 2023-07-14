@@ -1,4 +1,4 @@
-const categoryByName = (collection) => {
+const categoryByName = function (collection) {
   const categories = require('./categories')(collection);
 
   const categoryByName = {};

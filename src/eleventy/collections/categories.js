@@ -1,4 +1,4 @@
-const categories = (collection) => {
+const categories = function (collection) {
   return collection.getFilteredByGlob('./content/categories/*.md').reverse();
 };
 

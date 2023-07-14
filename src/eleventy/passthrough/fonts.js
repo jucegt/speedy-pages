@@ -1,4 +1,4 @@
-const fonts = (config) => {
+const fonts = function (config) {
   config.addPassthroughCopy({ 'src/assets/fonts': 'static/fonts' });
 };
 

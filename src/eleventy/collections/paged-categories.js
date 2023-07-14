@@ -1,6 +1,6 @@
 const speedy = require('../../../speedy.config');
 
-const pagedCategories = (collection) => {
+const pagedCategories = function (collection) {
   const posts = require('./posts')(collection);
   const categories = require('./categories')(collection);
   const { postsPerPage } = speedy.ui;

@@ -1,6 +1,6 @@
 const fonts = require('./fonts');
 
-const passthrough = (config) => {
+const passthrough = function (config) {
   fonts(config);
 };
 

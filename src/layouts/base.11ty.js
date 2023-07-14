@@ -8,7 +8,7 @@ const state = require('../components/state');
 const inlineCss = require('../utilities/css');
 
 const base = {
-  render: async ({ config, metadata, content }) => {
+  render: async function ({ config, metadata, content, collections }) {
     return /* html */ `
     <!doctype html>
     <html ⚡ lang="${config.language}">
@@ -41,7 +41,7 @@ const base = {
         <main class="content">
           ${content}
         </main>
-        ${footer(metadata)}
+        ${footer(metadata, collections.categories, collections.pages)}
         ${mask()}
         ${state()}
       </body>

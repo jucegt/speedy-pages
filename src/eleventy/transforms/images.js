@@ -2,7 +2,7 @@ const { JSDOM } = require('jsdom');
 const speedyConfig = require('../../../speedy.config');
 const imagesConfig = speedyConfig.images;
 
-const images = (content, outputPath) => {
+const images = function (content, outputPath) {
   if (
     outputPath &&
     outputPath.endsWith('.html') &&

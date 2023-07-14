@@ -1,7 +1,7 @@
 const root = require('./root');
 const src = require('./src');
 
-const ignores = (config) => {
+const ignores = function (config) {
   root(config);
   src(config);
 };

@@ -2,7 +2,7 @@ const optimizer = require('@ampproject/toolbox-optimizer').create({
   minify: true,
 });
 
-const amp = (content, outputPath) => {
+const amp = function (content, outputPath) {
   if (
     outputPath &&
     outputPath.endsWith('.html') &&

@@ -1,4 +1,4 @@
-const scss = (config) => {
+const scss = function (config) {
   config.addWatchTarget('./src/assets/scss/');
 };
 

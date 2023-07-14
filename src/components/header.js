@@ -6,7 +6,7 @@ const moon = require('../svgs/moon');
 const sun = require('../svgs/sun');
 const hamburger = require('../svgs/hamburger');
 
-const header = ({ url, title }) => {
+const header = function ({ url, title }) {
   const classesMenu = 'header__panel menu';
   const classesTools = 'header__panel tools';
 
