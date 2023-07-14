@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: jucegt/speedy-pages
-  branch: master
+  branch: develop
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'
