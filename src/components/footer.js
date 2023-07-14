@@ -29,7 +29,7 @@ const footer = function (config, { url, title }, categories, pages) {
                 .map(
                   (category) => /* html */ `
                   <li>
-                    <a href="${config.slugify(category.name)}">
+                    <a href="/${config.slugify(category.name)}">
                       ${category.name} <span>${category.posts}</span>
                     </a>
                   </li>
@@ -51,7 +51,7 @@ const footer = function (config, { url, title }, categories, pages) {
                 .map(
                   (page) => /* html */ `
                     <li>
-                      <a href="${config.slugify(page.name)}">${page.name}</a>
+                      <a href="/${config.slugify(page.name)}">${page.name}</a>
                     </li>
                   `,
                 )
