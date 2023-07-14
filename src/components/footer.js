@@ -3,7 +3,7 @@ const facebook = require('../svgs/facebook');
 const instagram = require('../svgs/instagram');
 const twitter = require('../svgs/twitter');
 
-const footer = function (config, { url, title }, categories, pages) {
+const footer = function ({ url, title }, categories, pages) {
   return /* html */ `
     <footer class="footer">
       <section class="footer__header">

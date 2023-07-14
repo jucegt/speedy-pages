@@ -42,7 +42,7 @@ const base = {
         <main class="content">
           ${content}
         </main>
-        ${footer(this, metadata, categoriesList, pagesList)}
+        ${footer(metadata, categoriesList, pagesList)}
         ${mask()}
         ${state()}
       </body>
