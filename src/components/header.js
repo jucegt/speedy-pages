@@ -14,19 +14,25 @@ const header = function ({ title }, menu) {
     <header class="header">
       <a href="/" class="header__link logo" title="${title}">${logo()}</a>
 
-      <nav class="${classesMenu}" [class]="menu ? '${classesMenu} header__panel--open' : '${classesMenu}'">
-        <ul class="menu__list">
-          ${menu
-            .map(
-              (category) => /* html */ `
-                <li class="menu__item">
-                  <a href="${category.url}" class="menu__link" title="${category.name}">${category.name}</a>
-                </li>
-              `,
-            )
-            .join('')}
-        </ul>
-      </nav>
+      ${
+        menu.length > 0
+          ? /* html */ `
+            <nav class="${classesMenu}" [class]="menu ? '${classesMenu} header__panel--open' : '${classesMenu}'">
+              <ul class="menu__list">
+                ${menu
+                  .map(
+                    (category) => /* html */ `
+                      <li class="menu__item">
+                        <a href="${category.url}" class="menu__link" title="${category.name}">${category.name}</a>
+                      </li>
+                    `,
+                  )
+                  .join('')}
+              </ul>
+            </nav>
+          `
+          : ''
+      }
 
       <section class="${classesTools}" [class]="search ? '${classesTools} header__panel--open' : '${classesTools}'">
         <form class="tools__search" method="post" action-xhr="/" target="_top">
@@ -68,14 +74,20 @@ const header = function ({ title }, menu) {
               <span>Modo</span>
             </button>
           </li>
-          <li class="nav__item">
-            <button on="tap:AMP.setState({ menu: !menu, search: false })" [class]="menu ? 'active' : ''">
-              <span class="nav__icon">
-                ${hamburger()}
-              </span>
-              <span>Menu</span>
-            </button>
-          </li>
+          ${
+            menu.length > 0
+              ? /* html */ `
+                <li class="nav__item">
+                  <button on="tap:AMP.setState({ menu: !menu, search: false })" [class]="menu ? 'active' : ''">
+                    <span class="nav__icon">
+                      ${hamburger()}
+                    </span>
+                    <span>Menu</span>
+                  </button>
+                </li>
+              `
+              : ''
+          }
         </ul>
       </nav>
     </header>
