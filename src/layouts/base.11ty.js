@@ -9,6 +9,7 @@ const inlineCss = require('../utilities/css');
 
 const base = {
   render: async function ({ config, metadata, content, collections }) {
+    const { categoriesMenu, categoriesList, pagesList } = collections;
     return /* html */ `
     <!doctype html>
     <html ⚡ lang="${config.language}">
@@ -37,11 +38,11 @@ const base = {
         <link rel="canonical" href="." />
       </head>
       <body>
-        ${header(metadata)}
+        ${header(metadata, categoriesMenu)}
         <main class="content">
           ${content}
         </main>
-        ${footer(this, metadata, collections.categoriesList, collections.pagesList)}
+        ${footer(this, metadata, categoriesList, pagesList)}
         ${mask()}
         ${state()}
       </body>
