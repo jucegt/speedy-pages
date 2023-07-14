@@ -31,8 +31,8 @@ collections:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'hidden' }
-      - { label: 'Site name', name: 'name', widget: 'string' }
-      - { label: 'Site description', name: 'description', widget: 'text' }
+      - { label: 'Site name', name: 'name', widget: 'string', required: false }
+      - { label: 'Site description', name: 'description', widget: 'text', required: false }
 
   - name: 'categories'
     label: 'Categories'
