@@ -3,7 +3,7 @@ const facebook = require('../svgs/facebook');
 const instagram = require('../svgs/instagram');
 const twitter = require('../svgs/twitter');
 
-const footer = ({ url, title }) => {
+const footer = function (config, { url, title }, categories, pages) {
   return /* html */ `
     <footer class="footer">
       <section class="footer__header">
@@ -19,32 +19,48 @@ const footer = ({ url, title }) => {
         </div>
       </section>
       <section class="footer__content">
-        <div class="footer__panel">
-          <h3>Categorias</h3>
-          <ul class="footer__list footer__list--inline">
-            <li><a href="/" title="Videojuegos">Videojuegos <span>3</span></a></li>
-            <li><a href="/" title="Cine">Cine <span>5</span></a></li>
-            <li><a href="/" title="Television">Television <span>8</span></a></li>
-            <li><a href="/" title="Teatro">Teatro <span>1</span></a></li>
-            <li><a href="/" title="Cultura y Deporte">Cultura y Deporte <span>2</span></a></li>
-            <li><a href="/" title="Videojuegos">Videojuegos <span>3</span></a></li>
-            <li><a href="/" title="Cine">Cine <span>5</span></a></li>
-            <li><a href="/" title="Television">Television <span>8</span></a></li>
-            <li><a href="/" title="Teatro">Teatro <span>1</span></a></li>
-            <li><a href="/" title="Cultura y Deporte">Cultura y Deporte <span>2</span></a></li>
-          </ul>
-        </div>
-        <div class="footer__panel">
-          <h3>Paginas</h3>
-          <ul class="footer__list">
-            <li><a href="/" title="Inicio">Inicio</a></li>
-            <li><a href="/" title="Sobre Nosotros">Sobre Nosotros</a></li>
-            <li><a href="/" title="Contacto">Contacto</a></li>
-            <li><a href="/" title="Politica de Privacidad">Politica de Privacidad</a></li>
-            <li><a href="/" title="Politica de Cookies">Politica de Cookies</a></li>
-            <li><a href="/" title="Aviso Legal">Aviso Legal</a></li>
-          </ul>
-        </div>
+        ${
+          categories?.length > 0
+            ? /* html */ `
+          <div class="footer__panel">
+            <h3>Categorias</h3>
+            <ul class="footer__list footer__list--inline">
+              ${categories
+                .map(
+                  (category) => /* html */ `
+                  <li>
+                    <a href="${config.slugify(category.name)}">
+                      ${category.name} <span>${category.posts}</span>
+                    </a>
+                  </li>
+                  `,
+                )
+                .join('')}
+            </ul>
+          </div>
+        `
+            : ''
+        }
+        ${
+          pages?.length > 0
+            ? /* html */ `
+          <div class="footer__panel">
+            <h3>Paginas</h3>
+            <ul class="footer__list">
+              ${pages
+                .map(
+                  (page) => /* html */ `
+                    <li>
+                      <a href="${config.slugify(page.name)}">${page.name}</a>
+                    </li>
+                  `,
+                )
+                .join('')}
+            </ul>
+          </div>
+          `
+            : ''
+        }
       </section>
       <section class="footer__bottom">
         <p class="copy">©2023 ${title} - Todos los derechos reservados</p>
