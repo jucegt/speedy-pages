@@ -6,22 +6,25 @@ const moon = require('../svgs/moon');
 const sun = require('../svgs/sun');
 const hamburger = require('../svgs/hamburger');
 
-const header = function ({ url, title }) {
+const header = function ({ title }, menu) {
   const classesMenu = 'header__panel menu';
   const classesTools = 'header__panel tools';
 
   return /* html */ `
     <header class="header">
-      <a href="${url}" class="header__link logo" title="${title}">${logo()}</a>
+      <a href="/" class="header__link logo" title="${title}">${logo()}</a>
 
       <nav class="${classesMenu}" [class]="menu ? '${classesMenu} header__panel--open' : '${classesMenu}'">
         <ul class="menu__list">
-          <li class="menu__item">
-            <a href="${url}" class="menu__link" title="Inicio">Inicio</a>
-          </li>
-          <li class="menu__item">
-            <a href="${url}/sobre-nosotros" class="menu__link" title="Sobre Nosotros">Sobre Nosotros</a>
-          </li>
+          ${menu
+            .map(
+              (category) => /* html */ `
+                <li class="menu__item">
+                  <a href="${category.url}" class="menu__link" title="${category.name}">${category.name}</a>
+                </li>
+              `,
+            )
+            .join('')}
         </ul>
       </nav>
 
@@ -41,7 +44,7 @@ const header = function ({ url, title }) {
       <nav class="header__nav nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="${url}">
+            <a href="/">
               <span class="nav__icon">
                 ${home()}
               </span>
