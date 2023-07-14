@@ -41,7 +41,7 @@ const base = {
         <main class="content">
           ${content}
         </main>
-        ${footer(this, metadata, collections.categoriesList, collections.pages)}
+        ${footer(this, metadata, collections.categoriesList, collections.pagesList)}
         ${mask()}
         ${state()}
       </body>
