@@ -21,6 +21,18 @@ slug:
   clean_accents: true
 
 collections:
+  - name: 'config'
+    label: 'Configurations'
+    label_singular: 'Configuration'
+    folder: 'content/config'
+    create: false
+    delete: false
+    editor:
+      preview: false
+    fields:
+      - { label: 'Site name', name: 'name', widget: 'string' }
+      - { label: 'Site description', name: 'description', widget: 'text' }
+
   - name: 'categories'
     label: 'Categories'
     label_singular: 'Category'
@@ -28,21 +40,12 @@ collections:
     create: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - {
-          label: 'Show in Menu',
-          name: 'showmenu',
-          widget: 'boolean',
-          required: false,
-        }
+      - { label: 'Show in Menu', name: 'showmenu', widget: 'boolean', required: false }
       - {
           label: 'Description',
           name: 'description',
           widget: 'text',
-          pattern:
-            [
-              '.{140,160}',
-              'The description should be between 140 and 160 characters.',
-            ],
+          pattern: ['.{140,160}', 'The description should be between 140 and 160 characters.'],
         }
       - { label: 'Excerpt', name: 'excerpt', widget: 'text' }
       - { label: 'Featured Image', name: 'featuredimage', widget: image }
@@ -78,11 +81,7 @@ collections:
           label: 'Description',
           name: 'description',
           widget: 'text',
-          pattern:
-            [
-              '.{140,160}',
-              'The description should be between 140 and 160 characters.',
-            ],
+          pattern: ['.{140,160}', 'The description should be between 140 and 160 characters.'],
         }
       - { label: 'Excerpt', name: 'excerpt', widget: 'text' }
       - {
