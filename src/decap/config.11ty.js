@@ -6,9 +6,7 @@ const config = {
   },
   render: async function ({ metadata }) {
     const file = await readFile('./src/decap/config.yml');
-    const configFile = file
-      .toString()
-      .replace(/'{{site_url}}'/gi, metadata.url);
+    const configFile = file.toString().replace(/'{{site_url}}'/gi, metadata.url);
     return configFile;
   },
 };

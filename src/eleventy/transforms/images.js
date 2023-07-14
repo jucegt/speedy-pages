@@ -3,11 +3,7 @@ const speedyConfig = require('../../../speedy.config');
 const imagesConfig = speedyConfig.images;
 
 const images = function (content, outputPath) {
-  if (
-    outputPath &&
-    outputPath.endsWith('.html') &&
-    !outputPath.includes('/admin/')
-  ) {
+  if (outputPath && outputPath.endsWith('.html') && !outputPath.includes('/admin/')) {
     const dom = new JSDOM(content);
     const document = dom.window.document;
     const images = document.querySelectorAll('img');
@@ -39,8 +35,7 @@ const images = function (content, outputPath) {
 
         for (const size of imagesConfig.webp.sizes) {
           const imagePath = `${path}${imagesConfig.webp.name}/${size.name}${toFormat} ${size.width}w`;
-          webpSrcSet =
-            webpSrcSet !== '' ? `${webpSrcSet}, ${imagePath}` : imagePath;
+          webpSrcSet = webpSrcSet !== '' ? `${webpSrcSet}, ${imagePath}` : imagePath;
         }
 
         const ampWebp = document.createElement('amp-img');

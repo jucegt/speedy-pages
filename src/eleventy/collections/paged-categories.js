@@ -7,9 +7,7 @@ const pagedCategories = function (collection) {
   const pagedPosts = [];
 
   categories.forEach((category) => {
-    const postByCategory = posts.filter(
-      (post) => post.data.category === category.name,
-    );
+    const postByCategory = posts.filter((post) => post.data.category === category.name);
     const numberOfPages = Math.ceil(postByCategory.length / postsPerPage);
 
     for (let pageNum = 1; pageNum <= numberOfPages; pageNum++) {

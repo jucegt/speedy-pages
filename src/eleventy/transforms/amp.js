@@ -3,11 +3,7 @@ const optimizer = require('@ampproject/toolbox-optimizer').create({
 });
 
 const amp = function (content, outputPath) {
-  if (
-    outputPath &&
-    outputPath.endsWith('.html') &&
-    !outputPath.includes('/admin/')
-  ) {
+  if (outputPath && outputPath.endsWith('.html') && !outputPath.includes('/admin/')) {
     return optimizer.transformHtml(content).then((optimizedHtml) => {
       return optimizedHtml;
     });
