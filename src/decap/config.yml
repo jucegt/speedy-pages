@@ -21,19 +21,6 @@ slug:
   clean_accents: true
 
 collections:
-  - name: 'config'
-    label: 'Configurations'
-    label_singular: 'Configuration'
-    folder: 'content/config'
-    create: false
-    delete: false
-    editor:
-      preview: false
-    fields:
-      - { label: 'Title', name: 'title', widget: 'hidden' }
-      - { label: 'Site name', name: 'name', widget: 'string', required: false }
-      - { label: 'Site description', name: 'description', widget: 'text', required: false }
-
   - name: 'categories'
     label: 'Categories'
     label_singular: 'Category'
@@ -104,3 +91,55 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'settings'
+    label: 'Settings'
+    label_singular: 'Setting'
+    folder: 'content/settings'
+    create: false
+    delete: false
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'hidden', default: 'Site Configuration' }
+      - label: 'SEO Information'
+        name: 'seoinfo'
+        widget: 'object'
+        collapsed: true
+        fields:
+          - { label: 'Site name', name: 'name', widget: 'string', required: false }
+          - { label: 'Site description', name: 'description', widget: 'text', required: false }
+      - label: 'Social Media'
+        name: 'socialmedia'
+        widget: 'list'
+        summary: '{{fields.name}} - {{fields.url}}'
+        fields:
+          - {
+              label: 'Name',
+              name: 'name',
+              widget: 'select',
+              options:
+                [
+                  'Behance',
+                  'Discrod',
+                  'Dribble',
+                  'Facebook',
+                  'GitHub',
+                  'GitLab',
+                  'Google',
+                  'Instagram',
+                  'LinkedIn',
+                  'Medium',
+                  'Pinterest',
+                  'Pocket',
+                  'RSS',
+                  'Snapchat',
+                  'StackOverflow',
+                  'Telegram',
+                  'TikTok',
+                  'Twitter',
+                  'YouTube',
+                  'Yelp',
+                ],
+            }
+          - { label: 'URL', name: 'url', widget: 'string' }
