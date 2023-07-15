@@ -143,3 +143,16 @@ collections:
                 ],
             }
           - { label: 'URL', name: 'url', widget: 'string' }
+      - label: 'Footer Pages'
+        name: 'footerpages'
+        widget: 'list'
+        summary: '{{fields.page}}'
+        fields:
+          - {
+              label: 'Page',
+              name: 'page',
+              widget: 'relation',
+              collection: 'pages',
+              search_fields: ['title'],
+              value_field: 'title',
+            }
