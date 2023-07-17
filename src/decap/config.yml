@@ -97,19 +97,19 @@ collections:
     editor:
       preview: false
     files:
-      - label: 'Site Settings'
-        name: 'sitesettings'
-        file: 'content/settings/default.md'
+      - label: 'SEO Information'
+        name: 'seoinfo'
+        file: 'content/settings/seo.md'
         fields:
-          - label: 'SEO Information'
-            name: 'seoinfo'
-            widget: 'object'
-            collapsed: true
-            fields:
-              - { label: 'Site name', name: 'name', widget: 'string', required: false }
-              - { label: 'Site description', name: 'description', widget: 'text', required: false }
-          - label: 'Social Media'
-            name: 'socialmedia'
+          - { label: 'Site name', name: 'name', widget: 'string', required: false }
+          - { label: 'Site description', name: 'description', widget: 'text', required: false }
+
+      - label: 'Social Media'
+        name: 'socialmedia'
+        file: 'content/settings/socialmedia.md'
+        fields:
+          - label: 'Social Links'
+            name: 'sociallinks'
             widget: 'list'
             summary: '{{fields.name}} - {{fields.url}}'
             fields:
@@ -142,6 +142,10 @@ collections:
                     ],
                 }
               - { label: 'URL', name: 'url', widget: 'string' }
+      - label: 'Links'
+        name: 'links'
+        file: 'content/settings/links.md'
+        fields:
           - label: 'Footer Pages'
             name: 'footerpages'
             widget: 'list'
