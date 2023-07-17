@@ -92,8 +92,10 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
-  - name: 'settings',
+  - name: 'settings'
     label: 'Settings'
+    editor:
+      preview: false
     files:
       - label: 'Site Settings'
         name: 'sitesettings'
