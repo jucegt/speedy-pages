@@ -5,8 +5,9 @@ const pagedPosts = require('./paged-posts');
 const pagedCategories = require('./paged-categories');
 const categoryByName = require('./category-by-name');
 const categoriesList = require('./categories-list');
-const pagesList = require('./pages-list');
 const categoriesMenu = require('./categories-menu');
+const { seo, socialMedia, links } = require('./settings');
+const footerPages = require('./footer-pages');
 
 const collections = function (config) {
   config.addCollection('posts', posts);
@@ -16,8 +17,11 @@ const collections = function (config) {
   config.addCollection('pagedCategories', pagedCategories);
   config.addCollection('categoryByName', categoryByName);
   config.addCollection('categoriesList', categoriesList(config));
-  config.addCollection('pagesList', pagesList);
   config.addCollection('categoriesMenu', categoriesMenu(config));
+  config.addCollection('seo', seo);
+  config.addCollection('socialMedia', socialMedia);
+  config.addCollection('links', links);
+  config.addCollection('footerPages', footerPages(config));
 };
 
 module.exports = collections;
