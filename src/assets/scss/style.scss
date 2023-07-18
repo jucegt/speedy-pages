@@ -15,10 +15,25 @@
 }
 
 @include min-query(md) {
+  @include container--md;
   @include header--md;
   @include footer--md;
 }
 
 @include min-query(lg) {
+  @include container--lg;
   @include header--lg;
+}
+
+@include min-query(xl) {
+  @include container--xl;
+}
+
+@include min-query(xxl) {
+  @include container--xxl;
+}
+
+@include min-query(extra) {
+  @include header--extra;
+  @include footer--extra;
 }

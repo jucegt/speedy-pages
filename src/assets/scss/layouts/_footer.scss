@@ -1,8 +1,11 @@
 .footer {
+  padding: to-rem(20) 0;
   background: var(--footer-bg);
   box-shadow: 0 0 to-rem(40) var(--shadow);
   margin-bottom: to-rem(76);
-  padding: to-rem(20);
+  .container {
+    max-width: none;
+  }
   &__panel {
     h1,
     h2,
@@ -102,6 +105,14 @@
         flex-grow: 1;
         flex-shrink: 1;
       }
+    }
+  }
+}
+
+@mixin footer--extra {
+  .footer {
+    .container {
+      padding: 0 to-rem(100);
     }
   }
 }

@@ -7,9 +7,7 @@
     svg {
       &.sun,
       &.moon {
-        transition:
-          transform ease 0.2s,
-          opacity ease 0.2s;
+        transition: transform ease 0.2s, opacity ease 0.2s;
       }
     }
     .sun {
