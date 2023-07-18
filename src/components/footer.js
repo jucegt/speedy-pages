@@ -3,11 +3,11 @@ const facebook = require('../svgs/facebook');
 const instagram = require('../svgs/instagram');
 const twitter = require('../svgs/twitter');
 
-const footer = function ({ url, title }, categories, pages) {
+const footer = function ({ title }, categories, pages) {
   return /* html */ `
     <footer class="footer">
       <section class="footer__header">
-        <a class="footer__link logo" href="${url}" title="${title}">
+        <a class="footer__link logo" href="/" title="${title}">
           ${logo()}
         </a>
         <div class="footer__panel social">

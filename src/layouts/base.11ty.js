@@ -8,8 +8,8 @@ const state = require('../components/state');
 const inlineCss = require('../utilities/css');
 
 const base = {
-  render: async function ({ config, metadata, content, collections }) {
-    const { categoriesMenu, categoriesList, pagesList } = collections;
+  render: async function ({ config, content, collections }) {
+    const { categoriesMenu, categoriesList, footerPages, seo } = collections;
     return /* html */ `
     <!doctype html>
     <html ⚡ lang="${config.language}">
@@ -19,8 +19,8 @@ const base = {
         <meta name="generator" content="eleventy" />
         <meta name="viewport" content="width=device-width" />
         <!-- BASIC SEO -->
-        <meta name="description" content="Descripcion" />
-        <title>${metadata.title}</title>
+        <meta name="description" content="${seo.description}" />
+        <title>${seo.title}</title>
         <!-- OG -->
         <!-- PRELOAD -->
         <link rel="preload" href="/static/fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -38,11 +38,11 @@ const base = {
         <link rel="canonical" href="." />
       </head>
       <body>
-        ${header(metadata, categoriesMenu)}
+        ${header(seo, categoriesMenu)}
         <main class="content">
           ${content}
         </main>
-        ${footer(metadata, categoriesList, pagesList)}
+        ${footer(seo, categoriesList, footerPages)}
         ${mask()}
         ${state()}
       </body>
