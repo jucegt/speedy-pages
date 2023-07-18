@@ -1,3 +1,4 @@
 ---
 footerpages:
+  - page: Pagina
 ---
