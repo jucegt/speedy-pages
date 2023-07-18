@@ -90,3 +90,18 @@
     padding: 0;
   }
 }
+
+@mixin footer--md {
+  .footer {
+    margin-bottom: 0;
+    &__content {
+      flex-direction: row;
+      .footer__panel {
+        display: block;
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
+    }
+  }
+}

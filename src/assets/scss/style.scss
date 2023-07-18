@@ -16,4 +16,5 @@
 
 @include min-query(md) {
   @include header--md;
+  @include footer--md;
 }
