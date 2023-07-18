@@ -26,6 +26,13 @@ body {
   background: var(--bg);
 }
 
+a {
+  color: var(--darkblue);
+  &:hover {
+    color: var(--orange);
+  }
+}
+
 button,
 input,
 textarea {

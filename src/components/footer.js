@@ -1,5 +1,5 @@
 const logo = require('../svgs/logo');
-const socialIcons = require('../svgs/social-icons');
+const socialLinks = require('./social-links');
 
 const footer = function (seo, socialMedia, categories, pages) {
   const { sociallinks } = socialMedia;
@@ -13,23 +13,7 @@ const footer = function (seo, socialMedia, categories, pages) {
           sociallinks?.length > 0
             ? /* html */ `
               <div class="footer__panel social">
-                <ul>
-                  ${sociallinks
-                    .map(
-                      (link) => /* html */ `
-                      <li>
-                        <a
-                          class="social__button ${link.name.toLowerCase()}"
-                          href="${link.url}"
-                          aria-label="${link.name}"
-                        >
-                          ${socialIcons[link.name.toLowerCase()]}
-                        </a>
-                      </li>
-                      `,
-                    )
-                    .join('')}
-                </ul>
+                ${socialLinks(sociallinks)}
               </div>
             `
             : ''
@@ -46,8 +30,8 @@ const footer = function (seo, socialMedia, categories, pages) {
                     .map(
                       (category) => /* html */ `
                       <li>
-                        <a href="${category.url}">
-                          ${category.name} <span>${category.posts}</span>
+                        <a href="${category.url}" data-total="${category.posts}">
+                          ${category.name}
                         </a>
                       </li>
                       `,

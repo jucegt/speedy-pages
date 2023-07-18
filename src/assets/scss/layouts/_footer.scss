@@ -46,24 +46,29 @@
       flex-wrap: wrap;
       a {
         display: block;
-      }
-      span {
-        background: var(--oragenta);
-        border-radius: to-rem(4);
-        color: var(--white-200);
-        display: inline-block;
-        font-size: to-rem(12);
-        font-weight: bold;
-        min-width: to-rem(19);
-        padding: to-rem(2) to-rem(4);
-        text-align: center;
-        top: to-rem(-1);
+        &:after {
+          content: attr(data-total);
+          background: var(--oragenta);
+          border-radius: to-rem(4);
+          color: var(--white-200);
+          display: inline-block;
+          font-size: to-rem(12);
+          font-weight: bold;
+          min-width: to-rem(19);
+          padding: to-rem(2) to-rem(4);
+          text-align: center;
+          top: to-rem(-1);
+          margin-left: to-rem(4);
+        }
       }
     }
     li {
       a {
         color: var(--text);
         text-decoration: none;
+        &:hover {
+          color: var(--orange);
+        }
       }
     }
   }
@@ -76,39 +81,6 @@
       path {
         fill: var(--text);
       }
-    }
-  }
-  .social {
-    ul {
-      display: flex;
-      gap: to-rem(16);
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    &__button {
-      align-items: center;
-      border-radius: to-rem(6);
-      color: var(--white-200);
-      display: flex;
-      height: to-rem(40);
-      justify-content: center;
-      text-decoration: none;
-      width: to-rem(40);
-      svg {
-        display: block;
-        height: to-rem(24);
-        width: to-rem(24);
-      }
-    }
-    .facebook {
-      background: var(--facebook);
-    }
-    .instagram {
-      background: var(--instagram);
-    }
-    .twitter {
-      background: var(--twitter);
     }
   }
   .copy {

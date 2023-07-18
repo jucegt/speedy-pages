@@ -1,0 +1,36 @@
+.social {
+  ul {
+    display: flex;
+    gap: to-rem(16);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__button {
+    align-items: center;
+    border-radius: to-rem(6);
+    color: var(--white-200);
+    display: flex;
+    height: to-rem(40);
+    justify-content: center;
+    text-decoration: none;
+    width: to-rem(40);
+    svg {
+      display: block;
+      height: to-rem(24);
+      width: to-rem(24);
+    }
+    &:hover {
+      color: var(--white-200);
+    }
+  }
+  .facebook {
+    background: var(--facebook);
+  }
+  .instagram {
+    background: var(--instagram);
+  }
+  .twitter {
+    background: var(--twitter);
+  }
+}
