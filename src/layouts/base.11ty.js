@@ -9,7 +9,7 @@ const inlineCss = require('../utilities/css');
 
 const base = {
   render: async function ({ config, content, collections }) {
-    const { categoriesMenu, categoriesList, footerPages, seo } = collections;
+    const { categoriesMenu, categoriesList, footerPages, seo, socialMedia } = collections;
     return /* html */ `
     <!doctype html>
     <html ⚡ lang="${config.language}">
@@ -42,7 +42,7 @@ const base = {
         <main class="content">
           ${content}
         </main>
-        ${footer(seo, categoriesList, footerPages)}
+        ${footer(seo, socialMedia, categoriesList, footerPages)}
         ${mask()}
         ${state()}
       </body>

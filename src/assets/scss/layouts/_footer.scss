@@ -19,6 +19,7 @@
   &__header {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     gap: to-rem(20);
     justify-content: space-between;
   }
@@ -100,13 +101,13 @@
         width: to-rem(24);
       }
     }
-    .fb {
+    .facebook {
       background: var(--facebook);
     }
-    .ig {
+    .instagram {
       background: var(--instagram);
     }
-    .tw {
+    .twitter {
       background: var(--twitter);
     }
   }
