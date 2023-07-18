@@ -104,8 +104,8 @@ collections:
         name: 'seoinfo'
         file: 'content/settings/seo.md'
         fields:
-          - { label: 'Site name', name: 'name', widget: 'string', required: false }
-          - { label: 'Site description', name: 'description', widget: 'text', required: false }
+          - { label: 'Site name', name: 'title', widget: 'string' }
+          - { label: 'Site description', name: 'description', widget: 'text' }
 
       - label: 'Social Media'
         name: 'socialmedia'
