@@ -28,7 +28,7 @@ collections:
     create: true
     path: '{{year}}/{{month}}/{{slug}}'
     slug: '{{fields.slug}}'
-    media_folder: content/static
+    media_folder: ../../../static
     public_folder: /
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
