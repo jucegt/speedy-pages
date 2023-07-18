@@ -1,6 +1,6 @@
 const { JSDOM } = require('jsdom');
-const speedyConfig = require('../../../speedy.config');
-const imagesConfig = speedyConfig.images;
+const speedy = require('../../../speedy.config');
+const imagesConfig = speedy.images;
 
 const images = function (content, outputPath) {
   if (outputPath && outputPath.endsWith('.html') && !outputPath.includes('/admin/')) {

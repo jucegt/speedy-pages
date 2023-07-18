@@ -2,10 +2,7 @@ require('dotenv').config();
 
 const speedyConfig = {
   language: process.env.LANGUAGE || 'en',
-  metadata: {
-    title: 'SpeedyPages',
-    url: process.env.ENV_URL || process.env.URL || 'http://localhost:8080',
-  },
+  url: process.env.ENV_URL || process.env.URL || 'http://localhost:8080',
   ui: {
     paginatedPagePrefix: '',
     postsPerPage: 12,

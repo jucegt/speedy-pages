@@ -3,8 +3,8 @@ const path = require('node:path');
 const glob = require('glob');
 const sharp = require('sharp');
 
-const speedyConfig = require('../../../speedy.config');
-const config = speedyConfig.images;
+const speedy = require('../../../speedy.config');
+const config = speedy.images;
 
 const files = glob.sync(config.src);
 

@@ -1,7 +1,8 @@
-const speedyConfig = require('../../speedy.config');
+const speedy = require('../../speedy.config');
 
 const config = {
-  language: speedyConfig.language || 'en',
+  language: speedy.language || 'en',
+  url: speedy.url || 'http://localhost:8080',
 };
 
 module.exports = config;
