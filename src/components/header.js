@@ -41,10 +41,27 @@ const header = function ({ title }, menu) {
             ${search()}
           </div>
         </form>
-        <div class="tools__mode">
-          ${moon()}
-          ${sun()}
+        <div class="tools__mode mode">
+          <button on="tap:AMP.toggleTheme()">
+            <span class="mode__icon">
+              ${moon()}
+              ${sun()}
+            </span>
+          </button>
         </div>
+        ${
+          menu.length > 0
+            ? /* html */ `
+              <div class="tools__menu">
+                <button on="tap:AMP.setState({ menu: !menu, search: false })" [class]="menu ? 'active' : ''">
+                  <span>
+                    ${hamburger()}
+                  </span>
+                </button>
+              </div>
+            `
+            : ''
+        }
       </section>
 
       <nav class="header__nav nav">
@@ -65,9 +82,9 @@ const header = function ({ title }, menu) {
               <span>Buscar</span>
             </button>
           </li>
-          <li class="nav__item">
+          <li class="nav__item mode">
             <button on="tap:AMP.toggleTheme()">
-              <span class="nav__icon">
+              <span class="nav__icon mode__icon">
                 ${moon()}
                 ${sun()}
               </span>

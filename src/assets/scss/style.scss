@@ -13,3 +13,7 @@
 .amp-dark-mode {
   @include header--dark;
 }
+
+@include min-query(md) {
+  @include header--md;
+}
