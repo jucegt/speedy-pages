@@ -26,7 +26,10 @@ collections:
     label_singular: 'Post'
     folder: 'content/posts'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    path: '{{year}}/{{month}}/{{slug}}'
+    slug: '{{fields.slug}}'
+    media_folder: content/static
+    public_folder: /
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Slug', name: 'slug', widget: 'string' }
@@ -57,15 +60,6 @@ collections:
       - { label: 'Featured Image', name: 'featuredimage', widget: image }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
-  - name: 'pages'
-    label: 'Pages'
-    label_singular: 'Page'
-    folder: 'content/pages'
-    create: true
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-
   - name: 'categories'
     label: 'Categories'
     label_singular: 'Category'
@@ -91,6 +85,15 @@ collections:
     create: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
+
+  - name: 'pages'
+    label: 'Pages'
+    label_singular: 'Page'
+    folder: 'content/pages'
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'settings'
     label: 'Settings'
