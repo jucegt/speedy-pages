@@ -23,8 +23,9 @@ const base = {
         <title>${seo.title}</title>
         <!-- OG -->
         <!-- PRELOAD -->
-        <link rel="preload" href="/static/fonts/lato-regular.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="/static/fonts/lato-bold.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" as="font" href="/static/fonts/lato-regular.woff2" type="font/woff2" crossorigin>
+        <link rel="preload" as="font" href="/static/fonts/lato-bold.woff2" type="font/woff2" crossorigin>
+        <link rel="preload" as="image" href="/static/webp/md/11ty.webp" imagesrcset="/static/webp/md/11ty.webp 600w, /static/webp/lg/11ty.webp 1200w" />
         <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
         <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-form-0.1.js">
         <!-- AMP -->
