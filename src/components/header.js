@@ -24,7 +24,7 @@ const header = function ({ title }, menu) {
                     .map(
                       (category) => /* html */ `
                         <li class="menu__item">
-                          <a href="${category.url}" class="menu__link" title="${category.name}">${category.name}</a>
+                          <a href="/${category.url}/" class="menu__link" title="${category.name}">${category.name}</a>
                         </li>
                       `,
                     )
