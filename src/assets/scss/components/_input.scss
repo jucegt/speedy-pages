@@ -6,9 +6,10 @@
     color: var(--title);
     height: to-rem(40);
     outline: to-rem(2) solid transparent;
+    outline-offset: to-rem(-2);
     padding: 0 to-rem(14);
     width: 100%;
-    transition: outline ease-in 0.2s;
+    transition: outline-offset ease-in 0.2s, outline-color ease-in 0.2s;
     &:focus {
       outline-offset: to-rem(2);
       outline-color: var(--orange);
