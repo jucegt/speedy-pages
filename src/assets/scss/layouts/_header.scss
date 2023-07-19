@@ -128,7 +128,8 @@
   }
 
   .tools {
-    &__mode {
+    &__mode,
+    &__menu {
       display: none;
     }
   }
