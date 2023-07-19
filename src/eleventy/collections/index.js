@@ -14,7 +14,7 @@ const collections = function (config) {
   config.addCollection('categories', categories);
   config.addCollection('pages', pages);
   config.addCollection('pagedPosts', pagedPosts);
-  config.addCollection('pagedCategories', pagedCategories);
+  config.addCollection('pagedCategories', pagedCategories(config));
   config.addCollection('categoryByName', categoryByName);
   config.addCollection('categoriesList', categoriesList(config));
   config.addCollection('categoriesMenu', categoriesMenu(config));
