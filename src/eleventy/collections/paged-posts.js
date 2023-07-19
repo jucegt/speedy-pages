@@ -11,11 +11,17 @@ const pagedPosts = function (collection) {
     const sliceTo = sliceFrom + postsPerPage;
 
     pagedPosts.push({
-      number: pageNum,
+      items: posts.slice(sliceFrom, sliceTo),
+      pageNumber: pageNum,
       total: numberOfPages,
-      posts: posts.slice(sliceFrom, sliceTo),
-      first: pageNum === 1,
-      last: pageNum === numberOfPages,
+      page: {
+        previous: pageNum === 1 ? null : pageNum - 1,
+        next: pageNum === numberOfPages ? null : pageNum + 1,
+        first: pageNum === 1,
+        last: pageNum === numberOfPages,
+      },
+      previousPageLink: pageNum === 1 ? null : `/${pageNum - 1 === 1 ? null : `${pageNum - 1}/`}`,
+      nextPageLink: pageNum === numberOfPages ? null : `/${pageNum + 1}/`,
     });
   }
 
