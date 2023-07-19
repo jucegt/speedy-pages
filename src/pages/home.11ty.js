@@ -3,34 +3,29 @@ const home = {
     return {
       layout: 'base',
       pagination: {
-        data: 'collections.posts',
-        size: 12,
-        alias: 'posts',
+        data: 'collections.pagedPosts',
+        size: 1,
+        alias: 'pages',
       },
-      permalink: ({ pagination }) => {
+      permalink: ({ pages }) => {
         let link = '/';
-        if (pagination.pageNumber > 0) {
-          link += `${pagination.pageNumber + 1}/`;
+        if (pages.pageNumber > 1) {
+          link += `${pages.pageNumber}/`;
         }
         return link;
       },
     };
   },
-  render: function ({ config, posts }) {
+  render: function ({ pages }) {
     return /* html */ `
       <div class="container">
-        ${posts
+        ${pages.items
           .map(
             (post) => /* html */ `
-            <p>${post.url}</p>
+            <p><a href="${post.url}">${post.url}</a></p>
           `,
           )
           .join('')}
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong>Asperiores beatae</strong> neque facere temporibus, fugit ullam sequi quidem expedita aspernatur, assumenda aliquid modi perferendis enim nostrum architecto doloremque explicabo cupiditate voluptates!</p>
-        <p>${config.language}</p>
-        <p><img src="/11ty.png" alt="11ty" /></p>
-        <p>${config.language}</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong>Asperiores beatae</strong> neque facere temporibus, fugit ullam sequi quidem expedita aspernatur, assumenda aliquid modi perferendis enim nostrum architecto doloremque explicabo cupiditate voluptates!</p>
       </div>
     `;
   },
