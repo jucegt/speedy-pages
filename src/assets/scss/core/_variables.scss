@@ -31,6 +31,7 @@
   --text: var(--gray);
   --title: var(--blue-900);
   --form-element-bg: var(--white-300);
+  --post-bg: var(--white);
 }
 
 @mixin dark {
@@ -42,4 +43,5 @@
   --border: var(--gray-800);
   --title: var(--white-100);
   --form-element-bg: var(--gray-800);
+  --post-bg: var(--gray-900);
 }

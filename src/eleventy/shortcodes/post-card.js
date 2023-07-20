@@ -1,3 +1,6 @@
+const calendar = require('../../svgs/calendar.js');
+const clock = require('../../svgs/clock.js');
+
 const postCard = function ({ data, content, url }) {
   const words = this.parseHTML(content);
   const wordsPerMinute = 300;
@@ -6,7 +9,7 @@ const postCard = function ({ data, content, url }) {
   const { featuredimage, title, date } = data;
   return /* html */ `
     <article class="post-card">
-      <a href="${url}" title="${title}">
+      <a href="${url}" title="${title}" class="post-card__image">
         <amp-img
           alt="${title}"
           src="${this.src(featuredimage, true)}"
@@ -25,11 +28,11 @@ const postCard = function ({ data, content, url }) {
           </amp-img>
         </amp-img>
       </a>
-      <section class="content">
+      <section class="post-card__content">
         <h2><a href="${url}" title="${title}">${title}</a></h2>
-        <div class="content__info">
-          <p>${this.date(date)}</p>
-          <p>${readingTime} min</p>
+        <div class="post-card__info">
+          <p>${calendar()} ${this.date(date)}</p>
+          <p>${clock()} ${readingTime} min</p>
         </div>
       </section>
     </article>
