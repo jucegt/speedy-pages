@@ -24,13 +24,7 @@ const categories = {
       <div class="container">
         <h1>${title}</h1>
         <p>${excerpt}</p>
-        ${pages.items
-          .map(
-            (post) => /* html */ `
-            <p><a href="${post.url}">${post.url}</a></p>
-          `,
-          )
-          .join('')}
+        ${pages.items.map((post) => this.postCard(post)).join('')}
       </div>
     `;
   },
