@@ -1,5 +1,4 @@
-const logo = require('../svgs/logo');
-const socialLinks = require('./social-links');
+const logo = require('../../svgs/logo');
 
 const footer = function (seo, socialMedia, categories, pages) {
   const { sociallinks } = socialMedia;
@@ -14,7 +13,7 @@ const footer = function (seo, socialMedia, categories, pages) {
             sociallinks?.length > 0
               ? /* html */ `
                 <div class="footer__panel social">
-                  ${socialLinks(sociallinks)}
+                  ${this.socialLinks(sociallinks)}
                 </div>
               `
               : ''

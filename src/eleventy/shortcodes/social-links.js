@@ -1,4 +1,4 @@
-const socialIcons = require('../svgs/social-icons');
+const socialIcons = require('../../svgs/social-icons');
 
 const socialLinks = function (social) {
   return /* html */ `
