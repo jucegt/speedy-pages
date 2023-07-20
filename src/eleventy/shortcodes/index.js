@@ -3,6 +3,7 @@ const footer = require('./footer');
 const socialLinks = require('./social-links');
 const mask = require('./mask');
 const state = require('./state');
+const postCard = require('./post-card');
 
 const shortcodes = function (config) {
   config.addShortcode('header', header);
@@ -10,6 +11,7 @@ const shortcodes = function (config) {
   config.addShortcode('socialLinks', socialLinks);
   config.addShortcode('mask', mask);
   config.addShortcode('state', state);
+  config.addShortcode('postCard', postCard);
 };
 
 module.exports = shortcodes;
