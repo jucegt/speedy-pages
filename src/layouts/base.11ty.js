@@ -1,5 +1,4 @@
 // Components
-const header = require('../components/header');
 const footer = require('../components/footer');
 const mask = require('../components/mask');
 const state = require('../components/state');
@@ -38,7 +37,7 @@ const base = {
         <link rel="canonical" href="." />
       </head>
       <body>
-        ${header(seo, categoriesMenu)}
+        ${this.header(seo, categoriesMenu)}
         <main class="content">
           ${content}
         </main>
