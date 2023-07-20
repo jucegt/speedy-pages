@@ -43,7 +43,7 @@ const header = function ({ title }, menu) {
             </div>
           </form>
           <div class="tools__mode mode">
-            <button on="tap:AMP.toggleTheme()">
+            <button on="tap:AMP.toggleTheme()" aria-label="Toggle Mode">
               <span class="mode__icon">
                 ${moon()}
                 ${sun()}
@@ -54,7 +54,7 @@ const header = function ({ title }, menu) {
             menu.length > 0
               ? /* html */ `
                 <div class="tools__menu">
-                  <button on="tap:AMP.setState({ menu: !menu, search: false })" [class]="menu ? 'active' : ''">
+                  <button on="tap:AMP.setState({ menu: !menu, search: false })" [class]="menu ? 'active' : ''" aria-label="Menu">
                     <span>
                       ${hamburger()}
                     </span>
