@@ -16,9 +16,14 @@ const categories = {
       },
     };
   },
-  render: function ({ pages }) {
+  render: function ({ pages, collections }) {
+    const { categoryByName } = collections;
+    const { data } = categoryByName[pages.title];
+    const { title, excerpt } = data;
     return /* html */ `
       <div class="container">
+        <h1>${title}</h1>
+        <p>${excerpt}</p>
         ${pages.items
           .map(
             (post) => /* html */ `
