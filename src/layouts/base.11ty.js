@@ -1,7 +1,3 @@
-// Components
-const mask = require('../components/mask');
-const state = require('../components/state');
-
 // Utilities
 const inlineCss = require('../utilities/css');
 
@@ -41,8 +37,8 @@ const base = {
           ${content}
         </main>
         ${this.footer(seo, socialMedia, categoriesList, footerPages)}
-        ${mask()}
-        ${state()}
+        ${this.mask()}
+        ${this.state()}
       </body>
     </html>
     `;
