@@ -75,6 +75,8 @@ collections:
           widget: 'text',
           pattern: ['.{140,160}', 'The description should be between 140 and 160 characters.'],
         }
+      - { label: 'Heading', name: 'heading', widget: 'string' }
+      - { label: 'Info', name: 'info', widget: 'text' }
       - { label: 'Featured Image', name: 'featuredimage', widget: image }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
