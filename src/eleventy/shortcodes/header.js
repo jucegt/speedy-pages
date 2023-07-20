@@ -1,4 +1,3 @@
-const logo = require('../../svgs/logo');
 const home = require('../../svgs/home');
 const search = require('../../svgs/search');
 const searchBox = require('../../svgs/search-box');
@@ -6,14 +5,14 @@ const moon = require('../../svgs/moon');
 const sun = require('../../svgs/sun');
 const hamburger = require('../../svgs/hamburger');
 
-const header = function ({ title }, menu) {
+const header = function ({ title }, logo, menu) {
   const classesMenu = 'header__panel menu';
   const classesTools = 'header__panel tools';
 
   return /* html */ `
     <header class="header">
       <div class="container">
-        <a href="/" class="header__link logo" title="${title}">${logo()}</a>
+        <a href="/" class="header__link logo" title="${title}">${logo}</a>
 
         ${
           menu.length > 0

@@ -35,6 +35,7 @@
   }
 
   .logo {
+    color: var(--title);
     svg {
       display: block;
       height: to-rem(30);
@@ -146,15 +147,6 @@
         .moon {
           opacity: 0;
           transform: translateY(-100%) scale(0.5);
-        }
-      }
-    }
-    .logo {
-      svg {
-        path {
-          &:not(:nth-last-child(2)) {
-            fill: var(--white-100);
-          }
         }
       }
     }

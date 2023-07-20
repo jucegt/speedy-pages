@@ -1,13 +1,11 @@
-const logo = require('../../svgs/logo');
-
-const footer = function (seo, socialMedia, categories, pages) {
+const footer = function (seo, logo, socialMedia, categories, pages) {
   const { sociallinks } = socialMedia;
   return /* html */ `
     <footer class="footer">
       <div class="container">
         <section class="footer__header">
           <a class="footer__link logo" href="/" title="${seo.title}">
-            ${logo()}
+            ${logo}
           </a>
           ${
             sociallinks?.length > 0
