@@ -3,8 +3,8 @@ const clock = require('../../svgs/clock.js');
 
 const postCard = function ({ data, content, url }) {
   const words = this.parseHTML(content);
-  const wordsPerMinute = 300;
-  const wordsCount = words.length;
+  const wordsPerMinute = 200;
+  const wordsCount = words.split(/\s+/).length;
   const readingTime = Math.ceil(wordsCount / wordsPerMinute);
   const { featuredimage, title, date } = data;
   return /* html */ `
