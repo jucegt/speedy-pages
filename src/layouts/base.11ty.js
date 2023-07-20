@@ -1,5 +1,4 @@
 // Components
-const footer = require('../components/footer');
 const mask = require('../components/mask');
 const state = require('../components/state');
 
@@ -41,7 +40,7 @@ const base = {
         <main class="content">
           ${content}
         </main>
-        ${footer(seo, socialMedia, categoriesList, footerPages)}
+        ${this.footer(seo, socialMedia, categoriesList, footerPages)}
         ${mask()}
         ${state()}
       </body>
