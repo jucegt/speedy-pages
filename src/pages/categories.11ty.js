@@ -24,7 +24,9 @@ const categories = {
       <div class="container">
         <h1>${title}</h1>
         <p>${excerpt}</p>
-        ${pages.items.map((post) => this.postCard(post)).join('')}
+        <section class="posts-grid">
+          ${pages.items.map((post) => this.postCard(post)).join('')}
+        </section>
       </div>
     `;
   },

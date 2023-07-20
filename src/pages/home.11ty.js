@@ -22,7 +22,9 @@ const home = {
       <div class="container">
         <h1>${seo.heading || seo.title}</h1>
         <p>${seo.info || seo.description}</p>
-        ${pages.items.map((post) => this.postCard(post)).join('')}
+        <section class="posts-grid">
+          ${pages.items.map((post) => this.postCard(post)).join('')}
+        </section>
       </div>
     `;
   },

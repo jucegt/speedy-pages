@@ -1,3 +1,9 @@
 .content {
   margin: to-rem(20) 0;
 }
+
+.posts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: to-rem(20);
+}
