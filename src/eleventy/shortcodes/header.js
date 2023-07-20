@@ -1,10 +1,10 @@
-const logo = require('../svgs/logo');
-const home = require('../svgs/home');
-const search = require('../svgs/search');
-const searchBox = require('../svgs/search-box');
-const moon = require('../svgs/moon');
-const sun = require('../svgs/sun');
-const hamburger = require('../svgs/hamburger');
+const logo = require('../../svgs/logo');
+const home = require('../../svgs/home');
+const search = require('../../svgs/search');
+const searchBox = require('../../svgs/search-box');
+const moon = require('../../svgs/moon');
+const sun = require('../../svgs/sun');
+const hamburger = require('../../svgs/hamburger');
 
 const header = function ({ title }, menu) {
   const classesMenu = 'header__panel menu';
