@@ -22,13 +22,7 @@ const home = {
       <div class="container">
         <h1>${seo.heading || seo.title}</h1>
         <p>${seo.info || seo.description}</p>
-        ${pages.items
-          .map(
-            (post) => /* html */ `
-            <p><a href="${post.url}">${post.url}</a></p>
-          `,
-          )
-          .join('')}
+        ${pages.items.map((post) => this.postCard(post)).join('')}
       </div>
     `;
   },
