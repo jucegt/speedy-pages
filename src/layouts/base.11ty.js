@@ -3,7 +3,8 @@ const inlineCss = require('../utilities/css');
 
 const base = {
   render: async function ({ config, content, collections }) {
-    const { categoriesMenu, categoriesList, footerPages, seo, socialMedia } = collections;
+    const { categoriesMenu, categoriesList, footerPages, seo, logo, socialMedia } = collections;
+    const { multicolor, onecolor } = logo;
     return /* html */ `
     <!doctype html>
     <html ⚡ lang="${config.language}">
@@ -32,11 +33,11 @@ const base = {
         <link rel="canonical" href="." />
       </head>
       <body>
-        ${this.header(seo, categoriesMenu)}
+        ${this.header(seo, multicolor.code, categoriesMenu)}
         <main class="content">
           ${content}
         </main>
-        ${this.footer(seo, socialMedia, categoriesList, footerPages)}
+        ${this.footer(seo, onecolor.code, socialMedia, categoriesList, footerPages)}
         ${this.mask()}
         ${this.state()}
       </body>
