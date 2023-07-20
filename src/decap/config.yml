@@ -67,6 +67,7 @@ collections:
     create: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Slug', name: 'slug', widget: 'string' }
       - { label: 'Show in Menu', name: 'showmenu', widget: 'boolean', required: false }
       - {
           label: 'Description',
@@ -74,7 +75,6 @@ collections:
           widget: 'text',
           pattern: ['.{140,160}', 'The description should be between 140 and 160 characters.'],
         }
-      - { label: 'Excerpt', name: 'excerpt', widget: 'text' }
       - { label: 'Featured Image', name: 'featuredimage', widget: image }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
@@ -104,8 +104,15 @@ collections:
         name: 'seoinfo'
         file: 'content/settings/seo.md'
         fields:
-          - { label: 'Site name', name: 'title', widget: 'string' }
-          - { label: 'Site description', name: 'description', widget: 'text' }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'text',
+              pattern: ['.{140,160}', 'The description should be between 140 and 160 characters.'],
+            }
+          - { label: 'Heading on Home', name: heading, widget: 'string' }
+          - { label: 'Info on Home', name: 'info', widget: 'text' }
 
       - label: 'Social Media'
         name: 'socialmedia'
