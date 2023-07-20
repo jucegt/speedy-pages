@@ -1,5 +1,6 @@
 const ignores = require('./src/eleventy/ignores');
 const watchers = require('./src/eleventy/watchers');
+const filters = require('./src/eleventy/filters');
 const shortcodes = require('./src/eleventy/shortcodes');
 const collections = require('./src/eleventy/collections');
 const transforms = require('./src/eleventy/transforms');
@@ -8,6 +9,7 @@ const passthrough = require('./src/eleventy/passthrough');
 const eleventy = function (config) {
   ignores(config);
   watchers(config);
+  filters(config);
   shortcodes(config);
   collections(config);
   transforms(config);
