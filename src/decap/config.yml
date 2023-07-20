@@ -116,6 +116,13 @@ collections:
           - { label: 'Heading on Home', name: heading, widget: 'string' }
           - { label: 'Info on Home', name: 'info', widget: 'text' }
 
+      - label: Logo
+        name: logo
+        file: 'content/settings/logo.md'
+        fields:
+          - { label: 'Multi-Color', name: 'multicolor', widget: 'code' }
+          - { label: 'One Color', name: 'onecolor', widget: 'code' }
+
       - label: 'Social Media'
         name: 'socialmedia'
         file: 'content/settings/social-media.md'
@@ -154,6 +161,7 @@ collections:
                     ],
                 }
               - { label: 'URL', name: 'url', widget: 'string' }
+
       - label: 'Links'
         name: 'links'
         file: 'content/settings/links.md'
