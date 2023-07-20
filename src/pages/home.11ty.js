@@ -1,5 +1,5 @@
 const home = {
-  data: async function () {
+  data: function () {
     return {
       layout: 'base',
       pagination: {
@@ -16,9 +16,12 @@ const home = {
       },
     };
   },
-  render: function ({ pages }) {
+  render: function ({ pages, collections }) {
+    const { seo } = collections;
     return /* html */ `
       <div class="container">
+        <h1>${seo.heading || seo.title}</h1>
+        <p>${seo.info || seo.description}</p>
         ${pages.items
           .map(
             (post) => /* html */ `
