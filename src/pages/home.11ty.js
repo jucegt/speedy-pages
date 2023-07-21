@@ -19,13 +19,21 @@ const home = {
   render: function ({ pages, collections }) {
     const { seo } = collections;
     return /* html */ `
-      <div class="container">
-        <h1>${seo.heading || seo.title}</h1>
-        <p>${seo.info || seo.description}</p>
-        <section class="posts-grid">
-          ${pages.items.map((post) => this.postCard(post)).join('')}
-        </section>
-      </div>
+      <header class="page-info">
+        <h1 class="page-info__title"><span>${seo.heading || seo.title}</span></h1>
+        ${
+          seo.info
+            ? seo.info
+            : seo.description
+            ? /* html */ `
+              <p>${seo.description}</p>
+            `
+            : ''
+        }
+      </header>
+      <section class="posts-grid">
+        ${pages.items.map((post) => this.postCard(post)).join('')}
+      </section>
     `;
   },
 };
