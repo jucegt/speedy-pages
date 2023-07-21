@@ -14,12 +14,21 @@
     padding: to-rem(20);
     position: absolute;
     width: 100%;
-    box-shadow: 0 to-rem(30) to-rem(30) to-rem(-30) var(--shadow);
+    box-shadow: var(--shadow);
     h2 {
       font-size: to-rem(18);
       margin: 0;
       a {
+        background: var(--oragenta);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: var(--title);
         text-decoration: none;
+        transition: all ease-in 0.15s;
+        &:hover {
+          color: transparent;
+          transition-timing-function: ease-out;
+        }
       }
     }
   }
