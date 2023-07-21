@@ -34,7 +34,7 @@ const base = {
       </head>
       <body>
         ${this.header(seo, multicolor.code, categoriesMenu)}
-        <main class="content">
+        <main class="content container">
           ${content}
         </main>
         ${this.footer(seo, onecolor.code, socialMedia, categoriesList, footerPages)}
