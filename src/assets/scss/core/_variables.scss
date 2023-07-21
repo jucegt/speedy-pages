@@ -3,10 +3,12 @@
   --white-100: hsl(202, 50%, 97%);
   --white-200: hsl(200, 32%, 93%);
   --white-300: hsl(0, 0%, 95%);
+  --white-400: hsl(210, 1%, 60%);
   --black-rgb: 0, 0, 0;
-  --gray: hsl(200, 1%, 54%);
+  --gray: hsl(210, 1%, 54%);
   --gray-900: hsl(0, 0%, 9%);
   --gray-800: hsl(0, 0%, 13%);
+  --gray-700: hsl(210, 1%, 40%);
   --blue-900: hsl(206, 16%, 9%);
   --blue-900-rgb: 19, 23, 26;
   --orange: hsl(17, 87%, 57%);
@@ -34,6 +36,7 @@
   --footer-bg: var(--white);
   --border: var(--white-300);
   --text: var(--gray);
+  --text-contrast: var(--gray-700);
   --title: var(--blue-900);
   --form-element-bg: var(--white-300);
   --post-bg: var(--white);
@@ -45,6 +48,7 @@
   --nav-bg: var(--gray-900);
   --footer-bg: var(--gray-900);
   --border: var(--gray-800);
+  --text-contrast: var(--white-400);
   --title: var(--white-100);
   --form-element-bg: var(--gray-800);
   --post-bg: var(--gray-900);

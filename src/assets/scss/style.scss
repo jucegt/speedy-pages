@@ -14,23 +14,34 @@
   @include header--dark;
 }
 
+@include min-query(sm) {
+  @include content--sm;
+  @include post-card--sm;
+}
+
 @include min-query(md) {
   @include container--md;
   @include header--md;
   @include footer--md;
+  @include content--md;
+  @include post-card--md;
 }
 
 @include min-query(lg) {
   @include container--lg;
   @include header--lg;
+  @include content--lg;
+  @include post-card--lg;
 }
 
 @include min-query(xl) {
   @include container--xl;
+  @include post-card--xl;
 }
 
 @include min-query(xxl) {
   @include container--xxl;
+  @include post-card--xxl;
 }
 
 @include min-query(extra) {
