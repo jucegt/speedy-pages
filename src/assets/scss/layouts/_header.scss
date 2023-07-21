@@ -1,6 +1,6 @@
 .header {
   background: var(--header-bg);
-  box-shadow: 0 0 to-rem(40) var(--shadow);
+  box-shadow: var(--bottom-shadow);
   height: to-rem(60);
   display: flex;
   align-items: center;
@@ -13,7 +13,7 @@
   }
   &__panel {
     background: var(--nav-bg);
-    bottom: to-rem(76);
+    bottom: to-rem(60);
     left: 0;
     padding: to-rem(20);
     position: fixed;
@@ -22,7 +22,7 @@
     transition: transform ease-in 0.2s;
     z-index: 10;
     &--open {
-      transform: translateY(0);
+      transform: translateY(to-rem(-16));
       transition-timing-function: ease-out;
     }
   }
@@ -45,7 +45,7 @@
 
   .nav {
     background: var(--nav-bg);
-    box-shadow: 0 0 to-rem(40) var(--shadow);
+    box-shadow: var(--top-shadow);
     height: to-rem(76);
     padding: 0 to-rem(20) to-rem(16);
     &__list {
@@ -109,6 +109,7 @@
   }
 
   .menu {
+    box-shadow: var(--top-shadow);
     ul {
       display: flex;
       flex-direction: column;
@@ -129,6 +130,7 @@
   }
 
   .tools {
+    box-shadow: var(--top-shadow);
     &__mode,
     &__menu {
       display: none;
@@ -187,6 +189,7 @@
     .tools {
       background: none;
       bottom: auto;
+      box-shadow: none;
       display: flex;
       gap: to-rem(16);
       left: auto;
@@ -246,6 +249,7 @@
     }
     .menu {
       background: none;
+      box-shadow: none;
       ul {
         flex-direction: row;
         gap: to-rem(6);

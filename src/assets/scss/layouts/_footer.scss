@@ -1,7 +1,7 @@
 .footer {
   padding: to-rem(20) 0;
   background: var(--footer-bg);
-  box-shadow: 0 0 to-rem(40) var(--shadow);
+  box-shadow: var(--top-shadow);
   margin-bottom: to-rem(76);
   .container {
     max-width: none;
