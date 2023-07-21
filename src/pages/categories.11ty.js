@@ -18,16 +18,16 @@ const categories = {
   },
   render: function ({ pages, collections }) {
     const { categoryByName } = collections;
-    const { data } = categoryByName[pages.title];
-    const { title, excerpt } = data;
+    const { data, content } = categoryByName[pages.title];
+    const { title } = data;
     return /* html */ `
-      <div class="container">
-        <h1>${title}</h1>
-        <p>${excerpt}</p>
-        <section class="posts-grid">
-          ${pages.items.map((post) => this.postCard(post)).join('')}
-        </section>
-      </div>
+      <header class="page-info">
+        <h1 class="page-info__title"><span>${title}</span></h1>
+        ${content}
+      </header>
+      <section class="posts-grid">
+        ${pages.items.map((post) => this.postCard(post)).join('')}
+      </section>
     `;
   },
 };
