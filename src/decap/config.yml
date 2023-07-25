@@ -85,6 +85,7 @@ collections:
     create: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Photo', name: 'photo', widget: image }
 
   - name: 'pages'
     label: 'Pages'
