@@ -27,9 +27,14 @@ body {
 }
 
 a {
-  color: var(--darkblue);
+  color: var(--title);
+  transition: color ease-in 0.2s;
   &:hover {
+    transition-timing-function: ease-out;
     color: var(--orange);
+    * {
+      color: inherit;
+    }
   }
 }
 

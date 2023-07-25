@@ -2,6 +2,7 @@
   margin: to-rem(20) auto;
   .page-info {
     color: var(--text-contrast);
+    margin: to-rem(20) 0;
     &__title {
       margin: to-rem(20) 0;
       font-weight: bold;
@@ -13,8 +14,11 @@
         color: transparent;
       }
     }
-    * {
-      color: inherit;
+    p {
+      line-height: to-rem(22);
+    }
+    a {
+      text-decoration: underline;
     }
   }
   .posts-grid {
@@ -47,6 +51,9 @@
 @mixin content--lg {
   .content {
     margin: to-rem(32) auto;
+    .page-info {
+      margin: to-rem(32) 0;
+    }
     .posts-grid {
       gap: to-rem(32);
     }
