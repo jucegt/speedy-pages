@@ -25,7 +25,7 @@ const footer = function (seo, logo, socialMedia, categories, pages) {
                   <h3>Categorias</h3>
                   <ul class="footer__list footer__list--inline">
                     ${categories
-                      .map(
+                      ?.map(
                         (category) => /* html */ `
                         <li>
                           <a href="${category.url}" data-total="${category.posts}">
@@ -47,7 +47,7 @@ const footer = function (seo, logo, socialMedia, categories, pages) {
                   <h3>Paginas</h3>
                   <ul class="footer__list">
                     ${pages
-                      .map(
+                      ?.map(
                         (page) => /* html */ `
                         <li>
                           <a href="${page.url}">${page.name}</a>

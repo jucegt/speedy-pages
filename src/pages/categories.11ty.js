@@ -26,7 +26,7 @@ const categories = {
         ${content}
       </header>
       <section class="posts-grid">
-        ${pages.items.map((post) => this.postCard(post)).join('')}
+        ${pages?.items?.map((post) => this.postCard(post)).join('')}
       </section>
     `;
   },

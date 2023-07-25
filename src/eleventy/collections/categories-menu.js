@@ -5,7 +5,7 @@ const categoriesMenu = function (config) {
 
     const categoriesMenu = categories.filter((category) => category.data.showmenu);
 
-    categoriesMenu.map((category) => {
+    categoriesMenu?.map((category) => {
       categoriesInMenu.push({
         name: category.data.title,
         url: config.getFilter('slugify')(category.data.title),

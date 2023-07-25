@@ -20,7 +20,7 @@ const header = function ({ title }, logo, menu) {
               <nav class="${classesMenu}" [class]="menu ? '${classesMenu} header__panel--open' : '${classesMenu}'">
                 <ul class="menu__list">
                   ${menu
-                    .map(
+                    ?.map(
                       (category) => /* html */ `
                         <li class="menu__item">
                           <a href="/${category.url}/" class="menu__link" title="${category.name}">${category.name}</a>

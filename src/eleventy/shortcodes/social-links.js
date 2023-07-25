@@ -4,7 +4,7 @@ const socialLinks = function (social) {
   return /* html */ `
     <ul class="social">
     ${social
-      .map(
+      ?.map(
         (link) => /* html */ `
         <li>
           <a

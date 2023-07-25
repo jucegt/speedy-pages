@@ -4,13 +4,13 @@ const categoriesList = function (config) {
     const categoriesNames = new Set();
     const categoriesList = [];
 
-    posts.map((post) => {
+    posts?.map((post) => {
       if ('category' in post.data) {
         categoriesNames.add(post.data.category);
       }
     });
 
-    [...categoriesNames].map((category) => {
+    [...categoriesNames]?.map((category) => {
       categoriesList.push({
         name: category,
         url: `/${config.getFilter('slugify')(category)}/`,

@@ -5,7 +5,7 @@ const footerPages = function (config) {
     const linkList = linksSettings.footerpages;
     const footerPages = [];
 
-    linkList.map((item) => {
+    linkList?.map((item) => {
       footerPages.push({
         name: item.page,
         url: `/${config.getFilter('slugify')(item.page)}`,
