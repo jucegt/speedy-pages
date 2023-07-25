@@ -23,7 +23,7 @@ const home = {
         <h1 class="page-info__title"><span>${seo.heading || seo.title}</span></h1>
         ${
           seo.info
-            ? seo.info
+            ? this.markdown(seo.info)
             : seo.description
             ? /* html */ `
               <p>${seo.description}</p>
