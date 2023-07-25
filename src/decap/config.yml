@@ -31,34 +31,50 @@ collections:
     media_folder: ../../../static
     public_folder: /
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Slug', name: 'slug', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - {
-          label: 'Author',
-          name: 'author',
-          widget: 'relation',
-          collection: 'authors',
-          search_fields: ['title'],
-          value_field: 'title',
-        }
-      - {
-          label: 'Description',
-          name: 'description',
-          widget: 'text',
-          pattern: ['.{140,160}', 'The description should be between 140 and 160 characters.'],
-        }
-      - { label: 'Excerpt', name: 'excerpt', widget: 'text' }
-      - {
-          label: 'Category',
-          name: 'category',
-          widget: 'relation',
-          collection: 'categories',
-          search_fields: ['title'],
-          value_field: 'title',
-        }
-      - { label: 'Featured Image', name: 'featuredimage', widget: image }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'SEO'
+        name: 'seo'
+        widget: 'object'
+        collapse: false
+        summary: '{{fields.seo.title}}'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Slug', name: 'slug', widget: 'string' }
+          - {
+              label: 'Description',
+              name: 'description',
+              widget: 'text',
+              pattern: ['.{140,160}', 'The description should be between 140 and 160 characters.'],
+            }
+      - label: 'Information'
+        name: 'info'
+        widget: 'object'
+        collapse: false
+        fields:
+          - {
+              label: 'Category',
+              name: 'category',
+              widget: 'relation',
+              collection: 'categories',
+              search_fields: ['title'],
+              value_field: 'title',
+            }
+          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+          - {
+              label: 'Author',
+              name: 'author',
+              widget: 'relation',
+              collection: 'authors',
+              search_fields: ['title'],
+              value_field: 'title',
+            }
+          - { label: 'Excerpt', name: 'excerpt', widget: 'text' }
+      - label: 'Content'
+        name: 'content'
+        widget: 'object'
+        collapse: false
+        fields:
+          - { label: 'Hero Image', name: 'image', widget: image }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'categories'
     label: 'Categories'
