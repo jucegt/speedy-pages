@@ -3,11 +3,11 @@ backend:
   repo: jucegt/speedy-pages
   branch: develop
   commit_messages:
-    create: 'Create {{collection}} “{{slug}}”'
-    update: 'Update {{collection}} “{{slug}}”'
-    delete: 'Delete {{collection}} “{{slug}}”'
-    uploadMedia: '[skip ci] Upload “{{path}}”'
-    deleteMedia: '[skip ci] Delete “{{path}}”'
+    create: 'cms: created {{collection}} “{{slug}}”'
+    update: 'cms: updated {{collection}} “{{slug}}”'
+    delete: 'cms: deleted {{collection}} “{{slug}}”'
+    uploadMedia: 'cms: uploaded “{{path}}”'
+    deleteMedia: 'cms: deleted “{{path}}”'
 
 publish_mode: editorial_workflow
 media_folder: content/static
