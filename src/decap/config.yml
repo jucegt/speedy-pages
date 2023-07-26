@@ -13,6 +13,7 @@ publish_mode: editorial_workflow
 media_folder: content/static
 public_folder: /
 
+locale: '{{language}}'
 site_url: '{{site_url}}'
 display_url: '{{site_url}}'
 
@@ -22,8 +23,8 @@ slug:
 
 collections:
   - name: 'posts'
-    label: 'Posts'
-    label_singular: 'Post'
+    label: '{{posts.plural}}'
+    label_singular: '{{posts.singular}}'
     folder: 'content/posts'
     create: true
     path: '{{year}}/{{month}}/{{slug}}'
@@ -31,122 +32,216 @@ collections:
     media_folder: ../../../static
     public_folder: /
     fields:
-      - label: 'SEO'
+      - label: '{{posts.seo.label}}'
         name: 'seo'
         widget: 'object'
         summary: '{{fields.title}}'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string', hint: 'Title displayed in Google search results.' }
-          - { label: 'Slug', name: 'slug', widget: 'string', hint: 'Link structure displayed in the navigation bar.' }
+          - { label: '{{posts.seo.title.label}}', name: 'title', widget: 'string', hint: '{{posts.seo.title.hint}}' }
+          - { label: '{{posts.seo.slug.label}}', name: 'slug', widget: 'string', hint: '{{posts.seo.slug.hint}}' }
           - {
-              label: 'Description',
+              label: '{{posts.seo.description.label}}',
               name: 'description',
               widget: 'text',
-              pattern: ['^.{140,160}$', 'The description should be between 140 and 160 characters'],
-              hint: 'Description displayed in Google search results.',
+              pattern: ['^.{140,160}$', '{{posts.seo.description.error}}'],
+              hint: '{{posts.seo.description.hint}}',
             }
-      - label: 'Information'
+      - label: '{{posts.info.label}}'
         name: 'info'
         widget: 'object'
         fields:
-          - { label: 'Heading', name: 'heading', widget: 'string', hint: 'Title displayed in the post page.' }
           - {
-              label: 'Category',
+              label: '{{posts.info.title.label}}',
+              name: 'heading',
+              widget: 'string',
+              hint: '{{posts.info.title.hint}}',
+            }
+          - {
+              label: '{{posts.info.category.label}}',
               name: 'category',
               widget: 'relation',
               collection: 'categories',
               search_fields: ['title'],
               value_field: 'title',
-              hint: 'Category displayed in the post page.',
+              hint: '{{posts.info.category.hint}}',
             }
-          - { label: 'Publish Date', name: 'date', widget: 'datetime', hint: 'Date displayed in the post page.' }
+          - { label: '{{posts.info.date.label}}', name: 'date', widget: 'datetime', hint: '{{posts.info.date.hint}}' }
           - {
-              label: 'Author',
+              label: '{{posts.info.author.label}}',
               name: 'author',
               widget: 'relation',
               collection: 'authors',
               search_fields: ['title'],
               value_field: 'title',
-              hint: 'Author displayed in the post page.',
+              hint: '{{posts.info.author.hint}}',
             }
-          - { label: 'Excerpt', name: 'excerpt', widget: 'text', hint: 'Excerpt displayed in the post page.' }
-      - label: 'Content'
+          - {
+              label: '{{posts.info.excerpt.label}}',
+              name: 'excerpt',
+              widget: 'text',
+              hint: '{{posts.info.excerpt.hint}}',
+            }
+      - label: '{{posts.content.label}}'
         name: 'content'
         widget: 'object'
         fields:
-          - { label: 'Hero Image', name: 'image', widget: image, hint: 'Hero image displayed in the post page.' }
-          - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Content displayed in the post page.' }
+          - {
+              label: '{{posts.content.heroImage.label}}',
+              name: 'image',
+              widget: image,
+              hint: '{{posts.content.heroImage.hint}}',
+            }
+          - {
+              label: '{{posts.content.body.label}}',
+              name: 'body',
+              widget: 'markdown',
+              hint: '{{posts.content.body.hint}}',
+            }
 
   - name: 'categories'
-    label: 'Categories'
-    label_singular: 'Category'
+    label: '{{categories.plural}}'
+    label_singular: '{{categories.singular}}'
     folder: 'content/categories'
     create: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Slug', name: 'slug', widget: 'string' }
-      - { label: 'Show in Menu', name: 'showmenu', widget: 'boolean', required: false }
-      - {
-          label: 'Description',
-          name: 'description',
-          widget: 'text',
-          pattern: ['^.{140,160}$', 'The description should be between 140 and 160 characters'],
-        }
-      - { label: 'Heading', name: 'heading', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: '{{categories.seo.label}}'
+        name: 'seo'
+        widget: 'object'
+        summary: '{{fields.title}}'
+        fields:
+          - {
+              label: '{{categories.seo.title.label}}',
+              name: 'title',
+              widget: 'string',
+              hint: '{{categories.seo.title.hint}}',
+            }
+          - {
+              label: '{{categories.seo.slug.label}}',
+              name: 'slug',
+              widget: 'string',
+              hint: '{{categories.seo.slug.hint}}',
+            }
+          - {
+              label: '{{categories.seo.description.label}}',
+              name: 'description',
+              widget: 'text',
+              pattern: ['^.{140,160}$', '{{categories.seo.description.error}}'],
+              hint: '{{categories.seo.description.hint}}',
+            }
+      - label: '{{categories.info.label}}'
+        name: 'info'
+        widget: 'object'
+        fields:
+          - {
+              label: '{{categories.info.showMenu.label}}',
+              name: 'showmenu',
+              widget: 'boolean',
+              required: false,
+              hint: '{{categories.info.showMenu.hint}}',
+            }
+          - {
+              label: '{{categories.info.title.label}}',
+              name: 'heading',
+              widget: 'string',
+              hint: '{{categories.info.title.hint}}',
+            }
+          - {
+              label: '{{categories.info.body.label}}',
+              name: 'body',
+              widget: 'markdown',
+              hint: '{{categories.info.body.hint}}',
+            }
 
   - name: 'authors'
-    label: 'Authors'
-    label_singular: 'Author'
+    label: '{{authors.plural}}'
+    label_singular: '{{authors.singular}}'
     folder: 'content/authors'
     create: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Photo', name: 'photo', widget: image }
+      - { label: '{{authors.title.label}}', name: 'title', widget: 'string', hint: '{{authors.title.hint}}' }
+      - { label: '{{authors.photo.label}}', name: 'photo', widget: 'image', hint: '{{authors.photo.hint}}' }
 
   - name: 'pages'
-    label: 'Pages'
-    label_singular: 'Page'
+    label: '{{pages.plural}}'
+    label_singular: '{{pages.singular}}'
     folder: 'content/pages'
     create: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: '{{pages.seo.label}}'
+        name: 'seo'
+        widget: 'object'
+        summary: '{{fields.title}}'
+        fields:
+          - { label: '{{pages.seo.title.label}}', name: 'title', widget: 'string', hint: '{{pages.seo.title.hint}}' }
+          - { label: '{{pages.seo.slug.label}}', name: 'slug', widget: 'string', hint: '{{pages.seo.slug.hint}}' }
+          - {
+              label: '{{pages.seo.description.label}}',
+              name: 'description',
+              widget: 'text',
+              pattern: ['^.{140,160}$', '{{pages.seo.description.error}}'],
+              hint: '{{pages.seo.description.hint}}',
+            }
+      - label: '{{pages.content.label}}'
+        name: 'info'
+        widget: 'object'
+        fields:
+          - {
+              label: '{{pages.content.title.label}}',
+              name: 'heading',
+              widget: 'string',
+              hint: '{{pages.content.title.hint}}',
+            }
+          - {
+              label: '{{pages.content.body.label}}',
+              name: 'body',
+              widget: 'markdown',
+              hint: '{{pages.content.body.hint}}',
+            }
 
   - name: 'settings'
     label: 'Settings'
     editor:
       preview: false
     files:
-      - label: 'SEO Information'
-        name: 'seoinfo'
-        file: 'content/settings/seo.md'
+      - name: 'homepage'
+        label: 'Home Page'
+        file: 'content/settings/homepage.md'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - {
-              label: 'Description',
-              name: 'description',
-              widget: 'text',
-              pattern: ['^.{140,160}$', 'The description should be between 140 and 160 characters'],
-            }
-          - { label: 'Heading on Home', name: heading, widget: 'string' }
-          - { label: 'Info on Home', name: 'info', widget: 'markdown' }
+          - name: 'seo'
+            label: 'SEO'
+            widget: 'object'
+            fields:
+              - { name: 'title', label: 'Title', widget: 'string', hint: 'Title displayed in Google search results.' }
+              - {
+                  name: 'description',
+                  label: 'Description',
+                  widget: 'text',
+                  pattern: ['^.{140,160}$', 'The description should be between 140 and 160 characters'],
+                  hint: 'Description displayed in Google search results.',
+                }
+          - name: 'info'
+            label: 'Information'
+            widget: 'object'
+            fields:
+              - { name: 'title', label: 'Title', widget: 'string', hint: 'Title displayed on the home page.' }
+              - { name: 'body', label: 'Body', widget: 'markdown', hint: 'Content displayed on the home page.' }
 
-      - label: Logo
-        name: logo
+      - name: 'logo'
+        label: 'Logo'
         file: 'content/settings/logo.md'
         fields:
-          - { label: 'Multi-Color', name: 'multicolor', widget: 'code' }
-          - { label: 'One Color', name: 'onecolor', widget: 'code' }
+          - { label: 'Multi-Color', name: 'multicolor', widget: 'code', hint: 'SVG code for multi-color logo.' }
+          - { label: 'One Color', name: 'onecolor', widget: 'code', hint: 'SVG code for one-color logo.' }
 
-      - label: 'Social Media'
-        name: 'socialmedia'
+      - name: 'socialmedia'
+        label: 'Social Media'
         file: 'content/settings/social-media.md'
         fields:
           - label: 'Social Links'
             name: 'sociallinks'
             widget: 'list'
             summary: '{{fields.name}} - {{fields.url}}'
+            hint: 'Links to social media profiles.'
             fields:
               - {
                   label: 'Name',
@@ -175,11 +270,12 @@ collections:
                       'YouTube',
                       'Yelp',
                     ],
+                  hint: 'Name of the social media platform to show the icon.',
                 }
-              - { label: 'URL', name: 'url', widget: 'string' }
+              - { label: 'URL', name: 'url', widget: 'string', hint: 'URL to the social media profile.' }
 
-      - label: 'Links'
-        name: 'links'
+      - name: 'links'
+        label: 'Links'
         file: 'content/settings/links.md'
         fields:
           - label: 'Footer Pages'
@@ -194,4 +290,5 @@ collections:
                   collection: 'pages',
                   search_fields: ['title'],
                   value_field: 'title',
+                  hint: 'Page to show in the footer.',
                 }
