@@ -49,13 +49,9 @@ collections:
       - label: '{{posts.info.label}}'
         name: 'info'
         widget: 'object'
+        summary: '{{fields.title}}'
         fields:
-          - {
-              label: '{{posts.info.title.label}}',
-              name: 'heading',
-              widget: 'string',
-              hint: '{{posts.info.title.hint}}',
-            }
+          - { label: '{{posts.info.title.label}}', name: 'title', widget: 'string', hint: '{{posts.info.title.hint}}' }
           - {
               label: '{{posts.info.category.label}}',
               name: 'category',
@@ -131,17 +127,11 @@ collections:
       - label: '{{categories.info.label}}'
         name: 'info'
         widget: 'object'
+        summary: '{{fields.title}}'
         fields:
           - {
-              label: '{{categories.info.showMenu.label}}',
-              name: 'showmenu',
-              widget: 'boolean',
-              required: false,
-              hint: '{{categories.info.showMenu.hint}}',
-            }
-          - {
               label: '{{categories.info.title.label}}',
-              name: 'heading',
+              name: 'title',
               widget: 'string',
               hint: '{{categories.info.title.hint}}',
             }
@@ -184,10 +174,11 @@ collections:
       - label: '{{pages.content.label}}'
         name: 'info'
         widget: 'object'
+        summary: '{{fields.title}}'
         fields:
           - {
               label: '{{pages.content.title.label}}',
-              name: 'heading',
+              name: 'title',
               widget: 'string',
               hint: '{{pages.content.title.hint}}',
             }
@@ -210,6 +201,7 @@ collections:
           - name: 'seo'
             label: 'SEO'
             widget: 'object'
+            summary: '{{fields.title}}'
             fields:
               - { name: 'title', label: 'Title', widget: 'string', hint: 'Title displayed in Google search results.' }
               - {
@@ -222,6 +214,7 @@ collections:
           - name: 'info'
             label: 'Information'
             widget: 'object'
+            summary: '{{fields.title}}'
             fields:
               - { name: 'title', label: 'Title', widget: 'string', hint: 'Title displayed on the home page.' }
               - { name: 'body', label: 'Body', widget: 'markdown', hint: 'Content displayed on the home page.' }
@@ -272,7 +265,13 @@ collections:
                     ],
                   hint: 'Name of the social media platform to show the icon.',
                 }
-              - { label: 'URL', name: 'url', widget: 'string', hint: 'URL to the social media profile.' }
+              - {
+                  label: 'URL',
+                  name: 'url',
+                  widget: 'string',
+                  pattern: ['^https?:\/\/.+', 'The URL must begin with http:// or https:// to be valid'],
+                  hint: 'URL to the social media profile.',
+                }
 
       - name: 'links'
         label: 'Links'
