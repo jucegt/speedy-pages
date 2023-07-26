@@ -1,6 +1,6 @@
 const settings = {
-  seo: function (collection) {
-    return collection.getFilteredByGlob('./content/settings/seo.md')[0].data;
+  homePage: function (collection) {
+    return collection.getFilteredByGlob('./content/settings/home-page.md')[0].data;
   },
   logo: function (collection) {
     return collection.getFilteredByGlob('./content/settings/logo.md')[0].data;

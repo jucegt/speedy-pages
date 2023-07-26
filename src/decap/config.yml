@@ -196,7 +196,7 @@ collections:
     files:
       - name: 'homepage'
         label: 'Home Page'
-        file: 'content/settings/homepage.md'
+        file: 'content/settings/home-page.md'
         fields:
           - name: 'seo'
             label: 'SEO'
