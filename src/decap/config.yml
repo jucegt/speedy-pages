@@ -34,22 +34,22 @@ collections:
       - label: 'SEO'
         name: 'seo'
         widget: 'object'
-        collapse: false
-        summary: '{{fields.seo.title}}'
+        summary: '{{fields.title}}'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Slug', name: 'slug', widget: 'string' }
+          - { label: 'Title', name: 'title', widget: 'string', hint: 'Title displayed in Google search results.' }
+          - { label: 'Slug', name: 'slug', widget: 'string', hint: 'Link structure displayed in the navigation bar.' }
           - {
               label: 'Description',
               name: 'description',
               widget: 'text',
-              pattern: ['.{140,160}', 'The description should be between 140 and 160 characters.'],
+              pattern: ['^.{140,160}$', 'The description should be between 140 and 160 characters'],
+              hint: 'Description displayed in Google search results.',
             }
       - label: 'Information'
         name: 'info'
         widget: 'object'
-        collapse: false
         fields:
+          - { label: 'Heading', name: 'heading', widget: 'string', hint: 'Title displayed in the post page.' }
           - {
               label: 'Category',
               name: 'category',
@@ -57,8 +57,9 @@ collections:
               collection: 'categories',
               search_fields: ['title'],
               value_field: 'title',
+              hint: 'Category displayed in the post page.',
             }
-          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+          - { label: 'Publish Date', name: 'date', widget: 'datetime', hint: 'Date displayed in the post page.' }
           - {
               label: 'Author',
               name: 'author',
@@ -66,15 +67,15 @@ collections:
               collection: 'authors',
               search_fields: ['title'],
               value_field: 'title',
+              hint: 'Author displayed in the post page.',
             }
-          - { label: 'Excerpt', name: 'excerpt', widget: 'text' }
+          - { label: 'Excerpt', name: 'excerpt', widget: 'text', hint: 'Excerpt displayed in the post page.' }
       - label: 'Content'
         name: 'content'
         widget: 'object'
-        collapse: false
         fields:
-          - { label: 'Hero Image', name: 'image', widget: image }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Hero Image', name: 'image', widget: image, hint: 'Hero image displayed in the post page.' }
+          - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Content displayed in the post page.' }
 
   - name: 'categories'
     label: 'Categories'
@@ -89,7 +90,7 @@ collections:
           label: 'Description',
           name: 'description',
           widget: 'text',
-          pattern: ['.{140,160}', 'The description should be between 140 and 160 characters.'],
+          pattern: ['^.{140,160}$', 'The description should be between 140 and 160 characters'],
         }
       - { label: 'Heading', name: 'heading', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
@@ -126,7 +127,7 @@ collections:
               label: 'Description',
               name: 'description',
               widget: 'text',
-              pattern: ['.{140,160}', 'The description should be between 140 and 160 characters.'],
+              pattern: ['^.{140,160}$', 'The description should be between 140 and 160 characters'],
             }
           - { label: 'Heading on Home', name: heading, widget: 'string' }
           - { label: 'Info on Home', name: 'info', widget: 'markdown' }
