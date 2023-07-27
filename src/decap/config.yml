@@ -30,7 +30,7 @@ collections:
     path: '{{year}}/{{month}}/{{slug}}'
     slug: '{{fields.slug}}'
     media_folder: ../../../static
-    public_folder: /post-image/
+    public_folder: /post-image
     fields:
       - label: '{{posts.seo.label}}'
         name: 'seo'
@@ -148,7 +148,7 @@ collections:
     folder: 'content/authors'
     create: true
     media_folder: ../photos
-    public_folder: /author-photo/
+    public_folder: /author-photo
     fields:
       - { label: '{{authors.title.label}}', name: 'title', widget: 'string', hint: '{{authors.title.hint}}' }
       - { label: '{{authors.photo.label}}', name: 'photo', widget: 'image', hint: '{{authors.photo.hint}}' }
