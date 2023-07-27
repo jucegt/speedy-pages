@@ -1,10 +1,10 @@
-const footer = function (seo, logo, socialMedia, categories, pages) {
+const footer = function ({ title }, logo, socialMedia, categories, pages) {
   const { sociallinks } = socialMedia;
   return /* html */ `
     <footer class="footer">
       <div class="container">
         <section class="footer__header">
-          <a class="footer__link logo" href="/" title="${seo.title}">
+          <a class="footer__link logo" href="/" title="${title}">
             ${logo}
           </a>
           ${
@@ -62,7 +62,7 @@ const footer = function (seo, logo, socialMedia, categories, pages) {
           }
         </section>
         <section class="footer__bottom">
-          <p class="copy">©2023 ${seo.title} - Todos los derechos reservados</p>
+          <p class="copy">©2023 ${title} - Todos los derechos reservados</p>
         </section>
       </div>
     </footer>
