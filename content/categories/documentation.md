@@ -3,7 +3,7 @@ title: Documentation
 seo:
   title: Documentation
   slug: documentation
-  description: "Dive into SpeedyPages' top-notch Documentation: clear, concise,
+  description: "Dive into SpeedyPages top-notch Documentation: clear, concise,
     and designed to enhance your blogging experience. Find swift solutions and
     boost your skills!"
   heading: "SpeedyPages: Documentation"
