@@ -27,7 +27,7 @@ collections:
     label_singular: '{{posts.singular}}'
     folder: 'content/posts'
     create: true
-    path: '{{year}}/{{month}}/{{slug}}'
+    path: '{{year}}/{{month}}'
     slug: '{{fields.slug}}'
     media_folder: ../../../static
     public_folder: /post-image
