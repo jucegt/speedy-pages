@@ -2,6 +2,10 @@ const en = {
   posts: {
     singular: 'Post',
     plural: 'Posts',
+    title: {
+      label: 'Title',
+      hint: 'Title displayed in the content manager system.',
+    },
     seo: {
       label: 'SEO',
       title: {
@@ -53,6 +57,10 @@ const en = {
   categories: {
     singular: 'Category',
     plural: 'Categories',
+    title: {
+      label: 'Title',
+      hint: 'Title displayed in the content manager system.',
+    },
     seo: {
       label: 'SEO',
       title: {
@@ -93,6 +101,10 @@ const en = {
   pages: {
     singular: 'Page',
     plural: 'Pages',
+    title: {
+      label: 'Title',
+      hint: 'Title displayed in the content manager system.',
+    },
     seo: {
       label: 'SEO',
       title: {

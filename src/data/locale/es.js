@@ -2,6 +2,10 @@ const es = {
   posts: {
     singular: 'Artículo',
     plural: 'Artículos',
+    title: {
+      label: 'Título',
+      hint: 'Título que se muestra en el sistema de gestión de contenidos.',
+    },
     seo: {
       label: 'SEO',
       title: {
@@ -53,6 +57,10 @@ const es = {
   categories: {
     singular: 'Categoría',
     plural: 'Categorías',
+    title: {
+      label: 'Título',
+      hint: 'Título que se muestra en el sistema de gestión de contenidos.',
+    },
     seo: {
       label: 'SEO',
       title: {
@@ -93,6 +101,10 @@ const es = {
   pages: {
     singular: 'Página',
     plural: 'Páginas',
+    title: {
+      label: 'Título',
+      hint: 'Título que se muestra en el sistema de gestión de contenidos.',
+    },
     seo: {
       label: 'SEO',
       title: {

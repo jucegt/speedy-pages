@@ -32,6 +32,7 @@ collections:
     media_folder: ../../../static
     public_folder: /post-image
     fields:
+      - { label: '{{posts.title.label}}', name: 'title', widget: 'string', hint: '{{posts.title.hint}}' }
       - label: '{{posts.seo.label}}'
         name: 'seo'
         widget: 'object'
@@ -86,6 +87,7 @@ collections:
     folder: 'content/categories'
     create: true
     fields:
+      - { label: '{{categories.title.label}}', name: 'title', widget: 'string', hint: '{{categories.title.hint}}' }
       - label: '{{categories.seo.label}}'
         name: 'seo'
         widget: 'object'
@@ -135,6 +137,7 @@ collections:
     folder: 'content/pages'
     create: true
     fields:
+      - { label: '{{pages.title.label}}', name: 'title', widget: 'string', hint: '{{pages.title.hint}}' }
       - label: '{{pages.seo.label}}'
         name: 'seo'
         widget: 'object'
