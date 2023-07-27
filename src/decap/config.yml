@@ -30,7 +30,7 @@ collections:
     path: '{{year}}/{{month}}/{{slug}}'
     slug: '{{fields.slug}}'
     media_folder: ../../../static
-    public_folder: /
+    public_folder: /post-image/
     fields:
       - label: '{{posts.seo.label}}'
         name: 'seo'
@@ -147,6 +147,8 @@ collections:
     label_singular: '{{authors.singular}}'
     folder: 'content/authors'
     create: true
+    media_folder: ../photos
+    public_folder: /author-photo/
     fields:
       - { label: '{{authors.title.label}}', name: 'title', widget: 'string', hint: '{{authors.title.hint}}' }
       - { label: '{{authors.photo.label}}', name: 'photo', widget: 'image', hint: '{{authors.photo.hint}}' }
@@ -190,54 +192,112 @@ collections:
             }
 
   - name: 'settings'
-    label: 'Settings'
+    label: '{{settings.label}}'
     editor:
       preview: false
     files:
       - name: 'homepage'
-        label: 'Home Page'
+        label: '{{settings.home.label}}'
         file: 'content/settings/home-page.md'
         fields:
           - name: 'seo'
-            label: 'SEO'
+            label: '{{settings.home.seo.label}}'
             widget: 'object'
             summary: '{{fields.title}}'
             fields:
-              - { name: 'title', label: 'Title', widget: 'string', hint: 'Title displayed in Google search results.' }
+              - {
+                  name: 'title',
+                  label: '{{settings.home.seo.title.label}}',
+                  widget: 'string',
+                  hint: '{{settings.home.seo.title.hint}}',
+                }
               - {
                   name: 'description',
-                  label: 'Description',
+                  label: '{{settings.home.seo.description.label}}',
                   widget: 'text',
-                  pattern: ['^.{140,160}$', 'The description should be between 140 and 160 characters'],
-                  hint: 'Description displayed in Google search results.',
+                  pattern: ['^.{140,160}$', '{{settings.home.seo.description.error}}'],
+                  hint: '{{settings.home.seo.description.hint}}',
                 }
           - name: 'info'
-            label: 'Information'
+            label: '{{settings.home.info.label}}'
             widget: 'object'
             summary: '{{fields.title}}'
             fields:
-              - { name: 'title', label: 'Title', widget: 'string', hint: 'Title displayed on the home page.' }
-              - { name: 'body', label: 'Body', widget: 'markdown', hint: 'Content displayed on the home page.' }
+              - {
+                  name: 'title',
+                  label: '{{settings.home.info.title.label}}',
+                  widget: 'string',
+                  hint: '{{settings.home.info.title.hint}}',
+                }
+              - {
+                  name: 'body',
+                  label: '{{settings.home.info.body.label}}',
+                  widget: 'markdown',
+                  hint: '{{settings.home.info.body.hint}}',
+                }
 
-      - name: 'logo'
-        label: 'Logo'
-        file: 'content/settings/logo.md'
+      - name: 'navigation'
+        label: '{{settings.navigation.label}}'
+        file: 'content/settings/navigation.md'
         fields:
-          - { label: 'Multi-Color', name: 'multicolor', widget: 'code', hint: 'SVG code for multi-color logo.' }
-          - { label: 'One Color', name: 'onecolor', widget: 'code', hint: 'SVG code for one-color logo.' }
-
-      - name: 'socialmedia'
-        label: 'Social Media'
-        file: 'content/settings/social-media.md'
-        fields:
-          - label: 'Social Links'
-            name: 'sociallinks'
+          - label: '{{settings.navigation.categories.label}}'
+            name: 'categories'
             widget: 'list'
-            summary: '{{fields.name}} - {{fields.url}}'
-            hint: 'Links to social media profiles.'
+            summary: '{{fields.title}}'
+            hint: '{{settings.navigation.categories.hint}}'
             fields:
               - {
-                  label: 'Name',
+                  label: '{{settings.navigation.categories.category}}',
+                  name: 'category',
+                  widget: 'relation',
+                  collection: 'categories',
+                  search_fields: ['title'],
+                  value_field: 'title',
+                }
+          - label: '{{settings.navigation.pages.label}}'
+            name: 'pages'
+            widget: 'list'
+            summary: '{{fields.title}}'
+            hint: '{{settings.navigation.pages.hint}}'
+            fields:
+              - {
+                  label: '{{settings.navigation.pages.page}}',
+                  name: 'page',
+                  widget: 'relation',
+                  collection: 'pages',
+                  search_fields: ['title'],
+                  value_field: 'title',
+                }
+
+      - name: 'logo'
+        label: '{{settings.logo.label}}'
+        file: 'content/settings/logo.md'
+        fields:
+          - {
+              label: '{{settings.logo.multicolor.label}}',
+              name: 'multicolor',
+              widget: 'code',
+              hint: '{{settings.logo.multicolor.hint}}',
+            }
+          - {
+              label: '{{settings.logo.onecolor.label}}',
+              name: 'onecolor',
+              widget: 'code',
+              hint: '{{settings.logo.onecolor.hint}}',
+            }
+
+      - name: 'socialmedia'
+        label: '{{settings.socialMedia.label}}'
+        file: 'content/settings/social-media.md'
+        fields:
+          - label: '{{settings.socialMedia.links.label}}'
+            name: 'links'
+            widget: 'list'
+            summary: '{{fields.name}} - {{fields.url}}'
+            hint: '{{settings.socialMedia.links.hint}}'
+            fields:
+              - {
+                  label: '{{settings.socialMedia.links.name.label}}',
                   name: 'name',
                   widget: 'select',
                   options:
@@ -263,31 +323,31 @@ collections:
                       'YouTube',
                       'Yelp',
                     ],
-                  hint: 'Name of the social media platform to show the icon.',
+                  hint: '{{settings.socialMedia.links.name.hint}}',
                 }
               - {
-                  label: 'URL',
+                  label: '{{settings.socialMedia.links.url.label}}',
                   name: 'url',
                   widget: 'string',
-                  pattern: ['^https?:\/\/.+', 'The URL must begin with http:// or https:// to be valid'],
-                  hint: 'URL to the social media profile.',
+                  pattern: ['^https?:\/\/.+', '{{settings.socialMedia.links.url.error}}'],
+                  hint: '{{settings.socialMedia.links.url.hint}}',
                 }
 
-      - name: 'links'
-        label: 'Links'
-        file: 'content/settings/links.md'
+      - name: 'footer'
+        label: '{{settings.footer.label}}'
+        file: 'content/settings/footer.md'
         fields:
-          - label: 'Footer Pages'
-            name: 'footerpages'
+          - label: '{{settings.footer.pages.label}}'
+            name: 'pages'
             widget: 'list'
-            summary: '{{fields.page}}'
+            summary: '{{fields.category}}'
+            hint: '{{settings.footer.pages.hint}}'
             fields:
               - {
-                  label: 'Page',
+                  label: '{{settings.footer.pages.page}}',
                   name: 'page',
                   widget: 'relation',
                   collection: 'pages',
                   search_fields: ['title'],
                   value_field: 'title',
-                  hint: 'Page to show in the footer.',
                 }

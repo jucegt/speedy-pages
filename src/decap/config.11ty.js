@@ -5,7 +5,7 @@ const config = {
     permalink: '/admin/config.yml',
   },
   render: async function ({ config, locale }) {
-    const texts = locale[config.language];
+    const texts = locale[config.language] || locale.en;
     const file = await readFile('./src/decap/config.yml');
     const configFile = file
       .toString()
@@ -31,6 +31,7 @@ const config = {
       .replace(/'{{posts.info.author.label}}'/gi, texts.posts.info.author.label)
       .replace(/'{{posts.info.author.hint}}'/gi, texts.posts.info.author.hint)
       .replace(/'{{posts.info.excerpt.label}}'/gi, texts.posts.info.excerpt.label)
+      .replace(/'{{posts.info.excerpt.hint}}'/gi, texts.posts.info.excerpt.hint)
       .replace(/'{{posts.content.label}}'/gi, texts.posts.content.label)
       .replace(/'{{posts.content.heroImage.label}}'/gi, texts.posts.content.heroImage.label)
       .replace(/'{{posts.content.heroImage.hint}}'/gi, texts.posts.content.heroImage.hint)
@@ -73,7 +74,42 @@ const config = {
       .replace(/'{{pages.content.title.label}}'/gi, texts.pages.content.title.label)
       .replace(/'{{pages.content.title.hint}}'/gi, texts.pages.content.title.hint)
       .replace(/'{{pages.content.body.label}}'/gi, texts.pages.content.body.label)
-      .replace(/'{{pages.content.body.hint}}'/gi, texts.pages.content.body.hint);
+      .replace(/'{{pages.content.body.hint}}'/gi, texts.pages.content.body.hint)
+      .replace(/'{{settings.label}}'/gi, texts.settings.label)
+      .replace(/'{{settings.home.label}}'/gi, texts.settings.home.label)
+      .replace(/'{{settings.home.seo.label}}'/gi, texts.settings.home.seo.label)
+      .replace(/'{{settings.home.seo.title.label}}'/gi, texts.settings.home.seo.title.label)
+      .replace(/'{{settings.home.seo.title.hint}}'/gi, texts.settings.home.seo.title.hint)
+      .replace(/'{{settings.home.seo.description.label}}'/gi, texts.settings.home.seo.description.label)
+      .replace(/'{{settings.home.seo.description.hint}}'/gi, texts.settings.home.seo.description.hint)
+      .replace(/'{{settings.home.info.label}}'/gi, texts.settings.home.info.label)
+      .replace(/'{{settings.home.info.title.label}}'/gi, texts.settings.home.info.title.label)
+      .replace(/'{{settings.home.info.title.hint}}'/gi, texts.settings.home.info.title.hint)
+      .replace(/'{{settings.home.info.body.label}}'/gi, texts.settings.home.info.body.label)
+      .replace(/'{{settings.home.info.body.hint}}'/gi, texts.settings.home.info.body.hint)
+      .replace(/'{{settings.navigation.label}}'/gi, texts.settings.navigation.label)
+      .replace(/'{{settings.navigation.categories.label}}'/gi, texts.settings.navigation.categories.label)
+      .replace(/'{{settings.navigation.categories.hint}}'/gi, texts.settings.navigation.categories.hint)
+      .replace(/'{{settings.navigation.categories.category}}'/gi, texts.settings.navigation.categories.category)
+      .replace(/'{{settings.navigation.pages.label}}'/gi, texts.settings.navigation.pages.label)
+      .replace(/'{{settings.navigation.pages.hint}}'/gi, texts.settings.navigation.pages.hint)
+      .replace(/'{{settings.navigation.pages.page}}'/gi, texts.settings.navigation.pages.page)
+      .replace(/'{{settings.logo.label}}'/gi, texts.settings.logo.label)
+      .replace(/'{{settings.logo.multicolor.label}}'/gi, texts.settings.logo.multicolor.label)
+      .replace(/'{{settings.logo.multicolor.hint}}'/gi, texts.settings.logo.multicolor.hint)
+      .replace(/'{{settings.logo.onecolor.label}}'/gi, texts.settings.logo.onecolor.label)
+      .replace(/'{{settings.logo.onecolor.hint}}'/gi, texts.settings.logo.onecolor.hint)
+      .replace(/'{{settings.socialMedia.label}}'/gi, texts.settings.socialMedia.label)
+      .replace(/'{{settings.socialMedia.links.label}}'/gi, texts.settings.socialMedia.links.label)
+      .replace(/'{{settings.socialMedia.links.hint}}'/gi, texts.settings.socialMedia.links.hint)
+      .replace(/'{{settings.socialMedia.links.name.label}}'/gi, texts.settings.socialMedia.links.name.label)
+      .replace(/'{{settings.socialMedia.links.name.hint}}'/gi, texts.settings.socialMedia.links.name.hint)
+      .replace(/'{{settings.socialMedia.links.url.label}}'/gi, texts.settings.socialMedia.links.url.label)
+      .replace(/'{{settings.socialMedia.links.url.hint}}'/gi, texts.settings.socialMedia.links.url.hint)
+      .replace(/'{{settings.footer.label}}'/gi, texts.settings.footer.label)
+      .replace(/'{{settings.footer.pages.label}}'/gi, texts.settings.footer.pages.label)
+      .replace(/'{{settings.footer.pages.hint}}'/gi, texts.settings.footer.pages.hint)
+      .replace(/'{{settings.footer.pages.page}}'/gi, texts.settings.footer.pages.page);
     return configFile;
   },
 };

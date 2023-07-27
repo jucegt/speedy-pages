@@ -131,6 +131,83 @@ const es = {
       },
     },
   },
+  settings: {
+    label: 'Configuración',
+    home: {
+      label: 'Pagina de Inicio',
+      seo: {
+        label: 'SEO',
+        title: {
+          label: 'Título',
+          hint: 'Título que se muestra en los resultados de búsqueda de Google.',
+        },
+        description: {
+          label: 'Descripción',
+          error: 'La descripción debe tener entre 140 y 160 caracteres',
+          hint: 'Descripción que se muestra en los resultados de búsqueda de Google.',
+        },
+      },
+      info: {
+        label: 'Información',
+        title: {
+          label: 'Título',
+          hint: 'Título que se muestra en la página de inicio.',
+        },
+        body: {
+          label: 'Cuerpo',
+          hint: 'Contenido que se muestra en la página de inicio.',
+        },
+      },
+    },
+    navigation: {
+      label: 'Navegación',
+      categories: {
+        label: 'Categorías',
+        hint: 'Categorías que se muestran en la barra de navegación.',
+        category: 'Categoría',
+      },
+      pages: {
+        label: 'Páginas',
+        hint: 'Páginas que se muestran en la barra de navegación.',
+        page: 'Página',
+      },
+    },
+    logo: {
+      label: 'Logo',
+      multicolor: {
+        label: 'Multi-Color',
+        hint: 'Código SVG para el logo multicolor.',
+      },
+      onecolor: {
+        label: '1-Color',
+        hint: 'Código SVG para el logo a un color.',
+      },
+    },
+    socialMedia: {
+      label: 'Redes Sociales',
+      links: {
+        label: 'Enlaces Sociales',
+        hint: 'Enlaces a redes sociales.',
+        name: {
+          label: 'Nombre',
+          hint: 'Nombre de la red social para mostrar el icono.',
+        },
+        url: {
+          label: 'URL',
+          error: 'La URL debe comenzar con http:// o https:// para que sea valida',
+          hint: 'URL del perfil de la red social.',
+        },
+      },
+    },
+    footer: {
+      label: 'Pie de Página',
+      pages: {
+        label: 'Páginas',
+        hint: 'Páginas que se muestran en el pie de página.',
+        page: 'Página',
+      },
+    },
+  },
 };
 
 module.exports = es;

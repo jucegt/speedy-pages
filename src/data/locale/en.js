@@ -131,6 +131,83 @@ const en = {
       },
     },
   },
+  settings: {
+    label: 'Settings',
+    home: {
+      label: 'Home Page',
+      seo: {
+        label: 'SEO',
+        title: {
+          label: 'Title',
+          hint: 'Title displayed in Google search results.',
+        },
+        description: {
+          label: 'Description',
+          error: 'The description should be between 140 and 160 characters',
+          hint: 'Description displayed in Google search results.',
+        },
+      },
+      info: {
+        label: 'Information',
+        title: {
+          label: 'Title',
+          hint: 'Title displayed in the home page.',
+        },
+        body: {
+          label: 'Body',
+          hint: 'Content displayed in the home page.',
+        },
+      },
+    },
+    navigation: {
+      label: 'Navigation',
+      categories: {
+        label: 'Categories',
+        hint: 'Categories displayed in the navigation bar.',
+        category: 'Category',
+      },
+      pages: {
+        label: 'Pages',
+        hint: 'Pages displayed in the navigation bar.',
+        page: 'Page',
+      },
+    },
+    logo: {
+      label: 'Logo',
+      multicolor: {
+        label: 'Multi-Color',
+        hint: 'SVG code for multi-color logo.',
+      },
+      onecolor: {
+        label: 'One-Color',
+        hint: 'SVG code for one-color logo.',
+      },
+    },
+    socialMedia: {
+      label: 'Social Media',
+      links: {
+        label: 'Social Links',
+        hint: 'Links to social media profiles.',
+        name: {
+          label: 'Name',
+          hint: 'Name of the social media platform to show the icon.',
+        },
+        url: {
+          label: 'URL',
+          error: 'The URL must begin with http:// or https:// to be valid',
+          hint: 'URL to the social media profile.',
+        },
+      },
+    },
+    footer: {
+      label: 'Footer',
+      pages: {
+        label: 'Pages',
+        hint: 'Pages displayed in the footer.',
+        page: 'Page',
+      },
+    },
+  },
 };
 
 module.exports = en;
