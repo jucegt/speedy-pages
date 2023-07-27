@@ -133,17 +133,14 @@ const es = {
           error: 'La descripción debe tener entre 140 y 160 caracteres',
           hint: 'Descripción que se muestra en los resultados de búsqueda de Google.',
         },
-      },
-      info: {
-        label: 'Información',
-        title: {
-          label: 'Título',
+        heading: {
+          label: 'Encabezado',
           hint: 'Título que se muestra en la página de inicio.',
         },
-        body: {
-          label: 'Cuerpo',
-          hint: 'Contenido que se muestra en la página de inicio.',
-        },
+      },
+      body: {
+        label: 'Cuerpo',
+        hint: 'Contenido que se muestra en la página de inicio.',
       },
     },
     navigation: {
