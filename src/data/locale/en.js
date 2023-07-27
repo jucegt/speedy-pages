@@ -41,16 +41,13 @@ const en = {
         hint: 'Excerpt displayed in the post page.',
       },
     },
-    content: {
-      label: 'Content',
-      heroImage: {
-        label: 'Hero Image',
-        hint: 'Image displayed in the post page.',
-      },
-      body: {
-        label: 'Body',
-        hint: 'Content displayed in the post page.',
-      },
+    heroImage: {
+      label: 'Hero Image',
+      hint: 'Image displayed in the post page.',
+    },
+    body: {
+      label: 'Body',
+      hint: 'Content displayed in the post page.',
     },
   },
   categories: {

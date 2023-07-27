@@ -77,22 +77,8 @@ collections:
               widget: 'text',
               hint: '{{posts.info.excerpt.hint}}',
             }
-      - label: '{{posts.content.label}}'
-        name: 'content'
-        widget: 'object'
-        fields:
-          - {
-              label: '{{posts.content.heroImage.label}}',
-              name: 'image',
-              widget: image,
-              hint: '{{posts.content.heroImage.hint}}',
-            }
-          - {
-              label: '{{posts.content.body.label}}',
-              name: 'body',
-              widget: 'markdown',
-              hint: '{{posts.content.body.hint}}',
-            }
+      - { label: '{{posts.heroImage.label}}', name: 'image', widget: image, hint: '{{posts.heroImage.hint}}' }
+      - { label: '{{posts.body.label}}', name: 'body', widget: 'markdown', hint: '{{posts.body.hint}}' }
 
   - name: 'categories'
     label: '{{categories.plural}}'

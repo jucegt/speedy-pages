@@ -41,16 +41,13 @@ const es = {
         hint: 'Extracto que se muestra en la página del artículo.',
       },
     },
-    content: {
-      label: 'Contenido',
-      heroImage: {
-        label: 'Imagen de portada',
-        hint: 'Imagen que se muestra en la página del artículo.',
-      },
-      body: {
-        label: 'Cuerpo',
-        hint: 'Contenido que se muestra en la página del artículo.',
-      },
+    heroImage: {
+      label: 'Imagen de portada',
+      hint: 'Imagen que se muestra en la página del artículo.',
+    },
+    body: {
+      label: 'Cuerpo',
+      hint: 'Contenido que se muestra en la página del artículo.',
     },
   },
   categories: {
