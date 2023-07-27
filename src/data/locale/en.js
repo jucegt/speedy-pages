@@ -108,17 +108,14 @@ const en = {
         error: 'The description should be between 140 and 160 characters',
         hint: 'Description displayed in Google search results.',
       },
-    },
-    content: {
-      label: 'Content',
-      title: {
-        label: 'Title',
+      heading: {
+        label: 'Heading',
         hint: 'Title displayed in the page.',
       },
-      body: {
-        label: 'Body',
-        hint: 'Content displayed in the page.',
-      },
+    },
+    body: {
+      label: 'Body',
+      hint: 'Content displayed in the page.',
     },
   },
   settings: {

@@ -149,23 +149,13 @@ collections:
               pattern: ['^.{140,160}$', '{{pages.seo.description.error}}'],
               hint: '{{pages.seo.description.hint}}',
             }
-      - label: '{{pages.content.label}}'
-        name: 'info'
-        widget: 'object'
-        summary: '{{fields.title}}'
-        fields:
           - {
-              label: '{{pages.content.title.label}}',
-              name: 'title',
+              label: '{{pages.seo.heading.label}}',
+              name: 'heading',
               widget: 'string',
-              hint: '{{pages.content.title.hint}}',
+              hint: '{{pages.seo.heading.hint}}',
             }
-          - {
-              label: '{{pages.content.body.label}}',
-              name: 'body',
-              widget: 'markdown',
-              hint: '{{pages.content.body.hint}}',
-            }
+      - { label: '{{pages.body.label}}', name: 'body', widget: 'markdown', hint: '{{pages.body.hint}}' }
 
   - name: 'settings'
     label: '{{settings.label}}'
