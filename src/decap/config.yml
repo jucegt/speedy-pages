@@ -28,7 +28,7 @@ collections:
     folder: 'content/posts'
     create: true
     path: '{{year}}/{{month}}/{{slug}}'
-    slug: '{{fields.title}}'
+    slug: '{{fields.seo.slug}}'
     media_folder: ../../../static
     public_folder: /post-image
     fields:
