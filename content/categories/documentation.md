@@ -1,4 +1,5 @@
 ---
+title: Documentation
 seo:
   title: Documentation
   slug: documentation
