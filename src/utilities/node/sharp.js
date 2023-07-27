@@ -5,8 +5,10 @@ const sharp = require('sharp');
 
 const speedy = require('../../../speedy.config');
 const config = speedy.images;
+const configPhotos = speedy.photos;
 
 const files = glob.sync(config.src);
+const photos = glob.sync(configPhotos.src);
 
 const errorMessage = (error) => {
   if (error) throw error;
@@ -61,4 +63,25 @@ config.webp.sizes.forEach((size) => {
         console.log(error);
       });
   });
+});
+
+// Photos
+if (!fs.existsSync(`${configPhotos.dist}`)) {
+  const photosPath = `${configPhotos.dist}`;
+  fs.mkdirSync(photosPath, { recursive: true }, errorMessage);
+}
+
+photos.forEach((photo) => {
+  const photoname = path.basename(photo);
+  const image = sharp(photo);
+  image
+    .resize({
+      width: configPhotos.width,
+      height: configPhotos.height,
+      fit: configPhotos.fit,
+    })
+    .toFile(`${configPhotos.dist}${photoname}`)
+    .catch((error) => {
+      console.log(error);
+    });
 });

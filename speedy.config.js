@@ -7,6 +7,13 @@ const speedyConfig = {
     paginatedPagePrefix: '',
     postsPerPage: 12,
   },
+  photos: {
+    src: './content/photos/*.*',
+    dist: './.11ty/photos/',
+    fit: 'cover',
+    width: 80,
+    height: 80,
+  },
   images: {
     src: './content/static/*.*',
     dist: './.11ty/static/',
