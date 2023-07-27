@@ -110,23 +110,13 @@ collections:
               pattern: ['^.{140,160}$', '{{categories.seo.description.error}}'],
               hint: '{{categories.seo.description.hint}}',
             }
-      - label: '{{categories.info.label}}'
-        name: 'info'
-        widget: 'object'
-        summary: '{{fields.title}}'
-        fields:
           - {
-              label: '{{categories.info.title.label}}',
-              name: 'title',
+              label: '{{categories.seo.heading.label}}',
+              name: 'heading',
               widget: 'string',
-              hint: '{{categories.info.title.hint}}',
+              hint: '{{categories.seo.heading.hint}}',
             }
-          - {
-              label: '{{categories.info.body.label}}',
-              name: 'body',
-              widget: 'markdown',
-              hint: '{{categories.info.body.hint}}',
-            }
+      - { label: '{{categories.body.label}}', name: 'body', widget: 'markdown', hint: '{{categories.body.hint}}' }
 
   - name: 'authors'
     label: '{{authors.plural}}'

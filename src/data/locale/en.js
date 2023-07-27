@@ -68,21 +68,14 @@ const en = {
         error: 'The description should be between 140 and 160 characters',
         hint: 'Description displayed in Google search results.',
       },
-    },
-    info: {
-      label: 'Information',
-      showMenu: {
-        label: 'Show in menu',
-        hint: 'Show category in the navigation bar.',
-      },
-      title: {
-        label: 'Title',
+      heading: {
+        label: 'Heading',
         hint: 'Title displayed in the category page.',
       },
-      body: {
-        label: 'Body',
-        hint: 'Content displayed in the category page.',
-      },
+    },
+    body: {
+      label: 'Body',
+      hint: 'Content displayed in the category page.',
     },
   },
   authors: {
