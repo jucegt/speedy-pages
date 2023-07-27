@@ -6,7 +6,7 @@ const pagedCategories = require('./paged-categories');
 const categoryByName = require('./category-by-name');
 const categoriesList = require('./categories-list');
 const categoriesMenu = require('./categories-menu');
-const { homePage, logo, socialMedia, links } = require('./settings');
+const { homePage, navigation, logo, socialMedia, footer } = require('./settings');
 const footerPages = require('./footer-pages');
 
 const collections = function (config) {
@@ -20,8 +20,9 @@ const collections = function (config) {
   config.addCollection('categoriesMenu', categoriesMenu(config));
   config.addCollection('homePage', homePage);
   config.addCollection('logo', logo);
+  config.addCollection('navigation', navigation);
   config.addCollection('socialMedia', socialMedia);
-  config.addCollection('links', links);
+  config.addCollection('footer', footer);
   config.addCollection('footerPages', footerPages(config));
 };
 

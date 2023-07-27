@@ -1,18 +1,18 @@
 const footerPages = function (config) {
   return function (collection) {
-    const { links } = require('./settings');
-    const linksSettings = links(collection);
-    const linkList = linksSettings.footerpages;
-    const footerPages = [];
+    const { footer } = require('./settings');
+    const linksSettings = footer(collection);
+    const linkList = linksSettings.pages;
+    const pages = [];
 
-    linkList?.map((item) => {
-      footerPages.push({
-        name: item.page,
-        url: `/${config.getFilter('slugify')(item.page)}`,
+    linkList?.map((page) => {
+      pages.push({
+        name: page.page,
+        url: `/${config.getFilter('slugify')(page.page)}`,
       });
     });
 
-    return footerPages;
+    return pages;
   };
 };
 
