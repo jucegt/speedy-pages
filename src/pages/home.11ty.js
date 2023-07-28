@@ -17,19 +17,13 @@ const home = {
     };
   },
   render: function ({ pages, collections }) {
-    const { seo } = collections;
+    const { homePage } = collections;
+    const { seo } = homePage.data;
+    console.log(seo);
     return /* html */ `
       <header class="page-info">
         <h1 class="page-info__title"><span>${seo.heading || seo.title}</span></h1>
-        ${
-          seo.info
-            ? this.markdown(seo.info)
-            : seo.description
-            ? /* html */ `
-              <p>${seo.description}</p>
-            `
-            : ''
-        }
+        ${homePage.content || /* html */ `<p>${seo.description}</p>`}
       </header>
       <section class="posts-grid">
         ${pages?.items?.map((post) => this.postCard(post)).join('')}
