@@ -30,7 +30,7 @@ collections:
     path: '{{year}}/{{month}}/{{slug}}'
     slug: '{{fields.seo.slug}}'
     media_folder: ../../../static
-    public_folder: /post-image
+    public_folder: /
     fields:
       - { label: '{{posts.title.label}}', name: 'title', widget: 'string', hint: '{{posts.title.hint}}' }
       - label: '{{posts.seo.label}}'
@@ -59,7 +59,7 @@ collections:
               widget: 'relation',
               collection: 'categories',
               search_fields: ['title'],
-              value_field: 'title',
+              value_field: 'slug',
               hint: '{{posts.info.category.hint}}',
             }
           - { label: '{{posts.info.date.label}}', name: 'date', widget: 'datetime', hint: '{{posts.info.date.hint}}' }
@@ -126,7 +126,7 @@ collections:
     folder: 'content/authors'
     create: true
     media_folder: ../photos
-    public_folder: /author-photo
+    public_folder: /
     fields:
       - { label: '{{authors.title.label}}', name: 'title', widget: 'string', hint: '{{authors.title.hint}}' }
       - { label: '{{authors.photo.label}}', name: 'photo', widget: 'image', hint: '{{authors.photo.hint}}' }

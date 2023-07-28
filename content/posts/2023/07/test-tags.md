@@ -9,13 +9,13 @@ seo:
 info:
   date: 2023-07-28T05:40:08.678Z
   title: Test Tags
-  category: Documentation
+  category: documentation
   author: Julio Palencia
   excerpt: The outline of this inner shore is most irregular, curving and bending
     in and out and back upon itself, making coves and points and creeks and
     channels, and often pushing out in flats with not water enough on them at
     low tide to wet your ankles.
-image: /post-image/como-equilibrar-tus-hormonas-para-mejorar-el-metabolismo-y-la-salud.jpg
+image: /como-equilibrar-tus-hormonas-para-mejorar-el-metabolismo-y-la-salud.jpg
 ---
 # Example
 
@@ -31,7 +31,7 @@ This is another fine paragraph
 
 This is a paragraph `with` \~style\~ *italic* *italic* **bold** **bold**
 
-![image alt](/post-image/estrategias-efectivas-para-acelerar-el-metabolismo-y-bajar-de-peso.jpg "image title")
+![image alt](/estrategias-efectivas-para-acelerar-el-metabolismo-y-bajar-de-peso.jpg "image title")
 
 *Hello [link](https://rsms.me/) lol*
 
