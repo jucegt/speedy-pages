@@ -1,6 +1,6 @@
 const settings = {
   homePage: function (collection) {
-    return collection.getFilteredByGlob('./content/settings/home-page.md')[0].data;
+    return collection.getFilteredByGlob('./content/settings/home-page.md')[0];
   },
   navigation: function (collection) {
     return collection.getFilteredByGlob('./content/settings/navigation.md')[0].data;
