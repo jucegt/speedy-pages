@@ -6,22 +6,23 @@ const postCard = function ({ data, content, url }) {
   const wordsPerMinute = 200;
   const wordsCount = words.split(/\s+/).length;
   const readingTime = Math.ceil(wordsCount / wordsPerMinute);
-  const { featuredimage, title, date } = data;
+  const { image, info } = data;
+  const { title, date } = info;
   return /* html */ `
     <article class="post-card">
       <a href="${url}" title="${title}" class="post-card__image">
         <amp-img
           alt="${title}"
-          src="${this.src(featuredimage, true)}"
-          srcset="${this.srcSet(featuredimage, true)}"
+          src="${this.src(image, true)}"
+          srcset="${this.srcSet(image, true)}"
           width="400"
           height="300"
           layout="responsive">
           <amp-img
             fallback
             alt="${title}"
-            src="${this.src(featuredimage)}"
-            srcset="${this.srcSet(featuredimage)}"
+            src="${this.src(image)}"
+            srcset="${this.srcSet(image)}"
             width="400"
             height="300"
             layout="responsive">
