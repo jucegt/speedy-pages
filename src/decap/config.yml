@@ -58,8 +58,9 @@ collections:
               name: 'category',
               widget: 'relation',
               collection: 'categories',
-              search_fields: ['title'],
-              value_field: 'slug',
+              search_fields: ['seo.title'],
+              value_field: 'seo.slug',
+              display_fields: ['seo.title'],
               hint: '{{posts.info.category.hint}}',
             }
           - { label: '{{posts.info.date.label}}', name: 'date', widget: 'datetime', hint: '{{posts.info.date.hint}}' }
@@ -207,7 +208,6 @@ collections:
           - label: '{{settings.navigation.categories.label}}'
             name: 'categories'
             widget: 'list'
-            summary: '{{fields.name}}'
             hint: '{{settings.navigation.categories.hint}}'
             fields:
               - {
@@ -215,13 +215,13 @@ collections:
                   name: 'name',
                   widget: 'relation',
                   collection: 'categories',
-                  search_fields: ['title'],
-                  value_field: 'slug',
+                  search_fields: ['seo.title'],
+                  value_field: 'seo.slug',
+                  display_fields: ['seo.title'],
                 }
           - label: '{{settings.navigation.pages.label}}'
             name: 'pages'
             widget: 'list'
-            summary: '{{fields.name}}'
             hint: '{{settings.navigation.pages.hint}}'
             fields:
               - {
@@ -229,8 +229,9 @@ collections:
                   name: 'page',
                   widget: 'relation',
                   collection: 'name',
-                  search_fields: ['title'],
-                  value_field: 'slug',
+                  search_fields: ['seo.title'],
+                  value_field: 'seo.slug',
+                  display_fields: ['seo.title'],
                 }
 
       - name: 'logo'
