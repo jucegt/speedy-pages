@@ -207,7 +207,7 @@ collections:
           - label: '{{settings.navigation.categories.label}}'
             name: 'categories'
             widget: 'list'
-            summary: '{{fields.title}}'
+            summary: '{{fields.name}}'
             hint: '{{settings.navigation.categories.hint}}'
             fields:
               - {
@@ -221,7 +221,7 @@ collections:
           - label: '{{settings.navigation.pages.label}}'
             name: 'pages'
             widget: 'list'
-            summary: '{{fields.title}}'
+            summary: '{{fields.name}}'
             hint: '{{settings.navigation.pages.hint}}'
             fields:
               - {
