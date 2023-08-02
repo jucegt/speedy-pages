@@ -13,6 +13,7 @@ const images = function (content, outputPath) {
     for (const image of images) {
       const src = image.getAttribute('src');
       const alt = image.getAttribute('alt');
+      const title = image.getAttribute('title');
       const path = imagesConfig.dist.replace('./.11ty', '');
 
       if (src.startsWith('/')) {
@@ -40,6 +41,7 @@ const images = function (content, outputPath) {
 
         const ampWebp = document.createElement('amp-img');
         ampWebp.setAttribute('alt', alt);
+        ampWebp.setAttribute('title', title);
         ampWebp.setAttribute('src', defaultWebpSrc);
         ampWebp.setAttribute('srcset', webpSrcSet);
         ampWebp.setAttribute('width', imagesConfig.webp.sizes[0].width);
@@ -49,6 +51,7 @@ const images = function (content, outputPath) {
         const ampFallback = document.createElement('amp-img');
         ampFallback.setAttribute('fallback', '');
         ampFallback.setAttribute('alt', alt);
+        ampFallback.setAttribute('title', title);
         ampFallback.setAttribute('src', defaultSrc);
         ampFallback.setAttribute('srcset', srcSet);
         ampFallback.setAttribute('width', imagesConfig.sizes[0].width);
