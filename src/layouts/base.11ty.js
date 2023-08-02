@@ -2,10 +2,11 @@
 const inlineCss = require('../utilities/css');
 
 const base = {
-  render: async function ({ config, content, collections }) {
+  render: async function ({ config, content, collections, page }) {
     const { navigation, categoriesList, footerPages, homePage, logo, socialMedia } = collections;
     const { multicolor, onecolor } = logo;
     const { seo } = homePage.data;
+    const { url } = page;
     return /* html */ `
     <!doctype html>
     <html ⚡ lang="${config.language}">
@@ -31,10 +32,10 @@ const base = {
         <style amp-custom>${await inlineCss('style.css')}</style>
         <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
         <!-- CANONICAL -->
-        <link rel="canonical" href="." />
+        <link rel="canonical" href="${config.url}${url}" />
       </head>
       <body>
-        ${this.header(seo, multicolor.code, navigation)}
+        ${this.header(seo, multicolor.code, navigation, url)}
         <main class="content container">
           ${content}
         </main>
