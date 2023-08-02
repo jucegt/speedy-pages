@@ -35,6 +35,7 @@
 }
 
 @include min-query(xl) {
+  @include root--xl;
   @include container--xl;
   @include post-card--xl;
 }

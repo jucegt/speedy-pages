@@ -19,12 +19,12 @@
 
 @mixin container--xl {
   .container {
-    max-width: to-rem(1200);
+    max-width: to-rem(1200, $base-font-size--xl);
   }
 }
 
 @mixin container--xxl {
   .container {
-    max-width: to-rem(1400);
+    max-width: to-rem(1400, $base-font-size--xl);
   }
 }

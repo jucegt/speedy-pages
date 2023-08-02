@@ -52,3 +52,9 @@ p {
     color: var(--title);
   }
 }
+
+@mixin root--xl {
+  :root {
+    font-size: to-px(18);
+  }
+}

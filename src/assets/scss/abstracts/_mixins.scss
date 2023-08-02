@@ -1,12 +1,12 @@
 // Media Queries
 @mixin min-query($size) {
-  @media (min-width: to-rem(map-get(map-get($breakpoints, $size), "min"))) {
+  @media (min-width: to-px(map-get(map-get($breakpoints, $size), "min"))) {
     @content;
   }
 }
 
 @mixin max-query($size) {
-  @media (max-width: to-rem(map-get(map-get($breakpoints, $size), "max"))) {
+  @media (max-width: to-px(map-get(map-get($breakpoints, $size), "max"))) {
     @content;
   }
 }
