@@ -29,7 +29,7 @@ collections:
     create: true
     path: '{{year}}/{{month}}/{{slug}}'
     slug: '{{fields.seo.slug}}'
-    media_folder: '{{media_folder}}'
+    media_folder: '{{dirname}}/{{media_folder}}'
     public_folder: '{{public_folder}}'
     fields:
       - { label: '{{posts.title.label}}', name: 'title', widget: 'string', hint: '{{posts.title.hint}}' }
