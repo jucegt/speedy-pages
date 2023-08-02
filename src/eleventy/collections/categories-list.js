@@ -20,8 +20,6 @@ const categoriesList = function (config) {
       });
     });
 
-    console.log(categoriesList);
-
     return categoriesList;
   };
 };
