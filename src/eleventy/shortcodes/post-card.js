@@ -1,11 +1,9 @@
-const calendar = require('../../svgs/calendar.js');
-const clock = require('../../svgs/clock.js');
+const calendar = require('../../svgs/calendar');
+const clock = require('../../svgs/clock');
+const getReadingTime = require('../../utilities/reading-time');
 
 const postCard = function ({ data, content, url }, showCategory = true) {
-  const words = this.parseHTML(content);
-  const wordsPerMinute = 200;
-  const wordsCount = words.split(/\s+/).length;
-  const readingTime = Math.ceil(wordsCount / wordsPerMinute);
+  const readingTime = getReadingTime(content);
   const { image, info, collections } = data;
   const { title, date, category } = info;
   const { categoryBySlug } = collections;
@@ -39,8 +37,8 @@ const postCard = function ({ data, content, url }, showCategory = true) {
       <section class="post-card__content">
         <h2><a href="${url}" title="${title}">${title}</a></h2>
         <div class="post-card__info">
-          <p>${calendar()} ${this.date(date)}</p>
-          <p>${clock()} ${readingTime} min</p>
+          <p>${calendar()} ${this.date(date, true)}</p>
+          <p>${clock()} ${readingTime} min de lectura</p>
         </div>
       </section>
     </article>
