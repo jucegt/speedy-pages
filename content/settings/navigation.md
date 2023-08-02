@@ -1,4 +1,3 @@
 ---
-categories:
-  - category: Documentation
+categories: []
 ---
