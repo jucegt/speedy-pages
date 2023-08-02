@@ -15,15 +15,15 @@ const header = function ({ title }, logo, menu) {
         <a href="/" class="header__link logo" title="${title}">${logo}</a>
 
         ${
-          menu.length > 0
+          menu?.length > 0
             ? /* html */ `
               <nav class="${classesMenu}" [class]="menu ? '${classesMenu} header__panel--open' : '${classesMenu}'">
                 <ul class="menu__list">
                   ${menu
                     ?.map(
-                      (category) => /* html */ `
+                      (item) => /* html */ `
                         <li class="menu__item">
-                          <a href="/${category.url}/" class="menu__link" title="${category.name}">${category.name}</a>
+                          <a href="${item.url}" class="menu__link" title="${item.name}">${item.name}</a>
                         </li>
                       `,
                     )
@@ -50,7 +50,7 @@ const header = function ({ title }, logo, menu) {
             </button>
           </div>
           ${
-            menu.length > 0
+            menu?.length > 0
               ? /* html */ `
                 <div class="tools__menu">
                   <button on="tap:AMP.setState({ menu: !menu, search: false })" [class]="menu ? 'active' : ''" aria-label="Menu">
@@ -92,7 +92,7 @@ const header = function ({ title }, logo, menu) {
               </button>
             </li>
             ${
-              menu.length > 0
+              menu?.length > 0
                 ? /* html */ `
                   <li class="nav__item">
                     <button on="tap:AMP.setState({ menu: !menu, search: false })" [class]="menu ? 'active' : ''">
