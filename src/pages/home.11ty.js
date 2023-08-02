@@ -19,7 +19,6 @@ const home = {
   render: function ({ pages, collections }) {
     const { homePage } = collections;
     const { seo } = homePage.data;
-    console.log(seo);
     return /* html */ `
       <header class="page-info">
         <h1 class="page-info__title"><span>${seo.heading || seo.title}</span></h1>
