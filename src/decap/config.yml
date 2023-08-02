@@ -10,7 +10,7 @@ backend:
     deleteMedia: 'cms: deleted “{{path}}”'
 
 publish_mode: editorial_workflow
-media_folder: ./content/static
+media_folder: content/static
 public_folder: /
 
 locale: '{{language}}'
@@ -29,7 +29,8 @@ collections:
     create: true
     path: '{{year}}/{{month}}/{{slug}}'
     slug: '{{fields.seo.slug}}'
-
+    media_folder: ../../../static
+    public_folder: /
     fields:
       - { label: '{{posts.title.label}}', name: 'title', widget: 'string', hint: '{{posts.title.hint}}' }
       - label: '{{posts.seo.label}}'
@@ -126,6 +127,7 @@ collections:
     folder: 'content/authors'
     create: true
     media_folder: ../photos
+    public_folder: /
     fields:
       - { label: '{{authors.title.label}}', name: 'title', widget: 'string', hint: '{{authors.title.hint}}' }
       - { label: '{{authors.photo.label}}', name: 'photo', widget: 'image', hint: '{{authors.photo.hint}}' }
