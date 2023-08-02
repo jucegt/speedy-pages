@@ -10,6 +10,24 @@
     display: block;
     margin: 0 to-rem(-20);
   }
+  &__category {
+    position: absolute;
+    top: to-rem(20);
+    left: 0;
+    background: var(--oragenta);
+    color: var(--white-200);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: to-rem(12);
+    display: block;
+    padding: to-rem(4) to-rem(8);
+    border-radius: to-rem(4);
+    font-weight: bold;
+    transition: transform ease-in 0.2s;
+    &:hover {
+      color: var(--white-200);
+    }
+  }
   &__content {
     background: var(--post-bg);
     border-radius: to-rem(8);
@@ -61,6 +79,9 @@
       border-radius: to-rem(8);
       overflow: hidden;
       margin: 0;
+    }
+    &__category {
+      left: to-rem(20);
     }
     &__content {
       left: to-rem(20);

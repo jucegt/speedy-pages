@@ -1,13 +1,15 @@
 const calendar = require('../../svgs/calendar.js');
 const clock = require('../../svgs/clock.js');
 
-const postCard = function ({ data, content, url }) {
+const postCard = function ({ data, content, url }, showCategory = true) {
   const words = this.parseHTML(content);
   const wordsPerMinute = 200;
   const wordsCount = words.split(/\s+/).length;
   const readingTime = Math.ceil(wordsCount / wordsPerMinute);
-  const { image, info } = data;
-  const { title, date } = info;
+  const { image, info, collections } = data;
+  const { title, date, category } = info;
+  const { categoryBySlug } = collections;
+  const categoryInfo = categoryBySlug[category];
   return /* html */ `
     <article class="post-card">
       <a href="${url}" title="${title}" class="post-card__image">
@@ -29,6 +31,11 @@ const postCard = function ({ data, content, url }) {
           </amp-img>
         </amp-img>
       </a>
+      ${
+        showCategory
+          ? /* html */ `<a class="post-card__category" href="/${category}/" title="${categoryInfo.data.seo.title}">${categoryInfo.data.seo.title}</a>`
+          : ''
+      }
       <section class="post-card__content">
         <h2><a href="${url}" title="${title}">${title}</a></h2>
         <div class="post-card__info">
