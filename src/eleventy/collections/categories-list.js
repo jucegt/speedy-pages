@@ -1,22 +1,26 @@
 const categoriesList = function (config) {
   return function (collection) {
     const posts = require('./posts')(collection);
-    const categoriesNames = new Set();
+    const categories = require('./categories')(collection);
+    const categoriesSlug = new Set();
     const categoriesList = [];
 
     posts?.map((post) => {
-      if ('category' in post.data) {
-        categoriesNames.add(post.data.category);
+      if ('category' in post.data.info) {
+        categoriesSlug.add(post.data.info.category);
       }
     });
 
-    [...categoriesNames]?.map((category) => {
+    [...categoriesSlug]?.map((category) => {
+      const categoryInfo = categories?.find((cat) => cat.data.seo.slug === category);
       categoriesList.push({
-        name: category,
+        name: categoryInfo.data.seo.title,
         url: `/${config.getFilter('slugify')(category)}/`,
-        posts: posts.filter((post) => post.data.category === category).length,
+        posts: posts.filter((post) => post.data.info.category === category).length,
       });
     });
+
+    console.log(categoriesList);
 
     return categoriesList;
   };
