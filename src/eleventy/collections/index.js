@@ -3,7 +3,7 @@ const categories = require('./categories');
 const pages = require('./pages');
 const pagedPosts = require('./paged-posts');
 const pagedCategories = require('./paged-categories');
-const categoryByName = require('./category-by-name');
+const categoryBySlug = require('./category-by-slug');
 const categoriesList = require('./categories-list');
 const categoriesMenu = require('./categories-menu');
 const { homePage, navigation, logo, socialMedia, footer } = require('./settings');
@@ -15,7 +15,7 @@ const collections = function (config) {
   config.addCollection('pages', pages);
   config.addCollection('pagedPosts', pagedPosts);
   config.addCollection('pagedCategories', pagedCategories(config));
-  config.addCollection('categoryByName', categoryByName);
+  config.addCollection('categoryBySlug', categoryBySlug);
   config.addCollection('categoriesList', categoriesList(config));
   config.addCollection('categoriesMenu', categoriesMenu(config));
   config.addCollection('homePage', homePage);
