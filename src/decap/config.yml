@@ -29,8 +29,8 @@ collections:
     create: true
     path: '{{year}}/{{month}}/{{slug}}'
     slug: '{{fields.seo.slug}}'
-    media_folder: '{{dirname}}/{{media_folder}}'
-    public_folder: '{{public_folder}}'
+    media_folder: ../../../static
+    public_folder: /
     fields:
       - { label: '{{posts.title.label}}', name: 'title', widget: 'string', hint: '{{posts.title.hint}}' }
       - label: '{{posts.seo.label}}'
@@ -127,7 +127,7 @@ collections:
     folder: 'content/authors'
     create: true
     media_folder: ../photos
-    public_folder: '{{public_folder}}'
+    public_folder: /
     fields:
       - { label: '{{authors.title.label}}', name: 'title', widget: 'string', hint: '{{authors.title.hint}}' }
       - { label: '{{authors.photo.label}}', name: 'photo', widget: 'image', hint: '{{authors.photo.hint}}' }
