@@ -212,11 +212,11 @@ collections:
             fields:
               - {
                   label: '{{settings.navigation.categories.category}}',
-                  name: 'category',
+                  name: 'name',
                   widget: 'relation',
                   collection: 'categories',
                   search_fields: ['title'],
-                  value_field: 'title',
+                  value_field: 'slug',
                 }
           - label: '{{settings.navigation.pages.label}}'
             name: 'pages'
@@ -228,9 +228,9 @@ collections:
                   label: '{{settings.navigation.pages.page}}',
                   name: 'page',
                   widget: 'relation',
-                  collection: 'pages',
+                  collection: 'name',
                   search_fields: ['title'],
-                  value_field: 'title',
+                  value_field: 'slug',
                 }
 
       - name: 'logo'
