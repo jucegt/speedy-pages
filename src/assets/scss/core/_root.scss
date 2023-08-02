@@ -29,6 +29,9 @@ body {
 a {
   color: var(--title);
   transition: color ease-in 0.2s;
+  * {
+    transition: inherit;
+  }
   &:hover {
     transition-timing-function: ease-out;
     color: var(--orange);
