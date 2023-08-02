@@ -108,14 +108,14 @@
 
 @mixin post-card--xl {
   .post-card {
-    max-width: to-rem(365.333);
-    min-width: to-rem(355.333);
+    max-width: to-rem(365.333, $base-font-size--xl);
+    min-width: to-rem(355.333, $base-font-size--xl);
   }
 }
 
 @mixin post-card--xxl {
   .post-card {
-    max-width: to-rem(432);
-    min-width: to-rem(422);
+    max-width: to-rem(432, $base-font-size--xl);
+    min-width: to-rem(422, $base-font-size--xl);
   }
 }
