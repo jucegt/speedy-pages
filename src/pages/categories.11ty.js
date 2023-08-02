@@ -8,7 +8,7 @@ const categories = {
         alias: 'pages',
       },
       permalink: function ({ pages }) {
-        let link = `/${this.slugify(pages.title)}/`;
+        let link = `/${this.slugify(pages.slug)}/`;
         if (pages.pageNumber > 1) {
           link += `${pages.pageNumber}/`;
         }
@@ -17,8 +17,8 @@ const categories = {
     };
   },
   render: function ({ pages, collections }) {
-    const { categoryByName } = collections;
-    const { data, content } = categoryByName[pages.title];
+    const { categoryBySlug } = collections;
+    const { data, content } = categoryBySlug[pages.slug];
     const { title, heading } = data;
     return /* html */ `
       <header class="page-info">
@@ -26,7 +26,7 @@ const categories = {
         ${content}
       </header>
       <section class="posts-grid">
-        ${pages?.items?.map((post) => this.postCard(post)).join('')}
+        ${pages?.items?.map((post) => this.postCard(post, false)).join('')}
       </section>
     `;
   },
