@@ -2,7 +2,7 @@ const settings = {
   homePage: function (collection) {
     return collection.getFilteredByGlob('./content/settings/home-page.md')[0];
   },
-  navigation: function (collection) {
+  navMenu: function (collection) {
     return collection.getFilteredByGlob('./content/settings/navigation.md')[0].data;
   },
   logo: function (collection) {
