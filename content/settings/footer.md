@@ -1,4 +1,3 @@
 ---
-pages:
-  - page: about-us
+pages: []
 ---
