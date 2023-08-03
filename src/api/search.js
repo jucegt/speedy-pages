@@ -6,6 +6,9 @@ export const handler = async ({ queryStringParameters }) => {
   if (!q) {
     return {
       statusCode: 400,
+      headers: {
+        'content-type': 'application/json',
+      },
       body: JSON.stringify({ error: true, message: 'Missing search parameter' }),
     };
   }
