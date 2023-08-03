@@ -16,8 +16,9 @@ const pagedCategories = function (config) {
         const sliceTo = sliceFrom + postsPerPage;
 
         pagedPosts.push({
-          title: category.data.seo.heading || category.data.seo.title,
+          title: category.data.seo.title,
           slug: category.data.seo.slug,
+          description: category.data.seo.description,
           items: postByCategory.slice(sliceFrom, sliceTo),
           pageNumber: pageNum,
           total: numberOfPages,
