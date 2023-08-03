@@ -5,7 +5,7 @@ const moon = require('../../svgs/moon');
 const sun = require('../../svgs/sun');
 const hamburger = require('../../svgs/hamburger');
 
-const header = function ({ title }, logo, menu) {
+const header = function ({ title }, logo, menu, url) {
   const classesMenu = 'header__panel menu';
   const classesTools = 'header__panel tools';
 
@@ -22,7 +22,7 @@ const header = function ({ title }, logo, menu) {
                   ${menu
                     ?.map(
                       (item) => /* html */ `
-                        <li class="menu__item">
+                        <li class="menu__item${url.includes(item.url) ? ' menu__item--active' : ''}">
                           <a href="${item.url}" class="menu__link" title="${item.name}">${item.name}</a>
                         </li>
                       `,
