@@ -1,6 +1,4 @@
 ---
-categories:
-  - name: documentation
-pages:
-  - name: about-us
+categories: []
+pages: []
 ---
