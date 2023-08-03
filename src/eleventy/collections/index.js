@@ -1,6 +1,7 @@
 const posts = require('./posts');
 const categories = require('./categories');
 const pages = require('./pages');
+const authors = require('./authors');
 const pagedPosts = require('./paged-posts');
 const pagedCategories = require('./paged-categories');
 const categoryBySlug = require('./category-by-slug');
@@ -13,6 +14,7 @@ const collections = function (config) {
   config.addCollection('posts', posts);
   config.addCollection('categories', categories);
   config.addCollection('pages', pages);
+  config.addCollection('authors', authors);
   config.addCollection('pagedPosts', pagedPosts);
   config.addCollection('pagedCategories', pagedCategories(config));
   config.addCollection('categoryBySlug', categoryBySlug);
