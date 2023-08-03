@@ -1,7 +1,7 @@
 const handler = async (event) => {
   return {
     status: 200,
-    body: JSON.stringify(event),
+    body: JSON.stringify({ event }),
   };
 };
 
