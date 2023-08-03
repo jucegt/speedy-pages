@@ -35,16 +35,16 @@ const post = {
             alt="${info.title}"
             src="${this.src(image, true)}"
             srcset="${this.srcSet(image, true)}"
-            width="400"
-            height="300"
+            width="600"
+            height="480"
             layout="responsive">
             <amp-img
               fallback
               alt="${info.title}"
               src="${this.src(image)}"
               srcset="${this.srcSet(image)}"
-              width="400"
-              height="300"
+              width="600"
+              height="480"
               layout="responsive">
             </amp-img>
           </amp-img>
