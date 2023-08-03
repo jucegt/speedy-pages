@@ -15,16 +15,16 @@ const postCard = function ({ data, content, url }, showCategory = true) {
           alt="${title}"
           src="${this.src(image, true)}"
           srcset="${this.srcSet(image, true)}"
-          width="400"
-          height="300"
+          width="600"
+          height="480"
           layout="responsive">
           <amp-img
             fallback
             alt="${title}"
             src="${this.src(image)}"
             srcset="${this.srcSet(image)}"
-            width="400"
-            height="300"
+            width="600"
+            height="480"
             layout="responsive">
           </amp-img>
         </amp-img>
