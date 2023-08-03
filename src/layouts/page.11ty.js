@@ -4,9 +4,7 @@ const page = {
   },
   render: function ({ content }) {
     return /* html */ `
-      <div class="container page">
-        ${content}
-      </div>
+      ${content}
     `;
   },
 };
