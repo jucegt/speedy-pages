@@ -1,6 +1,6 @@
 export const handler = async () => {
   return {
-    status: 200,
+    statusCode: 200,
     body: JSON.stringify({ message: 'Search API' }),
   };
 };
