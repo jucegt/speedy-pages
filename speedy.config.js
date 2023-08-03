@@ -11,8 +11,8 @@ const speedyConfig = {
     src: './content/photos/*.*',
     dist: './.11ty/photos/',
     fit: 'cover',
-    width: 80,
-    height: 80,
+    width: 60,
+    height: 60,
   },
   images: {
     src: './content/static/*.*',
