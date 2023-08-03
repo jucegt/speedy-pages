@@ -1,7 +1,7 @@
-const handler = async (event) => {
+const handler = async () => {
   return {
     status: 200,
-    body: JSON.stringify({ event }),
+    body: JSON.stringify({ message: 'Search API' }),
   };
 };
 
