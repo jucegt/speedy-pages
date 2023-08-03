@@ -2,11 +2,24 @@
 const inlineCss = require('../utilities/css');
 
 const base = {
-  render: async function ({ config, content, collections, page }) {
+  render: async function ({
+    config,
+    content,
+    collections,
+    page,
+    image,
+    pageTitle,
+    pageDescription,
+    firstPostImage,
+    ...rest
+  }) {
     const { navigation, categoriesList, footerPages, homePage, logo, socialMedia } = collections;
     const { multicolor, onecolor } = logo;
     const { seo } = homePage.data;
     const { url } = page;
+    const preload = image || firstPostImage || null;
+    const title = rest?.seo?.title || pageTitle;
+    const description = rest?.seo?.description || pageDescription || seo.description;
     return /* html */ `
     <!doctype html>
     <html ⚡ lang="${config.language}">
@@ -16,13 +29,24 @@ const base = {
         <meta name="generator" content="eleventy" />
         <meta name="viewport" content="width=device-width" />
         <!-- BASIC SEO -->
-        <meta name="description" content="${seo.description}" />
-        <title>${seo.title}</title>
+        <meta name="description" content="${description}" />
+        <title>${title ? `${title} - ${seo.title}` : seo.title}</title>
         <!-- OG -->
         <!-- PRELOAD -->
         <link rel="preload" as="font" href="/static/fonts/lato-regular.woff2" type="font/woff2" crossorigin>
         <link rel="preload" as="font" href="/static/fonts/lato-bold.woff2" type="font/woff2" crossorigin>
-        <link rel="preload" as="image" href="/static/webp/md/11ty.webp" imagesrcset="/static/webp/md/11ty.webp 600w, /static/webp/lg/11ty.webp 1200w" />
+        ${
+          preload
+            ? /* html */ `
+              <link
+                rel="preload"
+                as="image"
+                href="${this.src(preload, true)}"
+                imagesrcset="${this.srcSet(preload, true)}"
+              />
+        `
+            : ''
+        }
         <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
         <!-- AMP -->
         <script async src="https://cdn.ampproject.org/v0.js"></script>
