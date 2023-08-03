@@ -7,6 +7,11 @@ const home = {
         size: 1,
         alias: 'pages',
       },
+      eleventyComputed: {
+        firstPostImage: function ({ pages }) {
+          return pages.items[0].data.image;
+        },
+      },
       permalink: ({ pages }) => {
         let link = '/';
         if (pages.pageNumber > 1) {
