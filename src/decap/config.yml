@@ -305,7 +305,6 @@ collections:
           - label: '{{settings.footer.pages.label}}'
             name: 'pages'
             widget: 'list'
-            summary: '{{fields.category}}'
             hint: '{{settings.footer.pages.hint}}'
             fields:
               - {
