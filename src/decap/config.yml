@@ -228,7 +228,7 @@ collections:
                   label: '{{settings.navigation.pages.page}}',
                   name: 'page',
                   widget: 'relation',
-                  collection: 'name',
+                  collection: 'pages',
                   search_fields: ['seo.title'],
                   value_field: 'seo.slug',
                   display_fields: ['seo.title'],
