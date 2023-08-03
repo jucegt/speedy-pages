@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "bungcip.better-toml",
     "mikestead.dotenv",
     "editorconfig.editorconfig",
     "usernamehw.errorlens",
