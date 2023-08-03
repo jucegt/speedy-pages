@@ -10,6 +10,9 @@
 // Components
 @import "components/components";
 
+// Pages
+@import "pages/pages";
+
 .amp-dark-mode {
   @include header--dark;
 }
@@ -17,6 +20,7 @@
 @include min-query(sm) {
   @include content--sm;
   @include post-card--sm;
+  @include post--sm;
 }
 
 @include min-query(md) {
@@ -25,6 +29,7 @@
   @include footer--md;
   @include content--md;
   @include post-card--md;
+  @include post--md;
 }
 
 @include min-query(lg) {
@@ -38,6 +43,7 @@
   @include root--xl;
   @include container--xl;
   @include post-card--xl;
+  @include post--xl;
 }
 
 @include min-query(xxl) {
