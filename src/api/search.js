@@ -22,6 +22,6 @@ export const handler = async ({ queryStringParameters }) => {
     headers: {
       'content-type': 'application/json',
     },
-    body: JSON.stringify({ results }),
+    body: JSON.stringify({ items: results }),
   };
 };
