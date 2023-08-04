@@ -35,10 +35,10 @@ const header = function ({ title }, logo, menu, url) {
         }
 
         <section class="${classesTools}" [class]="search ? '${classesTools} header__panel--open' : '${classesTools}'">
-          <form class="tools__search" method="post" action-xhr="/" target="_top">
+          <form class="tools__search" method="POST" action-xhr="https://speedypages.netlify.app/api/search/" target="_top" on="submit:AMP.setState({ query: value })">
             <div class="input input--icon">
-              <input placeholder="Buscar" name="search" id="search">
-              ${search()}
+              <input placeholder="Buscar" name="search" id="search" on="input-throttled:AMP.setState({ value: event.value })">
+              <button>${search()}</button>
             </div>
           </form>
           <div class="tools__mode mode">

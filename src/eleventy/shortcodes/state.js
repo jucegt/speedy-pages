@@ -4,7 +4,9 @@ const state = function () {
       <script type="application/json">
         {
           "menu": false,
-          "search": false
+          "search": false,
+          "query": "",
+          "value": ""
         }
       </script>
     </amp-state>

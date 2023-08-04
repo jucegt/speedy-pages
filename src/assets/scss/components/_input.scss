@@ -17,16 +17,23 @@
     }
   }
   &--icon {
-    svg {
+    button {
+      background: none;
+      border: none;
+      color: var(--text);
       display: block;
-      height: to-rem(24);
       left: to-rem(14);
+      margin: 0;
+      padding: 0;
       pointer-events: none;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+    }
+    svg {
+      display: block;
+      height: to-rem(24);
       width: to-rem(24);
-      color: var(--text);
     }
     input {
       padding-left: to-rem(42);
