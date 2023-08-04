@@ -65,7 +65,8 @@ const base = {
         <div class="search">
           <amp-list
             layout="responsive"
-            [src]="query ? 'https://speedypages.netlify.app/api/search?q=' + encodeURIComponent(query) : null">
+            src="/search/default.json"
+            [src]="query ? '/api/search?q=' + encodeURIComponent(query) : '/search/default.json'">
             <template type="amp-mustache">
               <div>
                 <a href="{{item.url}}">{{item.title}}</a>
