@@ -13,6 +13,7 @@ const searchInfo = {
       "heading": "${post.data.info.title}",
       "url": "/${post.data.info.category}/${post.data.seo.slug}/",
       "description": "${post.data.seo.description}",
+      "date": "${this.date(post.data.info.date)}",
       "image": {
         "default": {
           "src": "${this.src(post.data.image)}",
