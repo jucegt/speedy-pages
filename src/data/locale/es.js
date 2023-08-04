@@ -132,6 +132,20 @@ const es = {
   },
   settings: {
     label: 'Configuración',
+    ui: {
+      label: 'UI',
+      colors: {
+        label: 'Colores',
+        primary: {
+          label: 'Primario',
+          hint: 'Color primario utilizado en el sitio web.',
+        },
+        secondary: {
+          label: 'Secundario',
+          hint: 'Color secundario utilizado en el sitio web.',
+        },
+      },
+    },
     home: {
       label: 'Pagina de Inicio',
       seo: {
