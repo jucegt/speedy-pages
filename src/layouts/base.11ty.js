@@ -66,23 +66,7 @@ const base = {
           ${content}
         </main>
         ${this.footer(seo, onecolor.code, socialMedia, categoriesList, footerPages)}
-        <section class="search-box">
-          <div class="container">
-            <amp-list
-              id="results"
-              width="auto"
-              height="auto"
-              layout="fill"
-              src="/search/default.json"
-              [src]="query ? '/api/search?q=' + encodeURIComponent(query) : '/search/default.json'"
-              binding="no"
-            >
-              <template type="amp-mustache">
-                <div><a href="{{item.url}}">{{item.title}}</a></div>
-              </template>
-            </amp-list>
-          </div>
-        </section>
+        ${this.search()}
         ${this.mask()}
         ${this.state()}
       </body>

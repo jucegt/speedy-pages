@@ -13,18 +13,6 @@
 // Pages
 @import "pages/pages";
 
-.search-box {
-  position: fixed;
-  top: to-rem(60);
-  width: 100%;
-  height: calc(100vh - to-rem(60));
-  background: var(--bg);
-  z-index: 1;
-  .container {
-    height: 100%;
-  }
-}
-
 .amp-dark-mode {
   @include header--dark;
 }
@@ -49,6 +37,7 @@
   @include header--lg;
   @include content--lg;
   @include post-card--lg;
+  @include search--lg;
 }
 
 @include min-query(xl) {
