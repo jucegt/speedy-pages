@@ -1,0 +1,30 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 to-rem(20);
+  width: 100%;
+}
+
+@mixin container--md {
+  .container {
+    max-width: to-rem(720);
+  }
+}
+
+@mixin container--lg {
+  .container {
+    max-width: to-rem(960);
+  }
+}
+
+@mixin container--xl {
+  .container {
+    max-width: to-rem(1200, $base-font-size--xl);
+  }
+}
+
+@mixin container--xxl {
+  .container {
+    max-width: to-rem(1400, $base-font-size--xl);
+  }
+}

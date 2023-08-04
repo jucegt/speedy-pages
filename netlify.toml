@@ -1,0 +1,11 @@
+[build]
+command = "npm run build"
+publish = ".11ty"
+
+[functions]
+directory = "src/api"
+
+[[redirects]]
+from = '/api/*'
+to = '/.netlify/functions/:splat'
+status = 200

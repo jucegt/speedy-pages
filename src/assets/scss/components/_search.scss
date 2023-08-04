@@ -1,0 +1,110 @@
+.search-box {
+  position: fixed;
+  top: to-rem(20);
+  left: to-rem(20);
+  right: to-rem(20);
+  height: calc(100vh - to-rem(196));
+  border-radius: to-rem(8);
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-100%) scale(0.7);
+  transition: opacity ease-in 0.2s, transform ease-in 0.2s;
+  &--active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition-timing-function: ease-out;
+  }
+  &__header {
+    padding: to-rem(10) to-rem(20);
+    background: var(--nav-bg);
+    box-shadow: var(--shadow);
+    border-radius: to-rem(8) to-rem(8) 0 0;
+    p {
+      margin: 0;
+      span {
+        display: block;
+        font-size: to-rem(14);
+      }
+      strong {
+        display: inline;
+        font-size: to-rem(18);
+        background: var(--oragenta);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+    }
+  }
+  &__content {
+    flex-grow: 1;
+    overflow: auto;
+    [role="list"] {
+      overflow: auto;
+    }
+  }
+
+  &__no-results {
+    padding: to-rem(20);
+    text-align: center;
+    margin: 0;
+    font-size: to-rem(18);
+  }
+  &__article {
+    padding: to-rem(20);
+    box-shadow: var(--shadow-border);
+    &:last-child {
+      box-shadow: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    p {
+      margin: 0;
+    }
+
+    .article {
+      &__header {
+        p {
+          font-size: to-rem(18);
+          font-weight: bold;
+        }
+      }
+      &__content {
+        margin-top: to-rem(12);
+      }
+    }
+  }
+}
+
+@mixin search--md {
+  .search-box {
+    height: calc(100vh - to-rem(40));
+    top: to-rem(20);
+  }
+}
+
+@mixin search--lg {
+  .search-box {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) translateY(-100%) scale(0.7);
+    height: calc(100vh - to-rem(100));
+    top: to-rem(80);
+    width: 100%;
+    max-width: to-rem(920);
+    &--active {
+      transform: translateX(-50%) translateY(0) scale(1);
+    }
+  }
+}
+
+@mixin search--xl {
+  .search-box {
+    height: calc(100vh - to-rem(124));
+    top: to-rem(92);
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "layout": "page",
+  "permalink": "/{{ seo.slug | slugify }}/index.html"
+}

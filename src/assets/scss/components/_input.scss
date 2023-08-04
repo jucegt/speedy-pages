@@ -1,0 +1,42 @@
+.input {
+  input {
+    background: var(--form-element-bg);
+    border-radius: to-rem(8);
+    border: 0;
+    color: var(--title);
+    height: to-rem(40);
+    outline: to-rem(2) solid transparent;
+    outline-offset: to-rem(-2);
+    padding: 0 to-rem(14);
+    width: 100%;
+    transition: outline-offset ease-in 0.2s, outline-color ease-in 0.2s;
+    &:focus {
+      outline-offset: to-rem(2);
+      outline-color: var(--orange);
+      transition-timing-function: ease-out;
+    }
+  }
+  &--icon {
+    button {
+      background: none;
+      border: none;
+      color: var(--text);
+      display: block;
+      left: to-rem(14);
+      margin: 0;
+      padding: 0;
+      pointer-events: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    svg {
+      display: block;
+      height: to-rem(24);
+      width: to-rem(24);
+    }
+    input {
+      padding-left: to-rem(42);
+    }
+  }
+}

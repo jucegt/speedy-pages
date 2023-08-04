@@ -1,0 +1,49 @@
+{
+  "name": "speedy-pages",
+  "version": "0.0.1",
+  "description": "11ty blog template with AMP",
+  "main": "index.js",
+  "repository": "git@github.com:jucegt/speedy-pages.git",
+  "author": "jucegt <julio2201@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,scss}\"",
+    "lint": "eslint . --config eslint.config.js --fix --max-warnings=0",
+    "11ty": "npx @11ty/eleventy",
+    "sass": "sass --no-source-map src/assets/scss:src/assets/css",
+    "clean": "rm -rf .11ty/",
+    "dev:11ty": "yarn 11ty --watch --serve",
+    "dev:sass": "yarn sass --watch",
+    "build:11ty": "yarn 11ty",
+    "build:sass": "yarn sass",
+    "build:images": "node ./src/utilities/node/sharp.js",
+    "dev": "npm-run-all clean build:images build:sass --parallel dev:*",
+    "build": "npm-run-all clean build:sass build:*"
+  },
+  "pre-commit": [
+    "format",
+    "lint"
+  ],
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@ampproject/toolbox-optimizer": "^2.9.0",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
+    "dotenv": "^16.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "glob": "^10.2.2",
+    "html-minifier": "^4.0.0",
+    "jsdom": "^22.1.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.24",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.8.8",
+    "sass": "^1.62.1",
+    "sharp": "^0.32.1"
+  },
+  "dependencies": {
+    "fuse.js": "^6.6.2"
+  }
+}

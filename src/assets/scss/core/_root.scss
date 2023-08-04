@@ -1,0 +1,71 @@
+@import "variables";
+
+:root {
+  min-width: 320px;
+  font-size: to-px(16);
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  @include light;
+}
+
+.amp-dark-mode {
+  @include dark;
+}
+
+*,
+*:before,
+*:after {
+  position: relative;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  background: var(--bg);
+}
+
+a {
+  color: var(--title);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  transition: color ease-in 0.2s;
+  * {
+    transition: inherit;
+  }
+  &:hover {
+    transition-timing-function: ease-out;
+    color: var(--orange);
+    * {
+      color: inherit;
+    }
+  }
+}
+
+button,
+input,
+textarea {
+  font-size: to-rem(16);
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+
+p {
+  line-height: 1.375em;
+  color: var(--text);
+  strong {
+    color: var(--title);
+  }
+}
+
+.disable-scroll {
+  overflow: hidden;
+}
+
+@mixin root--xl {
+  :root {
+    font-size: to-px(18);
+  }
+}

@@ -1,0 +1,21 @@
+.mode {
+  &__icon {
+    display: block;
+    margin: 0;
+    width: to-rem(24);
+    height: to-rem(24);
+    svg {
+      &.sun,
+      &.moon {
+        transition: transform ease 0.2s, opacity ease 0.2s;
+      }
+    }
+    .sun {
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      transform: translateY(100%) scale(0.5);
+    }
+  }
+}

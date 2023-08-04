@@ -1,0 +1,121 @@
+.post-card {
+  padding-bottom: to-rem(60);
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: to-rem(380);
+  width: 100%;
+  &__image {
+    display: block;
+    margin: 0 to-rem(-20);
+  }
+  &__category {
+    position: absolute;
+    top: to-rem(20);
+    left: 0;
+    background: var(--oragenta);
+    color: var(--white-200);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: to-rem(12);
+    display: block;
+    padding: to-rem(4) to-rem(8);
+    border-radius: to-rem(4);
+    font-weight: bold;
+    transition: transform ease-in 0.2s;
+    &:hover {
+      color: var(--white-200);
+    }
+  }
+  &__content {
+    background: var(--post-bg);
+    border-radius: to-rem(8);
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: to-rem(20);
+    padding: to-rem(20);
+    position: absolute;
+    width: 100%;
+    box-shadow: var(--shadow);
+    z-index: 1;
+    h2 {
+      font-size: to-rem(18);
+      margin: 0;
+      a {
+        background: var(--oragenta);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: var(--title);
+        text-decoration: none;
+        transition: all ease-in 0.15s;
+        &:hover {
+          color: transparent;
+          transition-timing-function: ease-out;
+        }
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: to-rem(16);
+    p {
+      align-items: center;
+      display: flex;
+      font-size: to-rem(14);
+      gap: to-rem(4);
+      margin: 0;
+    }
+  }
+}
+
+@mixin post-card--sm {
+  .post-card {
+    min-width: to-rem(420);
+    max-width: to-rem(420);
+    &__image {
+      border-radius: to-rem(8);
+      overflow: hidden;
+      margin: 0;
+    }
+    &__category {
+      left: to-rem(20);
+    }
+    &__content {
+      left: to-rem(20);
+      right: to-rem(20);
+      width: auto;
+    }
+  }
+}
+
+@mixin post-card--md {
+  .post-card {
+    width: auto;
+    max-width: to-rem(330);
+    min-width: to-rem(320);
+  }
+}
+
+@mixin post-card--lg {
+  .post-card {
+    max-width: to-rem(444);
+    min-width: to-rem(434);
+  }
+}
+
+@mixin post-card--xl {
+  .post-card {
+    max-width: to-rem(365.333, $base-font-size--xl);
+    min-width: to-rem(355.333, $base-font-size--xl);
+  }
+}
+
+@mixin post-card--xxl {
+  .post-card {
+    max-width: to-rem(432, $base-font-size--xl);
+    min-width: to-rem(422, $base-font-size--xl);
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "layout": "post",
+  "permalink": "/{{ info.category | slugify }}/{% if seo.slug %}{{ seo.slug | slugify }}{% else %}{{ seo.title | slugify }}{% endif %}/index.html"
+}
