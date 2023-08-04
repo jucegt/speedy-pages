@@ -30,6 +30,7 @@
   @include content--md;
   @include post-card--md;
   @include post--md;
+  @include search--md;
 }
 
 @include min-query(lg) {
@@ -45,6 +46,7 @@
   @include container--xl;
   @include post-card--xl;
   @include post--xl;
+  @include search--xl;
 }
 
 @include min-query(xxl) {
