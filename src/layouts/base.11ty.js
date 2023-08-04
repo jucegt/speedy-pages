@@ -62,22 +62,27 @@ const base = {
       </head>
       <body>
         ${this.header(seo, multicolor.code, navigation, url)}
-        <div class="search">
-          <amp-list
-            layout="responsive"
-            src="/search/default.json"
-            [src]="query ? '/api/search?q=' + encodeURIComponent(query) : '/search/default.json'">
-            <template type="amp-mustache">
-              <div>
-                <a href="{{item.url}}">{{item.title}}</a>
-              </div>
-            </template>
-          </amp-list>
-        </div>
         <main class="content container">
           ${content}
         </main>
         ${this.footer(seo, onecolor.code, socialMedia, categoriesList, footerPages)}
+        <section class="search-box">
+          <div class="container">
+            <amp-list
+              id="results"
+              width="auto"
+              height="auto"
+              layout="fill"
+              src="/search/default.json"
+              [src]="query ? '/api/search?q=' + encodeURIComponent(query) : '/search/default.json'"
+              binding="no"
+            >
+              <template type="amp-mustache">
+                <div><a href="{{item.url}}">{{item.title}}</a></div>
+              </template>
+            </amp-list>
+          </div>
+        </section>
         ${this.mask()}
         ${this.state()}
       </body>

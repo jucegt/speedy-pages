@@ -4,8 +4,8 @@ const searchDefault = {
   },
   render: function () {
     return `{
-      "items": []
-    }`;
+  "items": []
+}`;
   },
 };
 
