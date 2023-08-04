@@ -75,7 +75,7 @@ const header = function ({ title }, logo, menu, url) {
               </a>
             </li>
             <li class="nav__item">
-              <button on="tap:AMP.setState({ search: !search, menu: false })" [class]="search ? 'active' : ''">
+              <button on="tap:AMP.setState({ search: !search, menu: false, query: '' })" [class]="search ? 'active' : ''">
                 <span class="nav__icon">
                   ${searchBox()}
                 </span>
@@ -95,7 +95,7 @@ const header = function ({ title }, logo, menu, url) {
               menu?.length > 0
                 ? /* html */ `
                   <li class="nav__item">
-                    <button on="tap:AMP.setState({ menu: !menu, search: false })" [class]="menu ? 'active' : ''">
+                    <button on="tap:AMP.setState({ menu: !menu, search: false, query: '' })" [class]="menu ? 'active' : ''">
                       <span class="nav__icon">
                         ${hamburger()}
                       </span>
