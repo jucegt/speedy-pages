@@ -56,6 +56,10 @@ p {
   }
 }
 
+.disable-scroll {
+  overflow: hidden;
+}
+
 @mixin root--xl {
   :root {
     font-size: to-px(18);

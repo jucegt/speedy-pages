@@ -22,7 +22,7 @@ const base = {
     const description = rest?.seo?.description || pageDescription || seo.description;
     return /* html */ `
     <!doctype html>
-    <html ⚡ lang="${config.language}">
+    <html ⚡ lang="${config.language}" [class]="menu || search || query ? 'disable-scroll' : ''">
       <head>
         <!-- META -->
         <meta charset="utf-8" />
