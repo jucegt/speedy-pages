@@ -97,6 +97,11 @@ const en = {
       label: 'Photo',
       hint: 'Photo displayed in the post page.',
     },
+    email: {
+      label: 'E-mail',
+      error: 'The E-mail must be valid',
+      hint: 'E-mail to contact you.',
+    },
   },
   pages: {
     singular: 'Page',

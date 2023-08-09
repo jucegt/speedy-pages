@@ -131,6 +131,13 @@ collections:
     fields:
       - { label: '{{authors.title.label}}', name: 'title', widget: 'string', hint: '{{authors.title.hint}}' }
       - { label: '{{authors.photo.label}}', name: 'photo', widget: 'image', hint: '{{authors.photo.hint}}' }
+      - {
+          label: '{{authors.email.label}}',
+          name: 'email',
+          widget: 'string',
+          pattern: ['^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$', '{{authors.email.error}}'],
+          hint: '{{authors.email.hint}}',
+        }
 
   - name: 'pages'
     label: '{{pages.plural}}'

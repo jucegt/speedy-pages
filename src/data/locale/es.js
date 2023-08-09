@@ -97,6 +97,11 @@ const es = {
       label: 'Foto',
       hint: 'Foto que se muestra en los artículos.',
     },
+    email: {
+      label: 'Correo Electrónico',
+      error: 'El correo electrónico debe ser válido',
+      hint: 'Correo electrónico para contactarte.',
+    },
   },
   pages: {
     singular: 'Página',
