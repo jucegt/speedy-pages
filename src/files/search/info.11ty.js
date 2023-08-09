@@ -7,7 +7,8 @@ const searchInfo = {
     const postsResults = posts
       .map((post) => {
         const category = categories.find((cat) => cat.data.seo.slug === post.data.info.category);
-        return `{
+        return `
+    {
       "type": "post",
       "title": "${post.data.seo.title}",
       "heading": "${post.data.info.title}",
@@ -29,34 +30,33 @@ const searchInfo = {
         "heading": "${category.data.seo.heading}",
         "url": "/${category.data.seo.slug}/"
       }
-    }
-`;
+    }`;
       })
       .join(',');
 
     const categoriesResults = categories
       .map((category) => {
-        return `{
+        return `
+    {
       "type": "category",
       "title": "${category.data.seo.title}",
       "heading": "${category.data.seo.heading}",
       "url": "/${category.data.seo.slug}/",
       "description": "${category.data.seo.description}"
-    }
-`;
+    }`;
       })
       .join(',');
 
     const pagesResults = pages
       .map((page) => {
-        return `{
+        return `
+    {
       "type": "page",
       "title": "${page.data.seo.title}",
       "heading": "${page.data.seo.heading}",
       "url": "/${page.data.seo.slug}/",
       "description": "${page.data.seo.description}"
-    }
-`;
+    }`;
       })
       .join(',');
 
