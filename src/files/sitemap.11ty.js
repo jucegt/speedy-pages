@@ -9,38 +9,38 @@ const sitemap = {
 
     const postsResults = posts
       .map((post) => {
-        return /* xml */ `<url>
+        return /* xml */ `
+  <url>
     <loc>${config.url}${post.url}</loc>
     <lastmod>${this.dateiso(post.date)}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-`;
+  </url>`;
       })
       .join('');
 
     const categoriesResults = categories
       .map((category) => {
         const lastPostByCategory = posts.find((post) => post.data.info.category === category.data.seo.slug);
-        return /* xml */ `<url>
+        return /* xml */ `
+  <url>
     <loc>${config.url}/${category.data.seo.slug}/</loc>
     <lastmod>${this.dateiso(lastPostByCategory.date)}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-  </url>
-`;
+  </url>`;
       })
       .join('');
 
     const pagesResults = pages
       .map((page) => {
-        return /* xml */ `<url>
+        return /* xml */ `
+  <url>
     <loc>${config.url}/${page.data.seo.slug}/</loc>
     <lastmod>${this.dateiso(page.date)}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
-  </url>
-`;
+  </url>`;
       })
       .join('');
 
