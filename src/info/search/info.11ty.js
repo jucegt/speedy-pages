@@ -11,7 +11,7 @@ const searchInfo = {
       "type": "post",
       "title": "${post.data.seo.title}",
       "heading": "${post.data.info.title}",
-      "url": "/${post.data.info.category}/${post.data.seo.slug}/",
+      "url": "${post.url}",
       "description": "${post.data.seo.description}",
       "date": "${this.date(post.data.info.date)}",
       "image": {
