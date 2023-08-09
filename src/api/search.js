@@ -5,13 +5,14 @@ export const handler = async ({ queryStringParameters }) => {
   const { q } = queryStringParameters;
   if (!q) {
     return {
-      statusCode: 400,
+      statusCode: 200,
       headers: {
         'content-type': 'application/json',
       },
-      body: JSON.stringify({ error: true, message: 'Missing search parameter' }),
+      body: JSON.stringify({ success: true }),
     };
   }
+
   const fuse = new Fuse(data.pages, {
     keys: ['title', 'heading', 'description'],
   });
