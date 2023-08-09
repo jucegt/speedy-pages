@@ -97,6 +97,11 @@ const en = {
       label: 'Photo',
       hint: 'Photo displayed in the post page.',
     },
+    email: {
+      label: 'E-mail',
+      error: 'The E-mail must be valid',
+      hint: 'E-mail to contact you.',
+    },
   },
   pages: {
     singular: 'Page',
@@ -132,6 +137,20 @@ const en = {
   },
   settings: {
     label: 'Settings',
+    ui: {
+      label: 'UI',
+      colors: {
+        label: 'Colors',
+        primary: {
+          label: 'Primary',
+          hint: 'Primary color used in the website.',
+        },
+        secondary: {
+          label: 'Secondary',
+          hint: 'Secondary color used in the website.',
+        },
+      },
+    },
     home: {
       label: 'Home Page',
       seo: {

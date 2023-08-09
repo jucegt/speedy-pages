@@ -97,6 +97,11 @@ const es = {
       label: 'Foto',
       hint: 'Foto que se muestra en los artículos.',
     },
+    email: {
+      label: 'Correo Electrónico',
+      error: 'El correo electrónico debe ser válido',
+      hint: 'Correo electrónico para contactarte.',
+    },
   },
   pages: {
     singular: 'Página',
@@ -132,6 +137,20 @@ const es = {
   },
   settings: {
     label: 'Configuración',
+    ui: {
+      label: 'UI',
+      colors: {
+        label: 'Colores',
+        primary: {
+          label: 'Primario',
+          hint: 'Color primario utilizado en el sitio web.',
+        },
+        secondary: {
+          label: 'Secundario',
+          hint: 'Color secundario utilizado en el sitio web.',
+        },
+      },
+    },
     home: {
       label: 'Pagina de Inicio',
       seo: {

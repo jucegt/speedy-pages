@@ -13,7 +13,7 @@ const base = {
     firstPostImage,
     ...rest
   }) {
-    const { navigation, categoriesList, footerPages, homePage, logo, socialMedia } = collections;
+    const { navigation, categoriesList, ui, footerPages, homePage, logo, socialMedia } = collections;
     const { multicolor, onecolor } = logo;
     const { seo } = homePage.data;
     const { url } = page;
@@ -55,7 +55,13 @@ const base = {
         <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
         <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
         <!-- STYLES -->
-        <style amp-custom>${await inlineCss('style.css')}</style>
+        <style amp-custom>
+          ${await inlineCss('style.css')}
+          :root {
+            --primary: ${ui.colors.primary};
+            --secondary: ${ui.colors.secondary};
+          }
+        </style>
         <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
         <!-- CANONICAL -->
         <link rel="canonical" href="${config.url}${url}" />
