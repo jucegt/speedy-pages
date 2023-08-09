@@ -11,9 +11,9 @@
   --gray-700: hsl(210, 1%, 40%);
   --blue-900: hsl(206, 16%, 9%);
   --blue-900-rgb: 19, 23, 26;
-  --orange: hsl(17, 87%, 57%);
-  --magenta: hsl(333, 100%, 49%);
-  --oragenta: linear-gradient(135deg, var(--orange) 0%, hsl(356, 97%, 62%) 50%, var(--magenta) 100%);
+  --orange: var(--primary, hsl(17, 87%, 57%));
+  --magenta: var(--secondary, hsl(333, 100%, 49%));
+  --oragenta: linear-gradient(135deg, var(--orange) 0%, var(--magenta) 100%);
   --facebook: hsl(221, 44%, 41%);
   --instagram: linear-gradient(
     135deg,

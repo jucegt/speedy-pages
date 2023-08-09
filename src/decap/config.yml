@@ -173,6 +173,27 @@ collections:
     editor:
       preview: false
     files:
+      - name: 'ui'
+        label: '{{settings.ui.label}}'
+        file: 'content/settings/ui.md'
+        fields:
+          - name: 'colors'
+            label: '{{settings.ui.colors.label}}'
+            widget: 'object'
+            fields:
+              - {
+                  name: 'primary',
+                  label: '{{settings.ui.colors.primary.label}}',
+                  widget: 'color',
+                  hint: '{{settings.ui.colors.primary.hint}}',
+                }
+              - {
+                  name: 'secondary',
+                  label: '{{settings.ui.colors.secondary.label}}',
+                  widget: 'color',
+                  hint: '{{settings.ui.colors.secondary.hint}}',
+                }
+
       - name: 'homepage'
         label: '{{settings.home.label}}'
         file: 'content/settings/home-page.md'

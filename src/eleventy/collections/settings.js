@@ -1,4 +1,7 @@
 const settings = {
+  ui: function (collection) {
+    return collection.getFilteredByGlob('./content/settings/ui.md')[0].data;
+  },
   homePage: function (collection) {
     return collection.getFilteredByGlob('./content/settings/home-page.md')[0];
   },
