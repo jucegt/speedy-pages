@@ -9,8 +9,8 @@ const speedyConfig = {
     postsPerPage: 12,
   },
   photos: {
-    src: './content/photos/*.*',
-    dist: './.11ty/photos/',
+    src: './content/static/photos/*.*',
+    dist: './.11ty/static/photos/',
     fit: 'cover',
     width: 60,
     height: 60,

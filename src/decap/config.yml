@@ -126,7 +126,7 @@ collections:
     label_singular: '{{authors.singular}}'
     folder: 'content/authors'
     create: true
-    media_folder: ../photos
+    media_folder: ../static/photos
     public_folder: /
     fields:
       - { label: '{{authors.title.label}}', name: 'title', widget: 'string', hint: '{{authors.title.hint}}' }
