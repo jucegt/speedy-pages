@@ -3,7 +3,7 @@ require('dotenv').config();
 const speedyConfig = {
   language: process.env.LANGUAGE || 'en',
   url: process.env.ENV_URL || process.env.URL || 'http://localhost:8080',
-  adsAllowed: process.env.ADS_ALLOWED || false,
+  adsAllowed: process.env.ADS_ALLOWED === 'true' ? true : false,
   ui: {
     paginatedPagePrefix: '',
     postsPerPage: 12,
