@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: to-rem(20);
+    gap: to-rem(20);
   }
   &__category {
     @extend .post-card__category;
@@ -13,7 +14,7 @@
   }
   &__title {
     font-size: to-rem(28);
-    margin: to-rem(20) 0;
+    margin: 0;
     color: var(--title);
   }
   &__info {
@@ -41,7 +42,7 @@
   &__excerpt {
     color: var(--text);
     max-width: to-rem(800);
-    margin: to-rem(20) 0;
+    margin: 0;
   }
   &__image {
     margin: 0 to-rem(-20);
@@ -184,10 +185,7 @@
   .post {
     &__header {
       margin-bottom: to-rem(32);
-    }
-    &__title,
-    &__excerpt {
-      margin: to-rem(32) 0;
+      gap: to-rem(32);
     }
     &__image {
       border-radius: to-rem(32);
