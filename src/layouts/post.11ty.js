@@ -6,10 +6,13 @@ const post = {
   data: {
     layout: 'base',
   },
-  render: function ({ content, info, image, collections, config }) {
-    const { authors } = collections;
+  render: function ({ content, seo, info, image, collections, config }) {
+    const { authors, posts } = collections;
     const author = authors.find((author) => author.data.title === info.author);
     const readingTime = getReadingTime(content);
+    const relatedPosts = posts
+      .filter((post) => post.data.info.category === info.category && post.data.seo.slug !== seo.slug)
+      .slice(0, 3);
     return /* html */ `
       <article class="post">
         <section class="post__header">
@@ -34,7 +37,6 @@ const post = {
               `
               : ''
           }
-
           <p class="post__info">
             <span>
               <amp-img
@@ -134,6 +136,15 @@ const post = {
           }
         </section>
       </article>
+      ${
+        relatedPosts.length
+          ? /* html */ `
+            <section class="posts-grid">
+              ${relatedPosts.map((post) => this.postCard(post)).join('')}
+            </section>
+          `
+          : ''
+      }
     `;
   },
 };
