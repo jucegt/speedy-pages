@@ -1,4 +1,7 @@
 const en = {
+  cms: {
+    label: 'Content Manager',
+  },
   posts: {
     singular: 'Post',
     plural: 'Posts',

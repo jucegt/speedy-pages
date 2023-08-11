@@ -1,4 +1,7 @@
 const es = {
+  cms: {
+    label: 'Gestor de contenidos',
+  },
   posts: {
     singular: 'Artículo',
     plural: 'Artículos',
