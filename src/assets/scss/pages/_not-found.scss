@@ -1,4 +1,4 @@
-.error {
+.not-found {
   display: flex;
   flex-direction: column;
   &__content {
@@ -22,18 +22,21 @@
         font-weight: bold;
       }
     }
-    a {
-      background: var(--oragenta);
-      border-radius: to-rem(8);
+  }
+  &__button {
+    background: var(--oragenta);
+    border-radius: to-rem(8);
+    color: var(--white-200);
+    display: block;
+    font-weight: bold;
+    margin: to-rem(32) auto;
+    max-width: to-rem(240);
+    padding: to-rem(16) to-rem(32);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
       color: var(--white-200);
-      display: block;
-      font-weight: bold;
-      margin: to-rem(32) auto;
-      max-width: to-rem(240);
-      padding: to-rem(16) to-rem(32);
-      text-align: center;
-      text-decoration: none;
-      text-transform: uppercase;
     }
   }
   &__icon {
@@ -54,8 +57,8 @@
   }
 }
 
-@mixin error--md {
-  .error {
+@mixin not-found--md {
+  .not-found {
     flex-direction: row;
     align-items: center;
     &__content,
@@ -74,8 +77,8 @@
   }
 }
 
-@mixin error--lg {
-  .error {
+@mixin not-found--lg {
+  .not-found {
     &__content {
       h1 {
         font-size: to-rem(180);

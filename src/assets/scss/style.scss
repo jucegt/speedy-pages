@@ -31,7 +31,7 @@
   @include post-card--md;
   @include post--md;
   @include search--md;
-  @include error--md;
+  @include not-found--md;
 }
 
 @include min-query(lg) {
@@ -40,7 +40,7 @@
   @include content--lg;
   @include post-card--lg;
   @include search--lg;
-  @include error--lg;
+  @include not-found--lg;
 }
 
 @include min-query(xl) {
