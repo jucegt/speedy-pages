@@ -13,9 +13,9 @@ publish_mode: editorial_workflow
 media_folder: content/static
 public_folder: /
 
-locale: '{{language}}'
-site_url: '{{site_url}}'
-display_url: '{{site_url}}'
+locale: '${language}'
+site_url: '${url}'
+display_url: '${url}'
 
 slug:
   encoding: 'ascii'
@@ -23,8 +23,8 @@ slug:
 
 collections:
   - name: 'posts'
-    label: '{{posts.plural}}'
-    label_singular: '{{posts.singular}}'
+    label: '${posts.plural}'
+    label_singular: '${posts.singular}'
     folder: 'content/posts'
     create: true
     path: '{{year}}/{{month}}/{{slug}}'
@@ -32,214 +32,214 @@ collections:
     media_folder: ../../../static
     public_folder: /
     fields:
-      - { label: '{{posts.title.label}}', name: 'title', widget: 'string', hint: '{{posts.title.hint}}' }
-      - label: '{{posts.seo.label}}'
+      - { label: '${posts.title.label}', name: 'title', widget: 'string', hint: '${posts.title.hint}' }
+      - label: '${posts.seo.label}'
         name: 'seo'
         widget: 'object'
         summary: '{{fields.title}}'
         fields:
-          - { label: '{{posts.seo.title.label}}', name: 'title', widget: 'string', hint: '{{posts.seo.title.hint}}' }
-          - { label: '{{posts.seo.slug.label}}', name: 'slug', widget: 'string', hint: '{{posts.seo.slug.hint}}' }
+          - { label: '${posts.seo.title.label}', name: 'title', widget: 'string', hint: '${posts.seo.title.hint}' }
+          - { label: '${posts.seo.slug.label}', name: 'slug', widget: 'string', hint: '${posts.seo.slug.hint}' }
           - {
-              label: '{{posts.seo.description.label}}',
+              label: '${posts.seo.description.label}',
               name: 'description',
               widget: 'text',
-              pattern: ['^.{140,160}$', '{{posts.seo.description.error}}'],
-              hint: '{{posts.seo.description.hint}}',
+              pattern: ['^.{140,160}$', '${posts.seo.description.error}'],
+              hint: '${posts.seo.description.hint}',
             }
-      - label: '{{posts.info.label}}'
+      - label: '${posts.info.label}'
         name: 'info'
         widget: 'object'
         summary: '{{fields.title}}'
         fields:
-          - { label: '{{posts.info.title.label}}', name: 'title', widget: 'string', hint: '{{posts.info.title.hint}}' }
+          - { label: '${posts.info.title.label}', name: 'title', widget: 'string', hint: '${posts.info.title.hint}' }
           - {
-              label: '{{posts.info.category.label}}',
+              label: '${posts.info.category.label}',
               name: 'category',
               widget: 'relation',
               collection: 'categories',
               search_fields: ['seo.title'],
               value_field: 'seo.slug',
               display_fields: ['seo.title'],
-              hint: '{{posts.info.category.hint}}',
+              hint: '${posts.info.category.hint}',
             }
-          - { label: '{{posts.info.date.label}}', name: 'date', widget: 'datetime', hint: '{{posts.info.date.hint}}' }
+          - { label: '${posts.info.date.label}', name: 'date', widget: 'datetime', hint: '${posts.info.date.hint}' }
           - {
-              label: '{{posts.info.author.label}}',
+              label: '${posts.info.author.label}',
               name: 'author',
               widget: 'relation',
               collection: 'authors',
               search_fields: ['title'],
               value_field: 'title',
-              hint: '{{posts.info.author.hint}}',
+              hint: '${posts.info.author.hint}',
             }
           - {
-              label: '{{posts.info.excerpt.label}}',
+              label: '${posts.info.excerpt.label}',
               name: 'excerpt',
               widget: 'text',
-              hint: '{{posts.info.excerpt.hint}}',
+              hint: '${posts.info.excerpt.hint}',
             }
-      - { label: '{{posts.heroImage.label}}', name: 'image', widget: image, hint: '{{posts.heroImage.hint}}' }
-      - { label: '{{posts.body.label}}', name: 'body', widget: 'markdown', hint: '{{posts.body.hint}}' }
+      - { label: '${posts.heroImage.label}', name: 'image', widget: image, hint: '${posts.heroImage.hint}' }
+      - { label: '${posts.body.label}', name: 'body', widget: 'markdown', hint: '${posts.body.hint}' }
 
   - name: 'categories'
-    label: '{{categories.plural}}'
-    label_singular: '{{categories.singular}}'
+    label: '${categories.plural}'
+    label_singular: '${categories.singular}'
     folder: 'content/categories'
     create: true
     fields:
-      - { label: '{{categories.title.label}}', name: 'title', widget: 'string', hint: '{{categories.title.hint}}' }
-      - label: '{{categories.seo.label}}'
+      - { label: '${categories.title.label}', name: 'title', widget: 'string', hint: '${categories.title.hint}' }
+      - label: '${categories.seo.label}'
         name: 'seo'
         widget: 'object'
         summary: '{{fields.title}}'
         fields:
           - {
-              label: '{{categories.seo.title.label}}',
+              label: '${categories.seo.title.label}',
               name: 'title',
               widget: 'string',
-              hint: '{{categories.seo.title.hint}}',
+              hint: '${categories.seo.title.hint}',
             }
           - {
-              label: '{{categories.seo.slug.label}}',
+              label: '${categories.seo.slug.label}',
               name: 'slug',
               widget: 'string',
-              hint: '{{categories.seo.slug.hint}}',
+              hint: '${categories.seo.slug.hint}',
             }
           - {
-              label: '{{categories.seo.description.label}}',
+              label: '${categories.seo.description.label}',
               name: 'description',
               widget: 'text',
-              pattern: ['^.{140,160}$', '{{categories.seo.description.error}}'],
-              hint: '{{categories.seo.description.hint}}',
+              pattern: ['^.{140,160}$', '${categories.seo.description.error}'],
+              hint: '${categories.seo.description.hint}',
             }
           - {
-              label: '{{categories.seo.heading.label}}',
+              label: '${categories.seo.heading.label}',
               name: 'heading',
               widget: 'string',
-              hint: '{{categories.seo.heading.hint}}',
+              hint: '${categories.seo.heading.hint}',
             }
-      - { label: '{{categories.body.label}}', name: 'body', widget: 'markdown', hint: '{{categories.body.hint}}' }
+      - { label: '${categories.body.label}', name: 'body', widget: 'markdown', hint: '${categories.body.hint}' }
 
   - name: 'authors'
-    label: '{{authors.plural}}'
-    label_singular: '{{authors.singular}}'
+    label: '${authors.plural}'
+    label_singular: '${authors.singular}'
     folder: 'content/authors'
     create: true
     media_folder: ../static/photos
     public_folder: /
     fields:
-      - { label: '{{authors.title.label}}', name: 'title', widget: 'string', hint: '{{authors.title.hint}}' }
-      - { label: '{{authors.photo.label}}', name: 'photo', widget: 'image', hint: '{{authors.photo.hint}}' }
+      - { label: '${authors.title.label}', name: 'title', widget: 'string', hint: '${authors.title.hint}' }
+      - { label: '${authors.photo.label}', name: 'photo', widget: 'image', hint: '${authors.photo.hint}' }
       - {
-          label: '{{authors.email.label}}',
+          label: '${authors.email.label}',
           name: 'email',
           widget: 'string',
-          pattern: ['^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$', '{{authors.email.error}}'],
-          hint: '{{authors.email.hint}}',
+          pattern: ['^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$', '${authors.email.error}'],
+          hint: '${authors.email.hint}',
         }
 
   - name: 'pages'
-    label: '{{pages.plural}}'
-    label_singular: '{{pages.singular}}'
+    label: '${pages.plural}'
+    label_singular: '${pages.singular}'
     folder: 'content/pages'
     create: true
     fields:
-      - { label: '{{pages.title.label}}', name: 'title', widget: 'string', hint: '{{pages.title.hint}}' }
-      - label: '{{pages.seo.label}}'
+      - { label: '${pages.title.label}', name: 'title', widget: 'string', hint: '${pages.title.hint}' }
+      - label: '${pages.seo.label}'
         name: 'seo'
         widget: 'object'
         summary: '{{fields.title}}'
         fields:
-          - { label: '{{pages.seo.title.label}}', name: 'title', widget: 'string', hint: '{{pages.seo.title.hint}}' }
-          - { label: '{{pages.seo.slug.label}}', name: 'slug', widget: 'string', hint: '{{pages.seo.slug.hint}}' }
+          - { label: '${pages.seo.title.label}', name: 'title', widget: 'string', hint: '${pages.seo.title.hint}' }
+          - { label: '${pages.seo.slug.label}', name: 'slug', widget: 'string', hint: '${pages.seo.slug.hint}' }
           - {
-              label: '{{pages.seo.description.label}}',
+              label: '${pages.seo.description.label}',
               name: 'description',
               widget: 'text',
-              pattern: ['^.{140,160}$', '{{pages.seo.description.error}}'],
-              hint: '{{pages.seo.description.hint}}',
+              pattern: ['^.{140,160}$', '${pages.seo.description.error}'],
+              hint: '${pages.seo.description.hint}',
             }
           - {
-              label: '{{pages.seo.heading.label}}',
+              label: '${pages.seo.heading.label}',
               name: 'heading',
               widget: 'string',
-              hint: '{{pages.seo.heading.hint}}',
+              hint: '${pages.seo.heading.hint}',
             }
-      - { label: '{{pages.body.label}}', name: 'body', widget: 'markdown', hint: '{{pages.body.hint}}' }
+      - { label: '${pages.body.label}', name: 'body', widget: 'markdown', hint: '${pages.body.hint}' }
 
   - name: 'settings'
-    label: '{{settings.label}}'
+    label: '${settings.label}'
     editor:
       preview: false
     files:
       - name: 'ui'
-        label: '{{settings.ui.label}}'
+        label: '${settings.ui.label}'
         file: 'content/settings/ui.md'
         fields:
           - name: 'colors'
-            label: '{{settings.ui.colors.label}}'
+            label: '${settings.ui.colors.label}'
             widget: 'object'
             fields:
               - {
                   name: 'primary',
-                  label: '{{settings.ui.colors.primary.label}}',
+                  label: '${settings.ui.colors.primary.label}',
                   widget: 'color',
-                  hint: '{{settings.ui.colors.primary.hint}}',
+                  hint: '${settings.ui.colors.primary.hint}',
                 }
               - {
                   name: 'secondary',
-                  label: '{{settings.ui.colors.secondary.label}}',
+                  label: '${settings.ui.colors.secondary.label}',
                   widget: 'color',
-                  hint: '{{settings.ui.colors.secondary.hint}}',
+                  hint: '${settings.ui.colors.secondary.hint}',
                 }
 
       - name: 'homepage'
-        label: '{{settings.home.label}}'
+        label: '${settings.home.label}'
         file: 'content/settings/home-page.md'
         fields:
           - name: 'seo'
-            label: '{{settings.home.seo.label}}'
+            label: '${settings.home.seo.label}'
             widget: 'object'
             summary: '{{fields.title}}'
             fields:
               - {
                   name: 'title',
-                  label: '{{settings.home.seo.title.label}}',
+                  label: '${settings.home.seo.title.label}',
                   widget: 'string',
-                  hint: '{{settings.home.seo.title.hint}}',
+                  hint: '${settings.home.seo.title.hint}',
                 }
               - {
                   name: 'description',
-                  label: '{{settings.home.seo.description.label}}',
+                  label: '${settings.home.seo.description.label}',
                   widget: 'text',
-                  pattern: ['^.{140,160}$', '{{settings.home.seo.description.error}}'],
-                  hint: '{{settings.home.seo.description.hint}}',
+                  pattern: ['^.{140,160}$', '${settings.home.seo.description.error}'],
+                  hint: '${settings.home.seo.description.hint}',
                 }
               - {
                   name: 'heading',
-                  label: '{{settings.home.seo.heading.label}}',
+                  label: '${settings.home.seo.heading.label}',
                   widget: 'string',
-                  hint: '{{settings.home.seo.heading.hint}}',
+                  hint: '${settings.home.seo.heading.hint}',
                 }
           - {
               name: 'body',
-              label: '{{settings.home.body.label}}',
+              label: '${settings.home.body.label}',
               widget: 'markdown',
-              hint: '{{settings.home.body.hint}}',
+              hint: '${settings.home.body.hint}',
             }
 
       - name: 'navigation'
-        label: '{{settings.navigation.label}}'
+        label: '${settings.navigation.label}'
         file: 'content/settings/navigation.md'
         fields:
-          - label: '{{settings.navigation.categories.label}}'
+          - label: '${settings.navigation.categories.label}'
             name: 'categories'
             widget: 'list'
-            hint: '{{settings.navigation.categories.hint}}'
+            hint: '${settings.navigation.categories.hint}'
             fields:
               - {
-                  label: '{{settings.navigation.categories.category}}',
+                  label: '${settings.navigation.categories.category}',
                   name: 'name',
                   widget: 'relation',
                   collection: 'categories',
@@ -247,13 +247,13 @@ collections:
                   value_field: 'seo.slug',
                   display_fields: ['seo.title'],
                 }
-          - label: '{{settings.navigation.pages.label}}'
+          - label: '${settings.navigation.pages.label}'
             name: 'pages'
             widget: 'list'
-            hint: '{{settings.navigation.pages.hint}}'
+            hint: '${settings.navigation.pages.hint}'
             fields:
               - {
-                  label: '{{settings.navigation.pages.page}}',
+                  label: '${settings.navigation.pages.page}',
                   name: 'name',
                   widget: 'relation',
                   collection: 'pages',
@@ -263,34 +263,34 @@ collections:
                 }
 
       - name: 'logo'
-        label: '{{settings.logo.label}}'
+        label: '${settings.logo.label}'
         file: 'content/settings/logo.md'
         fields:
           - {
-              label: '{{settings.logo.multicolor.label}}',
+              label: '${settings.logo.multicolor.label}',
               name: 'multicolor',
               widget: 'code',
-              hint: '{{settings.logo.multicolor.hint}}',
+              hint: '${settings.logo.multicolor.hint}',
             }
           - {
-              label: '{{settings.logo.onecolor.label}}',
+              label: '${settings.logo.onecolor.label}',
               name: 'onecolor',
               widget: 'code',
-              hint: '{{settings.logo.onecolor.hint}}',
+              hint: '${settings.logo.onecolor.hint}',
             }
 
       - name: 'socialmedia'
-        label: '{{settings.socialMedia.label}}'
+        label: '${settings.socialMedia.label}'
         file: 'content/settings/social-media.md'
         fields:
-          - label: '{{settings.socialMedia.links.label}}'
+          - label: '${settings.socialMedia.links.label}'
             name: 'links'
             widget: 'list'
             summary: '{{fields.name}} - {{fields.url}}'
-            hint: '{{settings.socialMedia.links.hint}}'
+            hint: '${settings.socialMedia.links.hint}'
             fields:
               - {
-                  label: '{{settings.socialMedia.links.name.label}}',
+                  label: '${settings.socialMedia.links.name.label}',
                   name: 'name',
                   widget: 'select',
                   options:
@@ -316,27 +316,27 @@ collections:
                       'YouTube',
                       'Yelp',
                     ],
-                  hint: '{{settings.socialMedia.links.name.hint}}',
+                  hint: '${settings.socialMedia.links.name.hint}',
                 }
               - {
-                  label: '{{settings.socialMedia.links.url.label}}',
+                  label: '${settings.socialMedia.links.url.label}',
                   name: 'url',
                   widget: 'string',
-                  pattern: ['^https?:\/\/.+', '{{settings.socialMedia.links.url.error}}'],
-                  hint: '{{settings.socialMedia.links.url.hint}}',
+                  pattern: ['^https?:\/\/.+', '${settings.socialMedia.links.url.error}'],
+                  hint: '${settings.socialMedia.links.url.hint}',
                 }
 
       - name: 'footer'
-        label: '{{settings.footer.label}}'
+        label: '${settings.footer.label}'
         file: 'content/settings/footer.md'
         fields:
-          - label: '{{settings.footer.pages.label}}'
+          - label: '${settings.footer.pages.label}'
             name: 'pages'
             widget: 'list'
-            hint: '{{settings.footer.pages.hint}}'
+            hint: '${settings.footer.pages.hint}'
             fields:
               - {
-                  label: '{{settings.footer.pages.page}}',
+                  label: '${settings.footer.pages.page}',
                   name: 'page',
                   widget: 'relation',
                   collection: 'pages',
