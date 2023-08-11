@@ -6,7 +6,8 @@ const post = {
   data: {
     layout: 'base',
   },
-  render: function ({ content, seo, info, image, collections, config }) {
+  render: function ({ content, seo, info, image, collections, config, locale }) {
+    const texts = locale[config.language];
     const { authors, posts } = collections;
     const author = authors.find((author) => author.data.title === info.author);
     const readingTime = getReadingTime(content);
@@ -49,7 +50,10 @@ const post = {
               ${info.author}
             </span>
             <span>${calendar()} ${this.date(info.date)}</span>
-            <span>${clock()} ${readingTime} minutos de lectura</span>
+            <span>
+              ${clock()} ${readingTime}
+              ${readingTime === 1 ? texts.ui.readingTime.long.singular : texts.ui.readingTime.long.plural}
+            </span>
           </p>
           <p class="post__excerpt">${info.excerpt}</p>
           <amp-img
@@ -140,7 +144,7 @@ const post = {
         relatedPosts.length
           ? /* html */ `
             <section class="posts-grid">
-              ${relatedPosts.map((post) => this.postCard(post)).join('')}
+              ${relatedPosts.map((post) => this.postCard(post, texts.ui)).join('')}
             </section>
           `
           : ''

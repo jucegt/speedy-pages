@@ -1,4 +1,4 @@
-const footer = function ({ title }, logo, socialMedia, categories, pages) {
+const footer = function ({ title }, logo, socialMedia, categories, pages, texts, currentYear) {
   const { sociallinks } = socialMedia;
   return /* html */ `
     <footer class="footer">
@@ -22,7 +22,7 @@ const footer = function ({ title }, logo, socialMedia, categories, pages) {
             categories?.length > 0
               ? /* html */ `
                 <div class="footer__panel">
-                  <h3>Categorias</h3>
+                  <h3>${texts.footer.categories}</h3>
                   <ul class="footer__list footer__list--inline">
                     ${categories
                       ?.map(
@@ -44,7 +44,7 @@ const footer = function ({ title }, logo, socialMedia, categories, pages) {
             pages?.length > 0
               ? /* html */ `
                 <div class="footer__panel">
-                  <h3>Paginas</h3>
+                  <h3>${texts.footer.pages}</h3>
                   <ul class="footer__list">
                     ${pages
                       ?.map(
@@ -62,7 +62,7 @@ const footer = function ({ title }, logo, socialMedia, categories, pages) {
           }
         </section>
         <section class="footer__bottom">
-          <p class="copy">©2023 ${title} - Todos los derechos reservados</p>
+          <p class="copy">©${currentYear} ${title} - ${texts.footer.copyright}</p>
         </section>
       </div>
     </footer>

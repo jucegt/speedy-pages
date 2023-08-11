@@ -8,6 +8,7 @@ const notFound = {
   render: function ({ collections, config, locale }) {
     const {
       ui: { notFound },
+      ui,
     } = locale[config.language];
     const { posts } = collections;
     const pages = posts.sort(() => 0.5 - Math.random()).slice(0, 6);
@@ -26,7 +27,7 @@ const notFound = {
       </section>
       <h2 class="not-found-recommended">${notFound.postsTitle}</h2>
       <section class="posts-grid">
-        ${pages.map((post) => this.postCard(post)).join('')}
+        ${pages.map((post) => this.postCard(post, ui)).join('')}
       </section>
     `;
   },

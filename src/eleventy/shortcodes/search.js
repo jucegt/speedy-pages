@@ -1,9 +1,9 @@
-const search = function () {
+const search = function (texts) {
   const defaultResults = 'search-box';
   return /* html */ `
     <section class="${defaultResults}" [class]="query ? '${defaultResults} search-box--active' : '${defaultResults}'">
       <header class="search-box__header">
-        <p><span>Resultados para:</span> <strong [text]="query ? query : ''"></strong></p>
+        <p><span>${texts.search.results}</span> <strong [text]="query ? query : ''"></strong></p>
       </header>
       <main class="search-box__content">
         <amp-list

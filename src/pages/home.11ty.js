@@ -21,7 +21,8 @@ const home = {
       },
     };
   },
-  render: function ({ pages, collections }) {
+  render: function ({ config, locale, pages, collections }) {
+    const texts = locale[config.language];
     const { homePage } = collections;
     const { seo } = homePage.data;
     return /* html */ `
@@ -30,7 +31,7 @@ const home = {
         ${homePage.content || /* html */ `<p>${seo.description}</p>`}
       </header>
       <section class="posts-grid">
-        ${pages?.items?.map((post) => this.postCard(post)).join('')}
+        ${pages?.items?.map((post) => this.postCard(post, texts.ui)).join('')}
       </section>
     `;
   },

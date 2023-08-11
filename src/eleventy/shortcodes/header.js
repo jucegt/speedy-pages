@@ -5,7 +5,7 @@ const moon = require('../../svgs/moon');
 const sun = require('../../svgs/sun');
 const hamburger = require('../../svgs/hamburger');
 
-const header = function ({ title }, logo, menu, url) {
+const header = function ({ title }, logo, menu, url, texts) {
   const classesMenu = 'header__panel menu';
   const classesTools = 'header__panel tools';
 
@@ -37,12 +37,17 @@ const header = function ({ title }, logo, menu, url) {
         <section class="${classesTools}" [class]="search ? '${classesTools} header__panel--open' : '${classesTools}'">
           <form class="tools__search" method="POST" action-xhr="/api/search/" target="_top" on="submit:AMP.setState({ query: value }),results.changeToLayoutContainer()">
             <div class="input input--icon">
-              <input placeholder="Buscar" name="search" id="search" on="input-throttled:AMP.setState({ value: event.value })">
+              <input
+                placeholder="${texts.search.placeholder}"
+                name="search"
+                id="search"
+                on="input-throttled:AMP.setState({ value: event.value })"
+              >
               <button>${search()}</button>
             </div>
           </form>
           <div class="tools__mode mode">
-            <button on="tap:AMP.toggleTheme()" aria-label="Toggle Mode">
+            <button on="tap:AMP.toggleTheme()" aria-label="${texts.navigation.mode}">
               <span class="mode__icon">
                 ${moon()}
                 ${sun()}
@@ -53,7 +58,11 @@ const header = function ({ title }, logo, menu, url) {
             menu?.length > 0
               ? /* html */ `
                 <div class="tools__menu">
-                  <button on="tap:AMP.setState({ menu: !menu, search: false })" [class]="menu ? 'active' : ''" aria-label="Menu">
+                  <button
+                    on="tap:AMP.setState({ menu: !menu, search: false })"
+                    [class]="menu ? 'active' : ''"
+                    aria-label="${texts.navigation.menu}"
+                  >
                     <span>
                       ${hamburger()}
                     </span>
@@ -71,7 +80,7 @@ const header = function ({ title }, logo, menu, url) {
                 <span class="nav__icon">
                   ${home()}
                 </span>
-                <span>Inicio</span>
+                <span>${texts.navigation.home}</span>
               </a>
             </li>
             <li class="nav__item">
@@ -79,7 +88,7 @@ const header = function ({ title }, logo, menu, url) {
                 <span class="nav__icon">
                   ${searchBox()}
                 </span>
-                <span>Buscar</span>
+                <span>${texts.navigation.search}</span>
               </button>
             </li>
             <li class="nav__item mode">
@@ -88,7 +97,7 @@ const header = function ({ title }, logo, menu, url) {
                   ${moon()}
                   ${sun()}
                 </span>
-                <span>Modo</span>
+                <span>${texts.navigation.mode}</span>
               </button>
             </li>
             ${
@@ -99,7 +108,7 @@ const header = function ({ title }, logo, menu, url) {
                       <span class="nav__icon">
                         ${hamburger()}
                       </span>
-                      <span>Menu</span>
+                      <span>${texts.navigation.menu}</span>
                     </button>
                   </li>
                 `

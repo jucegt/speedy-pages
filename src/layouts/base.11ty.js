@@ -4,6 +4,8 @@ const inlineCss = require('../utilities/css');
 const base = {
   render: async function ({
     config,
+    locale,
+    currentYear,
     content,
     collections,
     page,
@@ -13,6 +15,7 @@ const base = {
     firstPostImage,
     ...rest
   }) {
+    const texts = locale[config.language];
     const { navigation, categoriesList, ui, footerPages, homePage, logo, socialMedia } = collections;
     const { multicolor, onecolor } = logo;
     const { seo } = homePage.data;
@@ -68,12 +71,12 @@ const base = {
         <link rel="canonical" href="${config.url}${url}" />
       </head>
       <body>
-        ${this.header(seo, multicolor.code, navigation, url)}
+        ${this.header(seo, multicolor.code, navigation, url, texts.ui)}
         <main class="content container">
           ${content}
         </main>
-        ${this.footer(seo, onecolor.code, socialMedia, categoriesList, footerPages)}
-        ${this.search()}
+        ${this.footer(seo, onecolor.code, socialMedia, categoriesList, footerPages, texts.ui, currentYear)}
+        ${this.search(texts.ui)}
         ${this.mask()}
         ${this.state()}
       </body>

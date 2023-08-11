@@ -2,7 +2,7 @@ const calendar = require('../../svgs/calendar');
 const clock = require('../../svgs/clock');
 const getReadingTime = require('../../utilities/reading-time');
 
-const postCard = function ({ data, content, url }, showCategory = true) {
+const postCard = function ({ data, content, url }, texts, showCategory = true) {
   const readingTime = getReadingTime(content);
   const { image, info, collections } = data;
   const { title, date, category } = info;
@@ -38,7 +38,10 @@ const postCard = function ({ data, content, url }, showCategory = true) {
         <h2><a href="${url}" title="${title}">${title}</a></h2>
         <div class="post-card__info">
           <p>${calendar()} ${this.date(date, true)}</p>
-          <p>${clock()} ${readingTime} min de lectura</p>
+          <p>
+          ${clock()} ${readingTime}
+          ${readingTime === 1 ? texts.readingTime.short.singular : texts.readingTime.short.plural}
+          </p>
         </div>
       </section>
     </article>
