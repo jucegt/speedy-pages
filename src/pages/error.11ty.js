@@ -13,6 +13,8 @@ const error = {
         <article class="error__content">
           <h1>404</h1>
           <h2><span>¡Oooops!</span> Algo salio <strong>mal...</strong></h2>
+          <p>Lamentablemente, el contenido que buscas no está aquí. Puede que haya un error ortográfico en la dirección web o que haya hecho clic en un enlace de un contenido que ya no existe.</p>
+          <p>Si ha seguido un enlace en este sitio para llegar aquí, por favor, póngase en contacto con el administrador para que pueda ser corregido.</p>
           <a href="/">Regresar al Inicio</a>
         </article>
         <aside class="error__icon">
