@@ -30,7 +30,7 @@ const base = {
         <meta name="viewport" content="width=device-width" />
         <!-- BASIC SEO -->
         <meta name="description" content="${description}" />
-        <title>${title ? `${title} - ${seo.title}` : seo.title}</title>
+        <title>${title ? `${title} | ${seo.title}` : seo.title}</title>
         <!-- OG -->
         <!-- PRELOAD -->
         <link rel="preload" as="font" href="/static/fonts/lato-regular.woff2" type="font/woff2" crossorigin>
