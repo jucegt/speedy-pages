@@ -187,6 +187,9 @@
       margin-bottom: to-rem(32);
       gap: to-rem(32);
     }
+    &__info {
+      gap: to-rem(32);
+    }
     &__image {
       border-radius: to-rem(32);
     }
