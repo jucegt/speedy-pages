@@ -23,8 +23,8 @@ const post = {
               ? /* html */ `
                 <div class="ad">
                   <amp-ad
-                    width="100vw"
-                    height="320"
+                    layout="fixed-height"
+                    height="300"
                     type="adsense"
                     data-ad-client="ca-pub-9019093411177810"
                     data-ad-slot="8268472649"
@@ -75,8 +75,8 @@ const post = {
               ? /* html */ `
                 <div class="ad">
                   <amp-ad
-                    width="100vw"
-                    height="320"
+                    layout="fixed-height"
+                    height="300"
                     type="adsense"
                     data-ad-client="ca-pub-9019093411177810"
                     data-ad-slot="2091938922"
@@ -93,25 +93,6 @@ const post = {
         <section class="post__body">
           <div class="post__content">
             ${content}
-            ${
-              config.adsAllowed
-                ? /* html */ `
-                  <div class="ad ad--mt">
-                    <amp-ad
-                      width="100vw"
-                      height="320"
-                      type="adsense"
-                      data-ad-client="ca-pub-9019093411177810"
-                      data-ad-slot="5997532525"
-                      data-auto-format="rspv"
-                      data-full-width=""
-                    >
-                      <div overflow=""></div>
-                    </amp-ad>
-                  </div>
-                `
-                : ''
-            }
           </div>
           ${
             config.adsAllowed
@@ -119,7 +100,7 @@ const post = {
                 <div class="post__ads">
                   <div class="ad">
                     <amp-ad
-                      width="100vw"
+                      width="300"
                       height="600"
                       type="adsense"
                       data-ad-client="ca-pub-9019093411177810"
@@ -136,6 +117,25 @@ const post = {
           }
         </section>
       </article>
+      ${
+        config.adsAllowed
+          ? /* html */ `
+            <div class="ad">
+              <amp-ad
+                layout="fixed-height"
+                height="300"
+                type="adsense"
+                data-ad-client="ca-pub-9019093411177810"
+                data-ad-slot="5997532525"
+                data-auto-format="rspv"
+                data-full-width=""
+              >
+                <div overflow=""></div>
+              </amp-ad>
+            </div>
+          `
+          : ''
+      }
       ${
         relatedPosts.length
           ? /* html */ `
