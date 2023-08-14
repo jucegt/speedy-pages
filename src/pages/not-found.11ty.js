@@ -1,4 +1,4 @@
-const warning = require('../svgs/warning.js');
+const error = require('../svgs/error.js');
 
 const notFound = {
   data: {
@@ -22,7 +22,7 @@ const notFound = {
           <a class="not-found__button" href="/">${notFound.button}</a>
         </article>
         <aside class="not-found__icon">
-          ${warning()}
+          ${error()}
         </aside>
       </section>
       <h2 class="not-found-recommended">${notFound.postsTitle}</h2>
