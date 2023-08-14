@@ -20,6 +20,11 @@ const es = {
         plural: 'minutos de lectura',
       },
     },
+    pagination: {
+      next: 'Siguiente',
+      prev: 'Anterior',
+      of: 'de',
+    },
     footer: {
       categories: 'Categorías',
       pages: 'Páginas',

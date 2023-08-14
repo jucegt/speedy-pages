@@ -42,6 +42,7 @@ const categories = {
       <section class="posts-grid">
         ${pages?.items?.map((post) => this.postCard(post, texts.ui, false)).join('')}
       </section>
+      ${this.pagination(pages, texts.ui)}
     `;
   },
 };

@@ -5,6 +5,7 @@ const mask = require('./mask');
 const state = require('./state');
 const postCard = require('./post-card');
 const search = require('./search');
+const pagination = require('./pagination');
 
 const shortcodes = function (config) {
   config.addShortcode('header', header);
@@ -14,6 +15,7 @@ const shortcodes = function (config) {
   config.addShortcode('state', state);
   config.addShortcode('postCard', postCard);
   config.addShortcode('search', search);
+  config.addShortcode('pagination', pagination);
 };
 
 module.exports = shortcodes;

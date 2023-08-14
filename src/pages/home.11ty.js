@@ -33,6 +33,7 @@ const home = {
       <section class="posts-grid">
         ${pages?.items?.map((post) => this.postCard(post, texts.ui)).join('')}
       </section>
+      ${this.pagination(pages, texts.ui)}
     `;
   },
 };

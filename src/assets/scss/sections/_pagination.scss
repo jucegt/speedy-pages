@@ -1,0 +1,35 @@
+.pagination {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: to-rem(20);
+  gap: to-rem(8);
+  font-size: to-rem(18);
+  &__btn {
+    padding: to-rem(11) to-rem(16);
+    border-radius: to-rem(8);
+  }
+  a {
+    &.pagination__btn {
+      color: var(--white-200);
+      background: var(--oragenta);
+    }
+  }
+  span {
+    color: var(--text);
+    &.pagination__btn {
+      background: var(--nav-bg);
+      color: var(--text);
+      cursor: not-allowed;
+      box-shadow: var(--shadow);
+    }
+  }
+}
+
+@mixin pagination--xl {
+  .pagination {
+    margin-top: to-rem(32);
+  }
+}
