@@ -29,7 +29,8 @@ const categories = {
       },
     };
   },
-  render: function ({ pages, collections }) {
+  render: function ({ config, locale, pages, collections }) {
+    const texts = locale[config.language];
     const { categoryBySlug } = collections;
     const { data, content } = categoryBySlug[pages.slug];
     const { title, heading } = data.seo;
@@ -39,8 +40,9 @@ const categories = {
         ${content}
       </header>
       <section class="posts-grid">
-        ${pages?.items?.map((post) => this.postCard(post, false)).join('')}
+        ${pages?.items?.map((post) => this.postCard(post, texts.ui, false)).join('')}
       </section>
+      ${this.pagination(pages, texts.ui)}
     `;
   },
 };

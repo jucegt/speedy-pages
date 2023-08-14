@@ -11,6 +11,7 @@
   --gray-700: hsl(210, 1%, 40%);
   --blue-900: hsl(206, 16%, 9%);
   --blue-900-rgb: 19, 23, 26;
+  --red: hsl(347, 70%, 52%);
   --orange: var(--primary, hsl(17, 87%, 57%));
   --magenta: var(--secondary, hsl(333, 100%, 49%));
   --oragenta: linear-gradient(135deg, var(--orange) 0%, var(--magenta) 100%);
@@ -40,6 +41,7 @@
   --title: var(--blue-900);
   --form-element-bg: var(--white-300);
   --post-bg: var(--white);
+  --warning: var(--red);
 }
 
 @mixin dark {

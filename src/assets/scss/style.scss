@@ -13,6 +13,9 @@
 // Pages
 @import "pages/pages";
 
+// Sections
+@import "sections/sections";
+
 .amp-dark-mode {
   @include header--dark;
 }
@@ -31,6 +34,7 @@
   @include post-card--md;
   @include post--md;
   @include search--md;
+  @include not-found--md;
 }
 
 @include min-query(lg) {
@@ -39,6 +43,7 @@
   @include content--lg;
   @include post-card--lg;
   @include search--lg;
+  @include not-found--lg;
 }
 
 @include min-query(xl) {
@@ -47,6 +52,8 @@
   @include post-card--xl;
   @include post--xl;
   @include search--xl;
+  @include ad--xl;
+  @include pagination--xl;
 }
 
 @include min-query(xxl) {

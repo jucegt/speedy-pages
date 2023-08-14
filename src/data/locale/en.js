@@ -1,4 +1,54 @@
 const en = {
+  ui: {
+    navigation: {
+      home: 'Home',
+      search: 'Search',
+      mode: 'Mode',
+      menu: 'Menu',
+    },
+    search: {
+      placeholder: 'Search',
+      results: 'Results for:',
+    },
+    readingTime: {
+      short: {
+        singular: 'min of reading',
+        plural: 'mins of reading',
+      },
+      long: {
+        singular: 'minute of reading time',
+        plural: 'minutes of reading time',
+      },
+    },
+    pagination: {
+      next: 'Next',
+      prev: 'Prev',
+      of: 'of',
+    },
+    footer: {
+      categories: 'Categories',
+      pages: 'Pages',
+      copyright: 'All rights reserved.',
+    },
+    notFound: {
+      title: 'Oooops!',
+      subtitle: {
+        text: 'Something went',
+        strong: 'wrong...',
+      },
+      text: 'Unfortunately, the content you are looking for is not here. There may be a spelling error in the web address or you may have clicked on a link to content that no longer exists.',
+      contact: {
+        prefix: 'If you have followed a link on this site to get here, please',
+        link: 'contact the administrator',
+        suffix: 'so that it can be corrected.',
+      },
+      button: 'Back to home',
+      postsTitle: 'Posts that may interest you',
+    },
+  },
+  cms: {
+    label: 'Content Manager',
+  },
   posts: {
     singular: 'Post',
     plural: 'Posts',

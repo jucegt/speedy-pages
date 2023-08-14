@@ -3,13 +3,14 @@ require('dotenv').config();
 const speedyConfig = {
   language: process.env.LANGUAGE || 'en',
   url: process.env.ENV_URL || process.env.URL || 'http://localhost:8080',
+  adsAllowed: process.env.ADS_ALLOWED === 'true' ? true : false,
   ui: {
     paginatedPagePrefix: '',
     postsPerPage: 12,
   },
   photos: {
-    src: './content/photos/*.*',
-    dist: './.11ty/photos/',
+    src: './content/static/photos/*.*',
+    dist: './.11ty/static/photos/',
     fit: 'cover',
     width: 60,
     height: 60,

@@ -1,0 +1,34 @@
+.ad {
+  width: 100%;
+  &--mt {
+    margin-top: to-rem(20);
+  }
+  &--mb {
+    margin-bottom: to-rem(20);
+  }
+  &--m {
+    margin-top: to-rem(20);
+    margin-bottom: to-rem(20);
+  }
+  amp-ad {
+    display: block;
+  }
+  .amp-active {
+    height: 100%;
+  }
+}
+
+@mixin ad--xl {
+  .ad {
+    &--mt {
+      margin-top: to-rem(32);
+    }
+    &--mb {
+      margin-bottom: to-rem(32);
+    }
+    &--m {
+      margin-top: to-rem(32);
+      margin-bottom: to-rem(32);
+    }
+  }
+}

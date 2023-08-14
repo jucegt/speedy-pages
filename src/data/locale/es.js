@@ -1,4 +1,54 @@
 const es = {
+  ui: {
+    navigation: {
+      home: 'Inicio',
+      search: 'Buscar',
+      mode: 'Modo',
+      menu: 'Menú',
+    },
+    search: {
+      placeholder: 'Buscar',
+      results: 'Resultados para:',
+    },
+    readingTime: {
+      short: {
+        singular: 'min de lectura',
+        plural: 'mins de lectura',
+      },
+      long: {
+        singular: 'minuto de lectura',
+        plural: 'minutos de lectura',
+      },
+    },
+    pagination: {
+      next: 'Siguiente',
+      prev: 'Anterior',
+      of: 'de',
+    },
+    footer: {
+      categories: 'Categorías',
+      pages: 'Páginas',
+      copyright: 'Todos los derechos reservados.',
+    },
+    notFound: {
+      title: '¡Oooops!',
+      subtitle: {
+        text: 'Algo salio',
+        strong: 'mal...',
+      },
+      text: 'Lamentablemente, el contenido que buscas no está aquí. Puede que haya un error ortográfico en la dirección web o que haya hecho clic en un enlace de un contenido que ya no existe.',
+      contact: {
+        prefix: 'Si ha seguido un enlace en este sitio para llegar aquí, por favor, póngase en',
+        link: 'contacto con el administrador',
+        suffix: 'para que pueda ser corregido.',
+      },
+      button: 'Volver al inicio',
+      postsTitle: 'Artículos que pueden interesarte',
+    },
+  },
+  cms: {
+    label: 'Gestor de contenidos',
+  },
   posts: {
     singular: 'Artículo',
     plural: 'Artículos',

@@ -4,6 +4,8 @@ const inlineCss = require('../utilities/css');
 const base = {
   render: async function ({
     config,
+    locale,
+    currentYear,
     content,
     collections,
     page,
@@ -13,6 +15,7 @@ const base = {
     firstPostImage,
     ...rest
   }) {
+    const texts = locale[config.language];
     const { navigation, categoriesList, ui, footerPages, homePage, logo, socialMedia } = collections;
     const { multicolor, onecolor } = logo;
     const { seo } = homePage.data;
@@ -30,7 +33,7 @@ const base = {
         <meta name="viewport" content="width=device-width" />
         <!-- BASIC SEO -->
         <meta name="description" content="${description}" />
-        <title>${title ? `${title} - ${seo.title}` : seo.title}</title>
+        <title>${title ? `${title} | ${seo.title}` : seo.title}</title>
         <!-- OG -->
         <!-- PRELOAD -->
         <link rel="preload" as="font" href="/static/fonts/lato-regular.woff2" type="font/woff2" crossorigin>
@@ -54,6 +57,7 @@ const base = {
         <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
         <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
         <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+        <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
         <!-- STYLES -->
         <style amp-custom>
           ${await inlineCss('style.css')}
@@ -67,12 +71,12 @@ const base = {
         <link rel="canonical" href="${config.url}${url}" />
       </head>
       <body>
-        ${this.header(seo, multicolor.code, navigation, url)}
+        ${this.header(seo, multicolor.code, navigation, url, texts.ui)}
         <main class="content container">
           ${content}
         </main>
-        ${this.footer(seo, onecolor.code, socialMedia, categoriesList, footerPages)}
-        ${this.search()}
+        ${this.footer(seo, onecolor.code, socialMedia, categoriesList, footerPages, texts.ui, currentYear)}
+        ${this.search(texts.ui)}
         ${this.mask()}
         ${this.state()}
       </body>
