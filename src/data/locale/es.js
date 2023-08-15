@@ -30,6 +30,13 @@ const es = {
       pages: 'Páginas',
       copyright: 'Todos los derechos reservados.',
     },
+    contact: {
+      name: 'Nombre',
+      email: 'Correo Electrónico',
+      subject: 'Asunto',
+      message: 'Mensaje',
+      send: 'Enviar',
+    },
     notFound: {
       title: '¡Oooops!',
       subtitle: {

@@ -30,6 +30,13 @@ const en = {
       pages: 'Pages',
       copyright: 'All rights reserved.',
     },
+    contact: {
+      name: 'Name',
+      email: 'E-mail',
+      subject: 'Subject',
+      message: 'Message',
+      send: 'Send',
+    },
     notFound: {
       title: 'Oooops!',
       subtitle: {

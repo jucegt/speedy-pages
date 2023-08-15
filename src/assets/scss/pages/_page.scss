@@ -1,0 +1,33 @@
+.page {
+  &__header {
+    @extend .post__header;
+  }
+  &__title {
+    @extend .post__title;
+  }
+  &__body {
+    @extend .post__body;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__content {
+    @extend .post__content;
+  }
+  &__contact {
+    width: 100%;
+    flex: 0 0 to-rem(400);
+    max-width: to-rem(400);
+  }
+}
+
+@mixin page--lg {
+  .page {
+    &__header {
+      margin-bottom: to-rem(32);
+    }
+    &__body {
+      flex-direction: row;
+      gap: to-rem(32);
+    }
+  }
+}

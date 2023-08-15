@@ -1,0 +1,45 @@
+.contact-form {
+  background: var(--nav-bg);
+  border-radius: to-rem(8);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: to-rem(20);
+  padding: to-rem(20);
+  .textarea {
+    @extend .input;
+    textarea {
+      background: var(--form-element-bg);
+      border-radius: to-rem(8);
+      border: 0;
+      color: var(--title);
+      outline: to-rem(2) solid transparent;
+      outline-offset: to-rem(-2);
+      padding: to-rem(14);
+      width: 100%;
+      transition:
+        outline-offset ease-in 0.2s,
+        outline-color ease-in 0.2s;
+      &:focus {
+        outline-offset: to-rem(2);
+        outline-color: var(--orange);
+        transition-timing-function: ease-out;
+      }
+    }
+  }
+  button {
+    background: var(--oragenta);
+    border-radius: to-rem(8);
+    border: 0;
+    color: var(--white-200);
+    font-weight: bold;
+    height: to-rem(46);
+    text-transform: uppercase;
+  }
+}
+
+@mixin contact-form--lg {
+  .contact-form {
+    padding: to-rem(32);
+  }
+}
