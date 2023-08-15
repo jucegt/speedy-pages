@@ -43,7 +43,7 @@ const header = function ({ title }, logo, menu, url, texts) {
                 id="search"
                 on="input-throttled:AMP.setState({ value: event.value })"
               >
-              <button>${search()}</button>
+              <button aria-label="${texts.search.placeholder}">${search()}</button>
             </div>
           </form>
           <div class="tools__mode mode">
