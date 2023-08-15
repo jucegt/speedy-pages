@@ -191,6 +191,10 @@ const en = {
       label: 'Body',
       hint: 'Content displayed in the page.',
     },
+    contact: {
+      label: 'Display Contact Form',
+      hint: 'Do you want to display the contact form on this page?',
+    },
   },
   settings: {
     label: 'Settings',

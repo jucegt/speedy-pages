@@ -191,6 +191,10 @@ const es = {
       label: 'Cuerpo',
       hint: 'Contenido que se muestra en la página.',
     },
+    contact: {
+      label: 'Mostrar Formulario de Contacto',
+      hint: '¿Quieres mostrar el formulario de contacto en esta página?',
+    },
   },
   settings: {
     label: 'Configuración',

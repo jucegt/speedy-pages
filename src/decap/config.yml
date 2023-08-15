@@ -167,6 +167,13 @@ collections:
               hint: '${pages.seo.heading.hint}',
             }
       - { label: '${pages.body.label}', name: 'body', widget: 'markdown', hint: '${pages.body.hint}' }
+      - {
+          label: '${pages.contact.label}',
+          name: 'showContactForm',
+          widget: 'boolean',
+          hint: '${pages.contact.hint}',
+          required: false,
+        }
 
   - name: 'settings'
     label: '${settings.label}'
