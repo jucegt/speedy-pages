@@ -3,7 +3,7 @@ const page = {
     layout: 'base',
   },
   render: function ({ config, locale, content, seo, showContactForm }) {
-    const texts = config.texts[locale] || locale.en;
+    const texts = locale[config.language] || locale.en;
     return /* html */ `
       <article class="page">
         <section class="page__header">
