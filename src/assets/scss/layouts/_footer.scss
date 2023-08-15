@@ -77,6 +77,7 @@
   }
   .logo {
     color: var(--title);
+    transition: none;
     svg {
       display: block;
       height: to-rem(30);
