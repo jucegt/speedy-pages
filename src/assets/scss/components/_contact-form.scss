@@ -17,9 +17,7 @@
       outline-offset: to-rem(-2);
       padding: to-rem(14);
       width: 100%;
-      transition:
-        outline-offset ease-in 0.2s,
-        outline-color ease-in 0.2s;
+      transition: outline-offset ease-in 0.2s, outline-color ease-in 0.2s;
       &:focus {
         outline-offset: to-rem(2);
         outline-color: var(--orange);
