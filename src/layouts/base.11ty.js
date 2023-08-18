@@ -36,8 +36,8 @@ const base = {
         <title>${title ? `${title} | ${seo.title}` : seo.title}</title>
         <!-- OG -->
         <!-- PRELOAD -->
-        <link rel="preload" as="font" href="/static/fonts/lato-regular.woff2" type="font/woff2" crossorigin>
-        <link rel="preload" as="font" href="/static/fonts/lato-bold.woff2" type="font/woff2" crossorigin>
+        <link rel="preload" fetchpriority="high" as="font" href="/static/fonts/lato-regular.woff2" type="font/woff2" crossorigin>
+        <link rel="preload" fetchpriority="high" as="font" href="/static/fonts/lato-bold.woff2" type="font/woff2" crossorigin>
         ${
           preload
             ? /* html */ `
