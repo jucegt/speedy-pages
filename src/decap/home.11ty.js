@@ -4,7 +4,7 @@ const home = {
   },
   render: function ({ config, collections, locale }) {
     const { homePage } = collections;
-    const texts = locale[config.language];
+    const texts = locale[config.language] || locale.en;
     return /* html */ `
       <!doctype html>
       <html>

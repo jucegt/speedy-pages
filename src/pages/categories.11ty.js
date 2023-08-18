@@ -30,7 +30,7 @@ const categories = {
     };
   },
   render: function ({ config, locale, pages, collections }) {
-    const texts = locale[config.language];
+    const texts = locale[config.language] || locale.en;
     const { categoryBySlug } = collections;
     const { data, content } = categoryBySlug[pages.slug];
     const { title, heading } = data.seo;
