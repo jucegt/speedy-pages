@@ -1,4 +1,11 @@
 .input {
+  label {
+    color: var(--title);
+    display: block;
+    font-size: to-rem(14);
+    font-weight: 600;
+    margin-bottom: to-rem(8);
+  }
   input {
     background: var(--form-element-bg);
     border-radius: to-rem(8);
