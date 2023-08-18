@@ -43,9 +43,10 @@ const base = {
             ? /* html */ `
               <link
                 rel="preload"
+                fetchpriority="high"
                 as="image"
                 href="${this.src(preload, true)}"
-                imagesrcset="${this.srcSet(preload, true)}"
+                ${!firstPostImage ? `imagesrcset="${this.srcSet(preload, true)}"` : ''}
               />
         `
             : ''
