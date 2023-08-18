@@ -8,7 +8,9 @@ const pagedCategories = function (config) {
     const pagedPosts = [];
 
     categories.forEach((category) => {
-      const postByCategory = posts.filter((post) => post.data.info.category === category.data.seo.slug);
+      const postByCategory = posts
+        .filter((post) => post.data.info.category === category.data.seo.slug)
+        .sort((a, b) => new Date(b.data.info.date) - new Date(a.data.info.date));
       const numberOfPages = Math.ceil(postByCategory.length / postsPerPage);
 
       for (let pageNum = 1; pageNum <= numberOfPages; pageNum++) {
@@ -31,9 +33,7 @@ const pagedCategories = function (config) {
           previousPageLink:
             pageNum === 1
               ? null
-              : `/${config.getFilter('slugify')(category.data.seo.slug)}/${
-                  pageNum - 1 === 1 ? null : `${pageNum - 1}/`
-                }`,
+              : `/${config.getFilter('slugify')(category.data.seo.slug)}/${pageNum - 1 === 1 ? '' : `${pageNum - 1}/`}`,
           nextPageLink:
             pageNum === numberOfPages
               ? null

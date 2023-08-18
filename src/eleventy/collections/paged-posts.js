@@ -1,7 +1,7 @@
 const speedy = require('../../../speedy.config');
 
 const pagedPosts = function (collection) {
-  const posts = require('./posts')(collection);
+  const posts = require('./posts')(collection).sort((a, b) => new Date(b.data.info.date) - new Date(a.data.info.date));
   const { postsPerPage } = speedy.ui;
   const pagedPosts = [];
   const numberOfPages = Math.ceil(posts.length / postsPerPage);
@@ -20,7 +20,7 @@ const pagedPosts = function (collection) {
         first: pageNum === 1,
         last: pageNum === numberOfPages,
       },
-      previousPageLink: pageNum === 1 ? null : `/${pageNum - 1 === 1 ? null : `${pageNum - 1}/`}`,
+      previousPageLink: pageNum === 1 ? null : `/${pageNum - 1 === 1 ? '' : `${pageNum - 1}/`}`,
       nextPageLink: pageNum === numberOfPages ? null : `/${pageNum + 1}/`,
     });
   }
