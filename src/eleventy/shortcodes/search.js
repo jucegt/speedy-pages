@@ -9,7 +9,7 @@ const search = function (texts) {
         <amp-list
           id="results"
           width="auto"
-          height="auto"
+          height="100"
           layout="fill"
           src="/search/default.json"
           [src]="query ? '/api/search?q=' + encodeURIComponent(query) : '/search/default.json'"
