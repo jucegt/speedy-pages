@@ -3,7 +3,7 @@
 :root {
   min-width: 320px;
   font-size: to-px(16);
-  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-family: "Lato", "Fallback", Arial, Helvetica, sans-serif;
   @include light;
 }
 
@@ -49,7 +49,7 @@ button,
 input,
 textarea {
   font-size: to-rem(16);
-  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-family: "Lato", "Fallback", Arial, Helvetica, sans-serif;
 }
 
 p {
