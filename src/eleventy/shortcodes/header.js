@@ -35,7 +35,7 @@ const header = function ({ title }, logo, menu, url, texts) {
         }
 
         <section class="${classesTools}" [class]="search ? '${classesTools} header__panel--open' : '${classesTools}'">
-          <form class="tools__search" method="POST" action-xhr="/api/search/" target="_top" on="submit:AMP.setState({ query: value }),results.changeToLayoutContainer()">
+          <form class="tools__search" method="POST" action-xhr="/api/search/" target="_top" on="submit:AMP.setState({ query: value }),searchresults.focus,results.changeToLayoutContainer">
             <div class="input input--icon">
               <input
                 placeholder="${texts.search.placeholder}"
