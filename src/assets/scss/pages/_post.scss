@@ -153,6 +153,12 @@
     p {
       margin: 0 0 to-rem(20);
     }
+    a {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-word;
+      hyphens: auto;
+    }
   }
   &__ads {
     display: none;
