@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   opacity: 0;
+  outline: none;
   transform: translateY(-100%) scale(0.7);
   transition: opacity ease-in 0.2s, transform ease-in 0.2s;
   &--active {
@@ -36,6 +37,7 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+        font-family: "Lato", "FallbackBold", Arial, Helvetica, sans-serif;
       }
     }
   }
@@ -71,6 +73,7 @@
         p {
           font-size: to-rem(18);
           font-weight: bold;
+          font-family: "Lato", "FallbackBold", Arial, Helvetica, sans-serif;
         }
       }
       &__content {

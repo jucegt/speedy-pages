@@ -1,4 +1,12 @@
 .input {
+  label {
+    color: var(--title);
+    display: block;
+    font-size: to-rem(14);
+    font-weight: bold;
+    margin-bottom: to-rem(8);
+    font-family: "Lato", "FallbackBold", Arial, Helvetica, sans-serif;
+  }
   input {
     background: var(--form-element-bg);
     border-radius: to-rem(8);

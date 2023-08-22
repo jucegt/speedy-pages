@@ -30,6 +30,13 @@ const es = {
       pages: 'Páginas',
       copyright: 'Todos los derechos reservados.',
     },
+    contact: {
+      name: 'Nombre',
+      email: 'Correo Electrónico',
+      subject: 'Asunto',
+      message: 'Mensaje',
+      send: 'Enviar',
+    },
     notFound: {
       title: '¡Oooops!',
       subtitle: {
@@ -183,6 +190,10 @@ const es = {
     body: {
       label: 'Cuerpo',
       hint: 'Contenido que se muestra en la página.',
+    },
+    contact: {
+      label: 'Mostrar Formulario de Contacto',
+      hint: '¿Quieres mostrar el formulario de contacto en esta página?',
     },
   },
   settings: {

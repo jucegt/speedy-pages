@@ -22,7 +22,7 @@ const home = {
     };
   },
   render: function ({ config, locale, pages, collections }) {
-    const texts = locale[config.language];
+    const texts = locale[config.language] || locale.en;
     const { homePage } = collections;
     const { seo } = homePage.data;
     return /* html */ `

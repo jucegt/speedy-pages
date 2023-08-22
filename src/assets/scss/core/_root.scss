@@ -3,7 +3,8 @@
 :root {
   min-width: 320px;
   font-size: to-px(16);
-  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-family: "Fallback", Arial, Helvetica, sans-serif;
+  font-family: "Lato", "Fallback", Arial, Helvetica, sans-serif;
   @include light;
 }
 
@@ -28,10 +29,6 @@ body {
 
 a {
   color: var(--title);
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-word;
-  hyphens: auto;
   transition: color ease-in 0.2s;
   * {
     transition: inherit;
@@ -49,15 +46,23 @@ button,
 input,
 textarea {
   font-size: to-rem(16);
-  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-family: "Lato", "Fallback", Arial, Helvetica, sans-serif;
 }
 
 p {
-  line-height: 1.375em;
+  line-height: to-rem(22);
   color: var(--text);
+  * {
+    line-height: to-rem(22);
+  }
   strong {
     color: var(--title);
+    font-family: "Lato", "FallbackBold", Arial, Helvetica, sans-serif;
   }
+}
+
+strong {
+  font-family: "Lato", "FallbackBold", Arial, Helvetica, sans-serif;
 }
 
 .disable-scroll {

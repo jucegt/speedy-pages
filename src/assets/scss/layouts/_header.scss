@@ -36,6 +36,7 @@
 
   .logo {
     color: var(--title);
+    transition: none;
     svg {
       display: block;
       height: to-rem(30);
@@ -135,6 +136,7 @@
     &__item {
       font-size: to-rem(18);
       font-weight: bold;
+      font-family: "Lato", "FallbackBold", Arial, Helvetica, sans-serif;
       a {
         align-items: center;
         color: var(--title);

@@ -30,6 +30,13 @@ const en = {
       pages: 'Pages',
       copyright: 'All rights reserved.',
     },
+    contact: {
+      name: 'Name',
+      email: 'E-mail',
+      subject: 'Subject',
+      message: 'Message',
+      send: 'Send',
+    },
     notFound: {
       title: 'Oooops!',
       subtitle: {
@@ -183,6 +190,10 @@ const en = {
     body: {
       label: 'Body',
       hint: 'Content displayed in the page.',
+    },
+    contact: {
+      label: 'Display Contact Form',
+      hint: 'Do you want to display the contact form on this page?',
     },
   },
   settings: {

@@ -44,6 +44,8 @@
   @include post-card--lg;
   @include search--lg;
   @include not-found--lg;
+  @include page--lg;
+  @include contact-form--lg;
 }
 
 @include min-query(xl) {

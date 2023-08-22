@@ -7,9 +7,10 @@ const post = {
     layout: 'base',
   },
   render: function ({ content, seo, info, image, collections, config, locale }) {
-    const texts = locale[config.language];
-    const { authors, posts } = collections;
+    const texts = locale[config.language] || locale.en;
+    const { authors, categories, posts } = collections;
     const author = authors.find((author) => author.data.title === info.author);
+    const category = categories.find((category) => category.data.seo.slug === info.category);
     const readingTime = getReadingTime(content);
     const relatedPosts = posts
       .filter((post) => post.data.info.category === info.category && post.data.seo.slug !== seo.slug)
@@ -17,7 +18,7 @@ const post = {
     return /* html */ `
       <article class="post">
         <section class="post__header">
-          <a class="post__category" href="/${info.category}/">${info.category}</a>
+          <a class="post__category" href="/${category.data.seo.slug}/">${category.data.seo.title}</a>
           <h1 class="post__title">${info.title}</h1>
           ${
             config.adsAllowed
