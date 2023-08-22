@@ -13,9 +13,7 @@
   opacity: 0;
   outline: none;
   transform: translateY(-100%) scale(0.7);
-  transition:
-    opacity ease-in 0.2s,
-    transform ease-in 0.2s;
+  transition: opacity ease-in 0.2s, transform ease-in 0.2s;
   &--active {
     opacity: 1;
     transform: translateY(0) scale(1);
