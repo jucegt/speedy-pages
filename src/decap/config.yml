@@ -180,26 +180,49 @@ collections:
     editor:
       preview: false
     files:
-      - name: 'ui'
-        label: '${settings.ui.label}'
-        file: 'content/settings/ui.md'
+      - name: 'branding'
+        label: '${settings.branding.label}'
+        file: 'content/settings/branding.md'
         fields:
           - name: 'colors'
-            label: '${settings.ui.colors.label}'
+            label: '${settings.branding.colors.label}'
             widget: 'object'
             fields:
               - {
                   name: 'primary',
-                  label: '${settings.ui.colors.primary.label}',
+                  label: '${settings.branding.colors.primary.label}',
                   widget: 'color',
-                  hint: '${settings.ui.colors.primary.hint}',
+                  hint: '${settings.branding.colors.primary.hint}',
                 }
               - {
                   name: 'secondary',
-                  label: '${settings.ui.colors.secondary.label}',
+                  label: '${settings.branding.colors.secondary.label}',
                   widget: 'color',
-                  hint: '${settings.ui.colors.secondary.hint}',
+                  hint: '${settings.branding.colors.secondary.hint}',
                 }
+          - name: 'logo'
+            label: '${settings.branding.logo.label}'
+            widget: 'object'
+            fields:
+              - {
+                  label: '${settings.branding.logo.multicolor.label}',
+                  name: 'multicolor',
+                  widget: 'code',
+                  hint: '${settings.branding.logo.multicolor.hint}',
+                }
+              - {
+                  label: '${settings.branding.logo.onecolor.label}',
+                  name: 'onecolor',
+                  widget: 'code',
+                  hint: '${settings.branding.logo.onecolor.hint}',
+                }
+          - name: 'favicon'
+            label: '${settings.branding.favicon.label}'
+            widget: 'image'
+            hint: '${settings.branding.favicon.hint}'
+            allow_multiple: false
+            choose_url: false
+            media_folder: ../static/favicon
 
       - name: 'homepage'
         label: '${settings.home.label}'
@@ -268,23 +291,6 @@ collections:
                   value_field: 'seo.slug',
                   display_fields: ['seo.title'],
                 }
-
-      - name: 'logo'
-        label: '${settings.logo.label}'
-        file: 'content/settings/logo.md'
-        fields:
-          - {
-              label: '${settings.logo.multicolor.label}',
-              name: 'multicolor',
-              widget: 'code',
-              hint: '${settings.logo.multicolor.hint}',
-            }
-          - {
-              label: '${settings.logo.onecolor.label}',
-              name: 'onecolor',
-              widget: 'code',
-              hint: '${settings.logo.onecolor.hint}',
-            }
 
       - name: 'socialmedia'
         label: '${settings.socialMedia.label}'

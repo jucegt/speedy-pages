@@ -198,8 +198,8 @@ const es = {
   },
   settings: {
     label: 'Configuración',
-    ui: {
-      label: 'UI',
+    branding: {
+      label: 'Marca',
       colors: {
         label: 'Colores',
         primary: {
@@ -210,6 +210,21 @@ const es = {
           label: 'Secundario',
           hint: 'Color secundario utilizado en el sitio web.',
         },
+      },
+      logo: {
+        label: 'Logo',
+        multicolor: {
+          label: 'Multi-Color',
+          hint: 'Código SVG para el logo multicolor.',
+        },
+        onecolor: {
+          label: '1-Color',
+          hint: 'Código SVG para el logo a un color.',
+        },
+      },
+      favicon: {
+        label: 'Favicon',
+        hint: 'Favicon que se muestra en la pestaña del navegador.',
       },
     },
     home: {
@@ -246,17 +261,6 @@ const es = {
         label: 'Páginas',
         hint: 'Páginas que se muestran en la barra de navegación.',
         page: 'Página',
-      },
-    },
-    logo: {
-      label: 'Logo',
-      multicolor: {
-        label: 'Multi-Color',
-        hint: 'Código SVG para el logo multicolor.',
-      },
-      onecolor: {
-        label: '1-Color',
-        hint: 'Código SVG para el logo a un color.',
       },
     },
     socialMedia: {

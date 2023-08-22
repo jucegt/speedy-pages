@@ -16,8 +16,8 @@ const base = {
     ...rest
   }) {
     const texts = locale[config.language] || locale.en;
-    const { navigation, categoriesList, ui, footerPages, homePage, logo, socialMedia } = collections;
-    const { multicolor, onecolor } = logo;
+    const { navigation, categoriesList, branding, footerPages, homePage, socialMedia } = collections;
+    const { multicolor, onecolor } = branding.logo;
     const { seo } = homePage.data;
     const { url } = page;
     const preload = image || firstPostImage || null;
@@ -63,11 +63,11 @@ const base = {
         <style amp-custom>
           ${await inlineCss('style.css')}
           ${
-            ui.colors.primary && ui.colors.secondary
+            branding.colors.primary && branding.colors.secondary
               ? /* css */ `
                 :root {
-                  --primary: ${ui.colors.primary};
-                  --secondary: ${ui.colors.secondary};
+                  --primary: ${branding.colors.primary};
+                  --secondary: ${branding.colors.secondary};
                 }
               `
               : ''
