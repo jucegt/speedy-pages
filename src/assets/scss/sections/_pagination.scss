@@ -15,6 +15,7 @@
   a {
     text-decoration: none;
     font-weight: bold;
+    font-family: "Lato", "FallbackBold", Arial, Helvetica, sans-serif;
     &.pagination__btn {
       color: var(--white-200);
       background: var(--oragenta);

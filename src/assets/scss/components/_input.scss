@@ -3,8 +3,9 @@
     color: var(--title);
     display: block;
     font-size: to-rem(14);
-    font-weight: 600;
+    font-weight: bold;
     margin-bottom: to-rem(8);
+    font-family: "Lato", "FallbackBold", Arial, Helvetica, sans-serif;
   }
   input {
     background: var(--form-element-bg);

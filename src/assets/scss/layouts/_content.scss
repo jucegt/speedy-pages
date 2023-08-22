@@ -7,15 +7,15 @@
       margin: to-rem(20) 0;
       font-weight: bold;
       font-size: to-rem(28);
+      line-height: to-rem(34);
+      font-family: "Lato", "FallbackBold", Arial, Helvetica, sans-serif;
       span {
         background: var(--oragenta);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+        line-height: to-rem(34);
       }
-    }
-    p {
-      line-height: to-rem(22);
     }
     a {
       text-decoration: underline;
