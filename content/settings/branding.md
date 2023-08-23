@@ -43,5 +43,5 @@ logo:
         <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17.4225L12.554 0L14.8246 0.745265V10.5652H22.9847L24 12.5775L11.446 30L9.17536 29.2547V19.4348H1.01528L0 17.4225ZM3.48059 16.9006H11.6861V25.3582L20.5194 13.0994H12.3138V4.64179L3.48059 16.9006Z" fill="currentColor"/>
       </svg>
     lang: svg
-favicon: ../static/favicon/favicon.png
+favicon: ../static/favicon/favicon-750.png
 ---
