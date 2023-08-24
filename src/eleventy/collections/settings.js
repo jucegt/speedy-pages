@@ -1,15 +1,12 @@
 const settings = {
-  ui: function (collection) {
-    return collection.getFilteredByGlob('./content/settings/ui.md')[0].data;
+  branding: function (collection) {
+    return collection.getFilteredByGlob('./content/settings/branding.md')[0].data;
   },
   homePage: function (collection) {
     return collection.getFilteredByGlob('./content/settings/home-page.md')[0];
   },
   navMenu: function (collection) {
     return collection.getFilteredByGlob('./content/settings/navigation.md')[0].data;
-  },
-  logo: function (collection) {
-    return collection.getFilteredByGlob('./content/settings/logo.md')[0].data;
   },
   socialMedia: function (collection) {
     return collection.getFilteredByGlob('./content/settings/social-media.md')[0].data;

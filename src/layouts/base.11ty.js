@@ -16,8 +16,8 @@ const base = {
     ...rest
   }) {
     const texts = locale[config.language] || locale.en;
-    const { navigation, categoriesList, ui, footerPages, homePage, logo, socialMedia } = collections;
-    const { multicolor, onecolor } = logo;
+    const { navigation, categoriesList, branding, footerPages, homePage, socialMedia } = collections;
+    const { multicolor, onecolor } = branding.logo;
     const { seo } = homePage.data;
     const { url } = page;
     const preload = image || firstPostImage || null;
@@ -63,11 +63,11 @@ const base = {
         <style amp-custom>
           ${await inlineCss('style.css')}
           ${
-            ui.colors.primary && ui.colors.secondary
+            branding.colors.primary && branding.colors.secondary
               ? /* css */ `
                 :root {
-                  --primary: ${ui.colors.primary};
-                  --secondary: ${ui.colors.secondary};
+                  --primary: ${branding.colors.primary};
+                  --secondary: ${branding.colors.secondary};
                 }
               `
               : ''
@@ -77,13 +77,11 @@ const base = {
         <!-- CANONICAL -->
         <link rel="canonical" href="${config.url}${url}" />
         <!-- FAVICON -->
-        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="icon" type="image/png" href="/favicon.png">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#f33691">
       </head>
       <body>
