@@ -63,11 +63,13 @@
     flex-wrap: wrap;
     gap: to-rem(16);
     p {
-      align-items: center;
-      display: flex;
       font-size: to-rem(14);
-      gap: to-rem(4);
       margin: 0;
+      span {
+        align-items: center;
+        display: flex;
+        gap: to-rem(4);
+      }
     }
   }
 }
