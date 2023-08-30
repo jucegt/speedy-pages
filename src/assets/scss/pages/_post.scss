@@ -115,6 +115,10 @@
     ul,
     ol {
       line-height: to-rem(22);
+      strong {
+        font-family: "Lato", "FallbackBold", Arial, Helvetica, sans-serif;
+        color: var(--title);
+      }
       li {
         margin: to-rem(4) 0;
       }
