@@ -14,7 +14,6 @@ const postCard = function ({ data, content, url }, texts, showCategory = true) {
         <amp-img
           alt="${title}"
           src="${this.src(image, true)}"
-          srcset="${this.srcSet(image, true)}"
           width="600"
           height="480"
           layout="responsive">
@@ -22,7 +21,6 @@ const postCard = function ({ data, content, url }, texts, showCategory = true) {
             fallback
             alt="${title}"
             src="${this.src(image)}"
-            srcset="${this.srcSet(image)}"
             width="600"
             height="480"
             layout="responsive">
@@ -37,10 +35,14 @@ const postCard = function ({ data, content, url }, texts, showCategory = true) {
       <section class="post-card__content">
         <h2><a href="${url}" title="${title}">${title}</a></h2>
         <div class="post-card__info">
-          <p>${calendar()} ${this.date(date, true)}</p>
-          <p>
-          ${clock()} ${readingTime}
-          ${readingTime === 1 ? texts.readingTime.short.singular : texts.readingTime.short.plural}
+          <p data-tooltip="${texts.publishedDate.tooltip}">
+            <span>${calendar()} ${this.date(date, true)}</span>
+          </p>
+          <p data-tooltip="${texts.readingTime.tooltip}">
+            <span>
+              ${clock()} ${readingTime}
+              ${readingTime === 1 ? texts.readingTime.short.singular : texts.readingTime.short.plural}
+            </span>
           </p>
         </div>
       </section>

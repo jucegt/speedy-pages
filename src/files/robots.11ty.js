@@ -4,8 +4,10 @@ const robots = {
   },
   render: function ({ config }) {
     return `User-agent: *
-Disallow: /admin/
 Allow: /
+Disallow: /admin/
+Disallow: /*{{item.url}}$
+Disallow: /*{{item.url}}/$
 
 Sitemap: ${config.url}/sitemap.xml`;
   },

@@ -6,9 +6,11 @@ const sharp = require('sharp');
 const speedy = require('../../../speedy.config');
 const config = speedy.images;
 const configPhotos = speedy.photos;
+const configFavicon = speedy.favicon;
 
 const files = glob.sync(config.src);
 const photos = glob.sync(configPhotos.src);
+const favicon = glob.sync(configFavicon.src);
 
 const errorMessage = (error) => {
   if (error) throw error;
@@ -81,6 +83,27 @@ photos.forEach((photo) => {
       fit: configPhotos.fit,
     })
     .toFile(`${configPhotos.dist}${photoname}`)
+    .catch((error) => {
+      console.log(error);
+    });
+});
+
+// Favicon
+if (!fs.existsSync(`${configFavicon.dist}`)) {
+  const faviconPath = `${configFavicon.dist}`;
+  fs.mkdirSync(faviconPath, { recursive: true }, errorMessage);
+}
+
+configFavicon.sizes.forEach((size) => {
+  const firstFavicon = favicon[0];
+  const faviconImage = sharp(firstFavicon);
+  faviconImage
+    .resize({
+      width: size.width,
+      height: size.height,
+      fit: configFavicon.fit,
+    })
+    .toFile(`${configFavicon.dist}${size.name}.png`)
     .catch((error) => {
       console.log(error);
     });

@@ -16,6 +16,7 @@
     font-size: to-rem(28);
     margin: 0;
     color: var(--title);
+    text-align: center;
   }
   &__info {
     margin: 0;
@@ -68,6 +69,11 @@
     }
   }
   &__content {
+    * {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
     amp-img {
       box-shadow: var(--bottom-shadow);
       margin: to-rem(20) to-rem(-20);
@@ -108,6 +114,11 @@
     }
     ul,
     ol {
+      line-height: to-rem(22);
+      strong {
+        font-family: "Lato", "FallbackBold", Arial, Helvetica, sans-serif;
+        color: var(--title);
+      }
       li {
         margin: to-rem(4) 0;
       }
@@ -145,6 +156,12 @@
     }
     p {
       margin: 0 0 to-rem(20);
+    }
+    a {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-word;
+      hyphens: auto;
     }
   }
   &__ads {

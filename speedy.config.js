@@ -8,6 +8,43 @@ const speedyConfig = {
     paginatedPagePrefix: '',
     postsPerPage: 12,
   },
+  favicon: {
+    src: './content/static/favicon/*.*',
+    dist: './.11ty/',
+    fit: 'cover',
+    sizes: [
+      {
+        name: 'android-chrome-192x192',
+        width: 192,
+        height: 192,
+      },
+      {
+        name: 'android-chrome-512x512',
+        width: 512,
+        height: 512,
+      },
+      {
+        name: 'apple-touch-icon',
+        width: 180,
+        height: 180,
+      },
+      {
+        name: 'favicon-16x16',
+        width: 16,
+        height: 16,
+      },
+      {
+        name: 'favicon-32x32',
+        width: 32,
+        height: 32,
+      },
+      {
+        name: 'favicon',
+        width: 32,
+        height: 32,
+      },
+    ],
+  },
   photos: {
     src: './content/static/photos/*.*',
     dist: './.11ty/static/photos/',

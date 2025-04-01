@@ -1,7 +1,7 @@
 const search = function (texts) {
   const defaultResults = 'search-box';
   return /* html */ `
-    <section class="${defaultResults}" [class]="query ? '${defaultResults} search-box--active' : '${defaultResults}'">
+    <section id="searchresults" class="${defaultResults}" [class]="query ? '${defaultResults} search-box--active' : '${defaultResults}'" tabindex="-1">
       <header class="search-box__header">
         <p><span>${texts.search.results}</span> <strong [text]="query ? query : ''"></strong></p>
       </header>
@@ -9,25 +9,17 @@ const search = function (texts) {
         <amp-list
           id="results"
           width="auto"
-          height="auto"
+          height="100"
           layout="fill"
           src="/search/default.json"
           [src]="query ? '/api/search?q=' + encodeURIComponent(query) : '/search/default.json'"
           binding="no"
+          template="search-item-template"
         >
-          <template type="amp-mustache">
-            <article class="search-box__article">
-              <header class="article__header">
-                <p><a href="{{item.url}}">{{item.title}}</a></p>
-              </header>
-              <section class="article__content">
-                <p>{{item.description}}</p>
-              </section>
-            </article>
-          </template>
         </amp-list>
       </main>
     </section>
+    <script type="text/plain" template="amp-mustache" id="search-item-template"><article class="search-box__article"><header class="article__header"><p><span role="button" on="tap:AMP.navigateTo(url='{{item.url}}', target='_top')">{{item.title}}</span></p></header><section class="article__content"><p>{{item.description}}</p></section></article></script>
   `;
 };
 

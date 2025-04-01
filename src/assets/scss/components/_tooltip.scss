@@ -1,0 +1,55 @@
+[data-tooltip] {
+  &:before {
+    background: var(--header-bg);
+    border-radius: to-rem(4);
+    bottom: to-rem(-32);
+    box-shadow: var(--shadow);
+    color: var(--text);
+    content: attr(data-tooltip);
+    font-size: to-rem(12);
+    left: 50%;
+    opacity: 0;
+    padding: to-rem(2) to-rem(6);
+    position: absolute;
+    transform: translate(-50%, 100%);
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.2s ease-in-out;
+    visibility: hidden;
+    white-space: nowrap;
+    z-index: 9;
+  }
+  &:after,
+  > *:after {
+    border-color: transparent transparent hsla(0, 0%, 50%, 0.2) transparent;
+    border-style: solid;
+    border-width: 0 to-rem(12) to-rem(12) to-rem(12);
+    bottom: to-rem(-12);
+    content: "";
+    height: 0;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    transform: translate(-50%, 235%);
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.2s ease-in-out;
+    visibility: hidden;
+    width: 0;
+    z-index: 5;
+  }
+  > * {
+    display: block;
+    height: 100%;
+    &:after {
+      border-color: transparent transparent var(--header-bg) transparent;
+      bottom: to-rem(-13);
+      z-index: 10;
+    }
+  }
+  &:hover {
+    &:before,
+    &:after,
+    > *:after {
+      opacity: 1;
+      transform: translate(-50%, 0);
+      visibility: visible;
+    }
+  }
+}

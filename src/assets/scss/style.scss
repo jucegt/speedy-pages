@@ -56,6 +56,7 @@
   @include search--xl;
   @include ad--xl;
   @include pagination--xl;
+  @include consent--xl;
 }
 
 @include min-query(xxl) {

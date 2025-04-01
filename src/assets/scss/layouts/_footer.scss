@@ -16,6 +16,7 @@
       color: var(--title);
       font-size: to-rem(18);
       font-weight: bold;
+      font-family: "Lato", "FallbackBold", Arial, Helvetica, sans-serif;
       margin: 0 0 to-rem(20) 0;
     }
   }
@@ -57,6 +58,7 @@
           display: inline-block;
           font-size: to-rem(12);
           font-weight: bold;
+          font-family: "Lato", "FallbackBold", Arial, Helvetica, sans-serif;
           min-width: to-rem(19);
           padding: to-rem(2) to-rem(4);
           text-align: center;

@@ -6,6 +6,7 @@
     h1 {
       font-size: to-rem(80);
       font-weight: bold;
+      font-family: "Lato", "FallbackBold", Arial, Helvetica, sans-serif;
       margin: 0;
       text-align: center;
       color: var(--title);
@@ -20,6 +21,7 @@
         display: block;
         font-size: to-rem(32);
         font-weight: bold;
+        font-family: "Lato", "FallbackBold", Arial, Helvetica, sans-serif;
       }
     }
   }
@@ -29,6 +31,7 @@
     color: var(--white-200);
     display: block;
     font-weight: bold;
+    font-family: "Lato", "FallbackBold", Arial, Helvetica, sans-serif;
     margin: to-rem(32) auto;
     max-width: to-rem(240);
     padding: to-rem(16) to-rem(32);

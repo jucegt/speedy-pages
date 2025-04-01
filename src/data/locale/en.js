@@ -10,10 +10,17 @@ const en = {
       placeholder: 'Search',
       results: 'Results for:',
     },
+    author: {
+      tooltip: 'Author',
+    },
+    publishedDate: {
+      tooltip: 'Published Date',
+    },
     readingTime: {
+      tooltip: 'Reading Time',
       short: {
-        singular: 'min of reading',
-        plural: 'mins of reading',
+        singular: 'min',
+        plural: 'mins',
       },
       long: {
         singular: 'minute of reading time',
@@ -198,8 +205,8 @@ const en = {
   },
   settings: {
     label: 'Settings',
-    ui: {
-      label: 'UI',
+    branding: {
+      label: 'Branding',
       colors: {
         label: 'Colors',
         primary: {
@@ -210,6 +217,21 @@ const en = {
           label: 'Secondary',
           hint: 'Secondary color used in the website.',
         },
+      },
+      logo: {
+        label: 'Logo',
+        multicolor: {
+          label: 'Multi-Color',
+          hint: 'SVG code for multi-color logo.',
+        },
+        onecolor: {
+          label: 'One-Color',
+          hint: 'SVG code for one-color logo.',
+        },
+      },
+      favicon: {
+        label: 'Favicon',
+        hint: 'Favicon displayed in the browser tab.',
       },
     },
     home: {
@@ -246,17 +268,6 @@ const en = {
         label: 'Pages',
         hint: 'Pages displayed in the navigation bar.',
         page: 'Page',
-      },
-    },
-    logo: {
-      label: 'Logo',
-      multicolor: {
-        label: 'Multi-Color',
-        hint: 'SVG code for multi-color logo.',
-      },
-      onecolor: {
-        label: 'One-Color',
-        hint: 'SVG code for one-color logo.',
       },
     },
     socialMedia: {

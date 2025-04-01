@@ -10,11 +10,25 @@
   &__btn {
     padding: to-rem(11) to-rem(16);
     border-radius: to-rem(8);
+    height: to-rem(46);
   }
   a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Lato", "FallbackBold", Arial, Helvetica, sans-serif;
     &.pagination__btn {
       color: var(--white-200);
       background: var(--oragenta);
+      &:after {
+        border-radius: to-rem(8);
+        bottom: 0;
+        box-shadow: var(--shadow);
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
     }
   }
   span {

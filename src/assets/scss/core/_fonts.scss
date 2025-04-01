@@ -13,3 +13,17 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Fallback";
+  size-adjust: 96.32%;
+  ascent-override: 99%;
+  src: local("Tahoma");
+}
+
+@font-face {
+  font-family: "FallbackBold";
+  size-adjust: 99%;
+  ascent-override: 99%;
+  src: local("Tahoma");
+}
