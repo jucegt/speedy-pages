@@ -10,10 +10,17 @@ const en = {
       placeholder: 'Search',
       results: 'Results for:',
     },
+    author: {
+      tooltip: 'Author',
+    },
+    publishedDate: {
+      tooltip: 'Published Date',
+    },
     readingTime: {
+      tooltip: 'Reading Time',
       short: {
-        singular: 'min of reading',
-        plural: 'mins of reading',
+        singular: 'min',
+        plural: 'mins',
       },
       long: {
         singular: 'minute of reading time',

@@ -53,12 +53,15 @@ const base = {
         }
         <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
         <!-- AMP -->
+        <meta name="amp-consent-blocking" content="amp-analytics,amp-auto-ads,amp-ad" />
         <script async src="https://cdn.ampproject.org/v0.js"></script>
         <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
         <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
         <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
         <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+        <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
         <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+        <script async custom-element="amp-consent" src="https://cdn.ampproject.org/v0/amp-consent-0.1.js"></script>
         <!-- STYLES -->
         <style amp-custom>
           ${await inlineCss('style.css')}
@@ -91,6 +94,7 @@ const base = {
         </main>
         ${this.footer(seo, onecolor?.code, socialMedia, categoriesList, footerPages, texts.ui, currentYear)}
         ${this.search(texts.ui)}
+        ${this.consent(config.language)}
         ${this.mask()}
         ${this.state()}
       </body>

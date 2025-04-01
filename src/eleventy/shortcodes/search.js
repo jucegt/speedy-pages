@@ -19,16 +19,7 @@ const search = function (texts) {
         </amp-list>
       </main>
     </section>
-    <script type="text/plain" template="amp-mustache" id="search-item-template">
-      <article class="search-box__article">
-        <header class="article__header">
-          <p><a href="{{item.url}}">{{item.title}}</a></p>
-        </header>
-        <section class="article__content">
-          <p>{{item.description}}</p>
-        </section>
-      </article>
-    </script>
+    <script type="text/plain" template="amp-mustache" id="search-item-template"><article class="search-box__article"><header class="article__header"><p><span role="button" on="tap:AMP.navigateTo(url='{{item.url}}', target='_top')">{{item.title}}</span></p></header><section class="article__content"><p>{{item.description}}</p></section></article></script>
   `;
 };
 

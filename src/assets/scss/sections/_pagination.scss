@@ -19,7 +19,16 @@
     &.pagination__btn {
       color: var(--white-200);
       background: var(--oragenta);
-      box-shadow: var(--shadow);
+      &:after {
+        border-radius: to-rem(8);
+        bottom: 0;
+        box-shadow: var(--shadow);
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
     }
   }
   span {

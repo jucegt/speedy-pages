@@ -14,6 +14,7 @@ const post = {
     const readingTime = getReadingTime(content);
     const relatedPosts = posts
       .filter((post) => post.data.info.category === info.category && post.data.seo.slug !== seo.slug)
+      .sort(() => 0.5 - Math.random())
       .slice(0, 3);
     return /* html */ `
       <article class="post">
@@ -40,20 +41,26 @@ const post = {
               : ''
           }
           <p class="post__info">
-            <span>
-              <amp-img
-                alt="${info.author}"
-                src="${this.photo(author.data.photo)}"
-                width="24"
-                height="24"
-                layout="responsive">
-              </amp-img>
-              ${info.author}
+            <span data-tooltip="${texts.ui.author.tooltip}">
+              <span>
+                <amp-img
+                  alt="${info.author}"
+                  src="${this.photo(author.data.photo)}"
+                  width="24"
+                  height="24"
+                  layout="responsive">
+                </amp-img>
+                ${info.author}
+              </span>
             </span>
-            <span>${calendar()} ${this.date(info.date)}</span>
-            <span>
-              ${clock()} ${readingTime}
-              ${readingTime === 1 ? texts.ui.readingTime.long.singular : texts.ui.readingTime.long.plural}
+            <span data-tooltip="${texts.ui.publishedDate.tooltip}">
+              <span>${calendar()} ${this.date(info.date)}</span>
+            </span>
+            <span data-tooltip="${texts.ui.readingTime.tooltip}">
+              <span>
+                ${clock()} ${readingTime}
+                ${readingTime === 1 ? texts.ui.readingTime.long.singular : texts.ui.readingTime.long.plural}
+              </span>
             </span>
           </p>
           <p class="post__excerpt">${info.excerpt}</p>
